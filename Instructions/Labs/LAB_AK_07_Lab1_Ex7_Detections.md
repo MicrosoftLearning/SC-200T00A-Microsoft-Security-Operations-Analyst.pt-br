@@ -76,7 +76,7 @@ Nesta tarefa, você criará uma detecção para o primeiro ataque do exercício 
     |Nome|RegKey de inicialização|
     |Descrição|RegKey de inicialização em c:\temp|
     |Táticas|Persistência|
-    |Severidade|Alta|
+    |Severidade|Alto|
 
 1. Clique no botão **Avançar: Definir lógica da regra >**.
 

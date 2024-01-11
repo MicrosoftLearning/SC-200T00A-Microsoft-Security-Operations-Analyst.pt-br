@@ -1,4 +1,4 @@
-# Módulo 6: criar detecções e executar investigações usando o Microsoft Sentinel
+# Módulo 6: criar detecções e executar investigações com o Microsoft Sentinel
 
 **Observação**: a conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [documento de Pré-requisitos](00-prerequisites.md). 
 
@@ -10,18 +10,18 @@ Nesta tarefa, você criará uma regra de consulta analítica NRT (Near Real Time
 
 1. Selecione a guia **Criar** e, em seguida, a **Regra de consulta NRT**.
 
-1. Isso abre o "Assistente de regras de análise". Para a guia *Geral*, digite:
+1. Isso abre o "Assistente de regras de análise". Para a regra *Geral*, digite:
 
     |Configuração|Valor|
     |---|---|
     |Nome|**Busca do PowerShell NRT**|
     |Descrição|**Busca do PowerShell NRT**|
     |Táticas e Técnicas|**Comando e controle**|
-    |Severidade|**Alto**|
+    |Severidade|**Alta**|
 
-1. Selecione o botão **Avançar: Definir lógica da regra >**. 
+1. Clique no botão **Avançar: Definir lógica da regra >**. 
 
-1. Para a *Consulta de regra*, insira a seguinte instrução KQL:
+1. Para *Consulta de regra*, insira a seguinte instrução KQL:
 
     ```KQL
     let lookback = 2d; 
@@ -33,7 +33,7 @@ Nesta tarefa, você criará uma regra de consulta analítica NRT (Near Real Time
     | summarize min(TimeGenerated), count() by Computer, SubjectUserName, PwshParam
     ```
 
-1. Selecione **Exibir resultados da consulta >** para garantir que a consulta não contenha erros.
+1. Selecione **Exibir resultados da consulta >** para garantir que sua consulta não tenha erros.
 
 1. Feche a janela *Logs* selecionando o **X** no canto superior direito da janela e selecione **OK** para descartar as alterações. 
 
@@ -42,7 +42,7 @@ Nesta tarefa, você criará uma regra de consulta analítica NRT (Near Real Time
 1. Em *Mapeamento de entidade*, selecione:
 
     - Na lista suspensa *Tipo de entidade*, selecione **Host**.
-    - Para a lista suspensa *Identificador*, selecione **Nome do Host**.
+    - Na lista suspensa *Identificador*, selecione **Nome do host**.
     - Na lista suspensa *Valor*, selecione **Computador**.
 
 1. Role para baixo e selecione o botão **Avançar: Configurações de Incidentes>**.
@@ -63,11 +63,11 @@ Nesta tarefa, você investigará o incidente criado a partir da regra `NRT` que 
 
 1. Na caixa de diálogo **Entrar**, copie e cole na conta **Email do locatário** para administrador fornecida pelo provedor de hospedagem de laboratório e selecione **Avançar**.
 
-1. Na caixa de diálogo **Inserir senha**, copie e cole a **Senha do locatário** para administrador fornecida pelo provedor de hospedagem de laboratório e selecione **Entrar**.
+1. Na caixa de diálogo **Inserir senha**, copie e cole a **Senha de locatário** para administrador fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.
 
 1. Na barra de Pesquisa do portal do Azure, digite *Sentinel* e selecione **Microsoft Sentinel**.
 
-1. Selecione o Workspace do Microsoft Sentinel que você criou anteriormente.
+1. Selecione o workspace do Microsoft Sentinel que você criou anteriormente.
 
 1. No `Microsoft Sentinel`, vá para a seção do menu `Threat management` e selecione **Incidentes**
 

@@ -25,7 +25,7 @@ Nesta tarefa, você criará uma watchlist.
     Host5
     ```
 
-1. No menu, selecione **Arquivo – Salvar** como e nomeie o arquivo como `HighValue.csv`.  Em seguida, altere o tipo de arquivo para **Todos os arquivos(*.*)**.  Em seguida, selecione **Salvar.**
+1. No menu, selecione **Arquivo – Salvar** como e nomeie o arquivo como `HighValue.csv`.  Em seguida, altere o tipo de arquivo para **Todos os arquivos(*.*)**.  Em seguida, selecione **Salvar**.
 
 1. Feche o Bloco de notas.
 

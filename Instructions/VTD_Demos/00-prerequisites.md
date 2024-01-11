@@ -2,7 +2,7 @@
 # Analista de operações de segurança da Microsoft
 Guia de preparação do instrutor
 
-## Objetivo
+## Finalidade
 
 Este documento destina-se aos apresentadores que se preparam para ensinar o Microsoft Virtual Training Day para `Defend Against Threats with Extended Detection and Response` e `Configure Security Operations Using Microsoft Sentinel`. Este material é um subconjunto do curso de certificação SC-200: Analista de operações de segurança da Microsoft.
 
@@ -692,6 +692,6 @@ Nesta tarefa, você realizará ataques em um host com o conector Eventos de Segu
     net localgroup administrators theusernametoadd /add
     ```
 
->**Observação**: certifique-se de que há apenas um comando por linha e você poderá executar novamente os comandos alterando o nome de usuário.
+>**Observação**: certifique-se de que há apenas um comando por linha e você pode executar novamente os comandos alterando o nome de usuário.
 
 1. Na janela `Output`, você deve ver `The command completed successfully` três vezes
