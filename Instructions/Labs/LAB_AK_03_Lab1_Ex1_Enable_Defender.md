@@ -41,7 +41,7 @@ Nesta tarefa, você configurará uma assinatura do Azure necessária para conclu
 
 1. Na guia *Membros*, selecione **+ Selecionar membros** e depois a conta de **Administrador do MOD**. Em seguida, clique em **Selecionar** para continuar.
 
-    >**Observação:** se você vir a guia **Condições** (com um ponto vermelho), selecione **Avançar** e, em seguida, selecione **Não restrito** no tipo *Delegação.
+    >**Observação:** Se a guia **Condições** mostrar um ponto vermelho, selecione **Avançar** e escolha **Não restrito**, se for exibido o tipo *Delegação*, ou selecione **Permitir que o usuário atribua todas as funções (altamente privilegiado)**, se for exibida a opção *O que o usuário pode fazer*.
 
 1. Clique em **Examinar + atribuir** duas vezes para atribuir a função de proprietário à sua conta de administrador.
 
