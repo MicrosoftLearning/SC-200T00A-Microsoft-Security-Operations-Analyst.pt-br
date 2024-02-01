@@ -37,22 +37,23 @@ Nesta tarefa, você analisará a configuração de conformidade regulatória no 
 
 1. Selecione sua assinatura.
 
-1. Em *Configurações de política*, selecione **Política de segurança** no menu do portal.
+    >**Dica:** Selecione **Expandir tudo** para localizar sua assinatura se você tiver uma hierarquia de Grupos de Gerenciamento.
 
-1. Role para baixo e revise os "Padrões regulatórios do setor" disponíveis para você por padrão. Observe que *a ISO 27001* agora foi preterida.
+1. Em *Configurações*, selecione **política de segurança** no menu do portal.
 
-1. Selecione **Adicionar mais padrões** para adicionar o padrão regulatório ISO 27001:2013 atualizado.
+1. Role para baixo e examine os "padrões de segurança" disponíveis para você por padrão.
 
-1. Selecione o botão **Adicionar** à direita da *ISO 27001:2013*.
+1. Use a caixa de pesquisa para localizar a *ISO 27001:2013*.
 
-1. Uma nova página para atribuir a iniciativa Azure Policy é aberta. Confirme se sua assinatura está selecionada em *Escopo* e clique em **Examinar e criar**.
+1. Selecione e mova o controle deslizante de **Status** para a direita da *ISO 27001:2013* para **Ativado**.
 
-1. Selecione **Criar** para atribuir a iniciativa Azure Policy à sua assinatura.
+    >**Observação:** Alguns padrões exigem que você atribua uma iniciativa do Azure Policy.
 
-1. Selecione Microsoft Defender para Nuvem abaixo da caixa de pesquisa para retornar à tela principal.
+1. Selecione **Atualizar** no menu da página para confirmar se *ISO 27001:2013* está definido como *Ativado* para sua assinatura.
+
+1. Feche a página de *Políticas de segurança* selecionando o 'X' no canto superior direito da página para voltar às **Configurações do ambiente**.
 
     >**Observação:** talvez você queira voltar mais tarde à *Conformidade regulatória* para analisar os novos controles e recomendações padrão.
-
 
 ### Tarefa 2: explorar a postura e as recomendações de segurança
 
