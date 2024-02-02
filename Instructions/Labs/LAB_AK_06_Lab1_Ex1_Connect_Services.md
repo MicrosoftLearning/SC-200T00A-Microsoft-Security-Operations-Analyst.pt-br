@@ -37,7 +37,7 @@ Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
 1. Selecione *Criar incidentes com base no Microsoft Defender para Nuvem* nos modelos de regra.
 
-1. Selecione **Criar regra** na folha de informações do conector.
+1. Selecione **Criar regra** no painel de informações da regra ou selecione os três pontinhos (...) e **+ Criar regra**.
 
 1. No assistente de regras de Análise, selecione **Avançar: Resposta automatizada** e selecione **Avançar: Examinar e criar**.
 
