@@ -581,97 +581,97 @@ Nesta tarefa, você realizará ataques em um host com o Microsoft Defender para 
 1. Em Pesquisa da barra de tarefas, insira *Comando*.  O prompt de comando será exibido nos resultados da pesquisa.  Clique com o botão direito do mouse no prompt de comando e selecione **Executar como administrador**. Confirme todos os prompts do Controle de conta de usuário exibidos.
 
 1. No prompt de comando, insira o comando em cada linha pressionando a tecla Enter após cada linha:
-```
-cd \
-mkdir temp
-cd temp
-```
+
+    ```CommandPrompt
+    cd \
+    mkdir temp
+    cd temp
+    ```
 
 1. Copie e execute este comando:
 
-```
-REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
-```
+    ```CommandPrompt
+    REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
+    ```
 
 ### Tarefa 2: criar ataque C2 (comando e controle)
 
 1. Faça logon na máquina virtual `WIN1` como Administrador com a senha: **Pa55w.rd**.  
 
 1. Em Pesquisa da barra de tarefas, insira *Comando*.  O prompt de comando será exibido nos resultados da pesquisa.  Clique com o botão direito do mouse no prompt de comando e selecione **Executar como administrador**. Confirme todos os prompts do Controle de conta de usuário exibidos.
-1. 
-1. 
+
 1. Ataque 2 – Copie e execute este comando:
 
-```
-notepad c2.ps1
-```
+    ```CommandPrompt
+    notepad c2.ps1
+    ```
+
 Selecione **Sim** para criar um novo arquivo e copie o seguinte script do PowerShell em c2.ps1 e selecione **Salvar**.
 
-**Observação** Colar na máquina virtual pode ter um tamanho limitado.  Cole isso em três seções para garantir que todo o script seja colado na Máquina virtual.  Certifique-se de que o script tenha a mesma aparência nestas instruções dentro do arquivo c2.ps1 do Bloco de notas.
+>**Observação:** Colar na Máquina Virtual pode ter um comprimento limitado.  Cole isso em três seções para garantir que todo o script seja colado na Máquina virtual.  Certifique-se de que o script tenha a mesma aparência nestas instruções dentro do arquivo c2.ps1 do Bloco de notas.
 
-```
-
-
-param(
-    [string]$Domain = "microsoft.com",
-    [string]$Subdomain = "subdomain",
-    [string]$Sub2domain = "sub2domain",
-    [string]$Sub3domain = "sub3domain",
-    [string]$QueryType = "TXT",
-        [int]$C2Interval = 8,
-        [int]$C2Jitter = 20,
-        [int]$RunTime = 240
-)
-
-
-$RunStart = Get-Date
-$RunEnd = $RunStart.addminutes($RunTime)
-
-$x2 = 1
-$x3 = 1 
-Do {
-    $TimeNow = Get-Date
-    Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
-    if ($x2 -eq 3 )
-    {
-        Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-        
-        $x2 = 1
-
-    }
-    else
-    {
-        $x2 = $x2 + 1
-    }
+    ```PowerShell
     
-    if ($x3 -eq 7 )
-    {
-
-        Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
-        $x3 = 1
+    param(
+        [string]$Domain = "microsoft.com",
+        [string]$Subdomain = "subdomain",
+        [string]$Sub2domain = "sub2domain",
+        [string]$Sub3domain = "sub3domain",
+        [string]$QueryType = "TXT",
+            [int]$C2Interval = 8,
+            [int]$C2Jitter = 20,
+            [int]$RunTime = 240
+    )
+    
+    
+    $RunStart = Get-Date
+    $RunEnd = $RunStart.addminutes($RunTime)
+    
+    $x2 = 1
+    $x3 = 1 
+    Do {
+        $TimeNow = Get-Date
+        Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+    
+        if ($x2 -eq 3 )
+        {
+            Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+            
+            $x2 = 1
+    
+        }
+        else
+        {
+            $x2 = $x2 + 1
+        }
         
+        if ($x3 -eq 7 )
+        {
+    
+            Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+    
+            $x3 = 1
+            
+        }
+        else
+        {
+            $x3 = $x3 + 1
+        }
+    
+    
+        $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
+        Start-Sleep -Seconds $Jitter
     }
-    else
-    {
-        $x3 = $x3 + 1
-    }
-
-
-    $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
-    Start-Sleep -Seconds $Jitter
-}
-Until ($TimeNow -ge $RunEnd)
-
-```
+    Until ($TimeNow -ge $RunEnd)
+    ```
 
 No prompt de comando, insira o comando em cada linha pressionando a tecla Enter após cada linha:
-```
-powershell
-.\c2.ps1
-```
-**Observação:** você verá erros de resolução. Isso é normal.
+
+    ```PowerShell
+    .\c2.ps1
+    ```
+
+>**Observação:** você verá erros de resolução. Isso é normal.
 Deixe esse script command/powershell ser executado em segundo plano. Não feche a janela.  O comando precisa gerar entradas de log por algumas horas.  Você pode prosseguir para a próxima tarefa e os próximos exercícios enquanto este script é executado.  Os dados criados por essa tarefa serão usados no laboratório de Busca de ameaças posteriormente.  Este processo não criará quantidades substanciais de dados ou processamento.
 
 ### Tarefa 2: atacar o Windows configurado com o Agente do Azure Monitor (AMA)
@@ -692,6 +692,6 @@ Nesta tarefa, você realizará ataques em um host com o conector Eventos de Segu
     net localgroup administrators theusernametoadd /add
     ```
 
->**Observação**: certifique-se de que há apenas um comando por linha e você pode executar novamente os comandos alterando o nome de usuário.
+    >**Observação**: certifique-se de que há apenas um comando por linha e você pode executar novamente os comandos alterando o nome de usuário.
 
 1. Na janela `Output`, você deve ver `The command completed successfully` três vezes
