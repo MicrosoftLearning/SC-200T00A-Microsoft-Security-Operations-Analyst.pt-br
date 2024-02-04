@@ -124,7 +124,7 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
 1. Na seção "Adicionar servidor único", selecione **Gerar script**.
 
-1. Leia a guia *Pré-requisitos* e selecione **Avançar** para continuar.
+    <!--- 1. Read through the *Prerequisites* tab and then select **Next** to continue.--->
 
 1. Na página *Adicionar um servidor com o Azure Arc*, selecione o grupo de recursos criado anteriormente em *Detalhes do projeto*. **Dica:** *RG-Defender*
 

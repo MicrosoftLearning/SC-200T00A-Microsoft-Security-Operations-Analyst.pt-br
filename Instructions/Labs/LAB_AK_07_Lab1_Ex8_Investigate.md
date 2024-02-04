@@ -53,9 +53,9 @@ Nesta tarefa, você investigará um incidente.
 
 1. Oculte a folha esquerda selecionando o ícone **<<** ao lado do proprietário.
 
-1. Revise a janela **Linha do tempo do incidente**. Para o alerta *RegKey de inicialização*, selecione o ícone de reticências **(...)** e, em seguida, **Executar guia estratégico**. Você verá o guia estratégico *PostMessageTeams-OnAlert*. Esta opção vai ajudar a executar guias estratégicos manualmente.
+1. Revise a janela **Linha do tempo do incidente**. Selecione o botão **Ações de Incidente** no canto superior direito e, em seguida, **Executar guia estratégico**. Você verá o guia estratégico *PostMessageTeams-OnIncident*. Esta opção vai ajudar a executar guias estratégicos manualmente.
 
-1. Feche a folha *Guias estratégicos de alerta* selecionando o ícone **x** no canto superior direito.
+1. Feche a folha *Executar guia estratégico no incidente* selecionando o ícone **x** no canto superior direito.
 
 1. Revise a janela **Entidades**. Pelo menos a entidade *Host* que mapeamos na consulta KQL do exercício anterior deve aparecer. **Dica:** se nenhuma entidade aparecer, atualize a página.
 
