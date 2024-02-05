@@ -51,9 +51,11 @@ Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nu
 
 1. No *Hub de conteúdo*, procure a solução **Microsoft Defender para Nuvem** e selecione-a na lista.
 
-1. Na página da solução *Microsoft Defender para Nuvem*, selecione **Instalar**.
+1. Na página de detalhes da solução do *Microsoft Defender para Nuvem*, selecione **Instalar**.
 
-1. Após a instalação, selecione **Gerenciar**
+1. Quando a instalação for concluída, pesquise a solução do **Microsoft Defender para Nuvem** e selecione-a.
+
+1. Na página de detalhes da solução do *Microsoft Defender para Nuvem*, selecione **Gerenciar**
 
     >**Observação:** a solução *Microsoft Defender para Nuvem* instala o conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura*, o conector de dados do *Microsoft Defender para Nuvem (Versão preliminar) baseado em locatário* e uma regra de Análise.
 
@@ -65,7 +67,7 @@ Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nu
 
 1. O *Status* agora deve ser **Conectado** e "Sincronização bidirecional" deve estar *Habilitada*.
 
-1. Role para baixo e, na área *Criar incidentes – Recomendado!*, verifique se a opção *Criar incidentes automaticamente de todos os alertas gerados neste serviço conectado* está **Habilitada**.
+    <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
 
 ### Tarefa 3: conector o conector de dados de Atividade do Azure
 

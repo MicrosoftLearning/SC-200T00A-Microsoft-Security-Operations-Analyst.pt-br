@@ -61,21 +61,27 @@ Nesta tarefa, você revisará o gerenciamento da postura de segurança da nuvem.
 
 1. Em *Segurança da nuvem*, selecione **Postura de segurança** no menu do portal.
 
-1. A classificação de segurança provavelmente mostrará *N/D* até que a classificação seja calculada.
+1. A *Classificação de segurança* será o padrão para o *ambiente do Azure*.
 
-1. Em *Geral*, selecione **Recomendações** no menu do portal.
+1. Na guia *Ambiente*, selecione **Exibir recomendações >**.
 
-1. Explore as recomendações fornecidas para sua assinatura e WINServer (Servidor Arc).
+1. Na página *Recomendações*, selecione a guia **Todas as recomendações**.
 
-1. Selecione qualquer recomendação em que o status não seja *"Concluído"* para WINServer.
+    >**Observação:** Você também pode usar as *Recomendações de classificação de segurança*.
 
-1. Leia a recomendação e role para baixo até **selecionar** a caixa de seleção WINServer. **Dica:** talvez seja necessário selecionar **Recursos afetados** para exibi-lo.
+1. Selecione o filtro **Tipo de recurso** e o seletor de lista suspensa **Valor**.
 
-1. Selecione **Atribuir proprietário** e, em seguida, clique em **Selecionar proprietário**.
+1. Selecione a caixa de seleção **Computadores – Azure Arc** e, em seguida, selecione o botão **OK**.
 
-1. Na caixa *Endereço de email*, anote seu email de administrador. **Dica:** você pode copiá-lo nas instruções na guia *Recursos*.
+1. Selecione qualquer recomendação cujo status não seja *"Concluído"*.
 
-1. Selecione **Voltar**, altere a *Data de conclusão* de acordo com sua preferência e clique em **Salvar**.
+1. Leia a recomendação e role para baixo até **selecionar** a caixa de seleção WINServer. **Dica:** Talvez seja necessário expandir e rolar para baixo nos **Recursos afetados** para exibi-la.
+
+1. Selecione **Atribuir proprietário** e, em seguida, expanda os **Detalhes da atribuição**.
+
+1. Na caixa `Set owner` *Endereço de email*, digite o seu email de administrador. **Dica:** você pode copiá-lo nas instruções na guia *Recursos*.
+
+1. Explore as opções de *Definir o período de correção* e *Definir as notificações por email* e selecione **Criar**.
 
     >**Observação:** se você vir o erro *Falha ao criar atribuições solicitadas*, tente novamente mais tarde.
 
@@ -95,17 +101,17 @@ Nesta tarefa, você carregará alertas de segurança de exemplo e revisará os d
 
 1. Selecione **Criar alertas de exemplo**.  
 
-    >**Observação:** este processo de criação de alertas de exemplo pode levar alguns minutos para ser concluído, aguarde até a notificação *"Alertas de exemplo criados com êxito"* aparecer. 
+    >**Observação:** este processo de criação de alertas de exemplo pode levar alguns minutos para ser concluído, aguarde até a notificação *"Alertas de exemplo criados com êxito"* aparecer.
 
-1. Depois de concluído, selecione **Atualizar** para ver os alertas aparecerem na área *Alertas de segurança*.
+1. Depois de concluído, selecione **Atualizar** (se necessário) para ver os alertas exibidos na área *Alertas de segurança*.
 
-1. Para os alertas que chamaram sua atenção, execute as seguintes ações:
+1. Escolha um alerta interessante com uma *Severidade* *Alta* e execute as seguintes ações:
 
-    - Selecione o alerta, assim as informações sobre ele deverão aparecer. Selecione **Exibir detalhes completos**.
+    - Selecione a caixa de seleção de alerta e o painel de detalhes do alerta deverá aparecer. Selecione **Exibir detalhes completos**.
 
     - Revise e leia a guia *Detalhes do alerta*.
 
-    - Selecione a guia **Executar ação** ou selecione o botão **Avançar: Executar ação** no final da página.
+    - Selecione a guia **Executar ação** ou role para baixo e selecione o botão **Avançar: Executar ação** no final da página.
 
     - Revise as informações de *Executar ação*. Observe as seções disponíveis para tomar medidas, dependendo do tipo de alerta: Inspecionar o contexto do recurso, Mitigar a ameaça, Prevenir ataques futuros, Disparar resposta automatizada e Suprimir alertas semelhantes.
 
