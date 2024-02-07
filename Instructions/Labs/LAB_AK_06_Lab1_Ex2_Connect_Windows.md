@@ -111,7 +111,9 @@ Nesta tarefa, você adicionará uma máquina virtual Windows que não seja do Az
 
 1. Na guia **Instruções**, na seção *Configuração*, edite a *regra de coleta de dados* **AZWINDCR** selecionando o ícone de *lápis*.
 
-1. Selecione **Avançar: Recursos** e **+Adicionar recurso(s).**
+1. Selecione **Avançar: Recursos** e expanda sua *Assinatura* em *Escopo* na guia *Recursos*.
+
+    >**Dica:** Você pode expandir toda a hierarquia *Escopo* selecionando o ">" antes da coluna *Escopo*.
 
 1. Expanda o **RG-Defender** (ou o Grupo de recursos que você criou) e selecione **WINServer**.
 
