@@ -33,21 +33,13 @@ Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
 1. Selecione o workspace do Microsoft Sentinel que você criou no laboratório anterior.
 
-1. Na menu de navegação, selecione Análise.
-
-1. Selecione *Criar incidentes com base no Microsoft Defender para Nuvem* nos modelos de regra.
-
-1. Selecione **Criar regra** no painel de informações da regra ou selecione os três pontinhos (...) e **+ Criar regra**.
-
-1. No assistente de regras de Análise, selecione **Avançar: Resposta automatizada** e selecione **Avançar: Examinar e criar**.
-
-1. Selecione **Salvar**.
+1. Prossiga para a próxima tarefa.
 
 ### Tarefa 2: conectar o conector de dados do Microsoft Defender para Nuvem
 
 Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nuvem.
 
-1. No menu esquerdo do Microsoft Sentinel, role para baixo até a seção *Gerenciamento de conteúdo* e selecione **Hub de conteúdos**.
+1. No menu esquerdo do Microsoft Sentinel, role para baixo até a seção **Gerenciamento de conteúdo** e selecione **Hub de conteúdos**.
 
 1. No *Hub de conteúdo*, procure a solução **Microsoft Defender para Nuvem** e selecione-a na lista.
 
@@ -57,7 +49,7 @@ Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nu
 
 1. Na página de detalhes da solução do *Microsoft Defender para Nuvem*, selecione **Gerenciar**
 
-    >**Observação:** a solução *Microsoft Defender para Nuvem* instala o conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura*, o conector de dados do *Microsoft Defender para Nuvem (Versão preliminar) baseado em locatário* e uma regra de Análise.
+    >**Observação:** a solução *Microsoft Defender para Nuvem* instala o conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura*, o conector de dados do *Microsoft Defender para Nuvem (Versão preliminar) baseado em locatário* e uma regra de Análise. O conector de dados *Microsoft Defender for Cloud (versão prévia)* baseado em locatário é usado quando um locatário tem várias assinaturas.
 
 1. Selecione a caixa de seleção Conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura* e selecione a **página Abrir conector**.
 
