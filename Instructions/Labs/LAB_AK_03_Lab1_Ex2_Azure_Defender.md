@@ -33,7 +33,7 @@ Nesta tarefa, você analisará a configuração de conformidade regulatória no 
 
 1. Em *Segurança da nuvem*, selecione **Conformidade regulatória** no menu do portal.
 
-1. Selecione **Gerenciar políticas de conformidade** na barra de ferramentas.
+1. Selecione **Gerenciar padrões de conformidade** na barra de ferramentas.
 
 1. Selecione sua assinatura.
 
@@ -58,6 +58,8 @@ Nesta tarefa, você analisará a configuração de conformidade regulatória no 
 ### Tarefa 2: explorar a postura e as recomendações de segurança
 
 Nesta tarefa, você revisará o gerenciamento da postura de segurança da nuvem.  As informações do Secure Score podem levar 24 horas para serem recalculadas. Recomenda-se fazer esta tarefa novamente em 24 horas.
+
+1. Selecione o link **Microsoft Defender para Nuvem | Conformidade regulatória** na parte superior da página para retornar aos menus superiores.
 
 1. Em *Segurança da nuvem*, selecione **Postura de segurança** no menu do portal.
 
