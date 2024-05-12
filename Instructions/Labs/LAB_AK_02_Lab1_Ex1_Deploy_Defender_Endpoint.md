@@ -23,13 +23,13 @@ Você começa inicializando o ambiente do Defender para Ponto de Extremidade. Em
 
 ### Tarefa 1: inicializar o Microsoft Defender para Ponto de Extremidade
 
-Nesta tarefa, você executará a inicialização do portal do Microsoft Defender para Ponto de Extremidade.
+Nesta tarefa, você vai executar a inicialização do Microsoft Defender para Ponto de Extremidade.
 
 1. Faça logon na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
 
-1. Se você ainda não estiver no portal do Microsoft 365 Defender, inicie o navegador Microsoft Edge.
+1. Se você ainda não estiver no portal do Microsoft Defender XDR, inicie o navegador Microsoft Edge.
 
-1. No navegador Edge, vá para o portal do Microsoft 365 Defender em (https://security.microsoft.com).
+1. No navegador Edge, acesse o portal do Defender XDR em (https://security.microsoft.com).
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
@@ -37,7 +37,7 @@ Nesta tarefa, você executará a inicialização do portal do Microsoft Defender
 
     >**Dica:** a conta de email e a senha de locatário do administrador podem ser encontradas na guia Recursos.
 
-1. No portal **Microsoft 365 Defender**, no menu de navegação, selecione **Configurações** à esquerda.
+1. No portal do **Defender XDR**, no menu de navegação, selecione **Configurações** à esquerda.
 
 1. Na página Configurações, selecione **Descoberta de dispositivo**. 
 
@@ -80,7 +80,7 @@ Nesta tarefa, você integrará um dispositivo ao Microsoft Defender para Ponto d
 
 Nesta tarefa, você configurará funções para usar em grupos de dispositivos.
 
-1. No portal do Microsoft 365 Defender, selecione **Configurações** na barra de menus à esquerda e, em seguida, selecione **Pontos de extremidade**. 
+1. No portal do Microsoft Defender XDR, selecione **Configurações** na barra de menus à esquerda e, em seguida, escolha **Ponto de Extremidade**. 
 
 1. Selecione **Funções** na área de permissões.
 
@@ -107,7 +107,7 @@ Nesta tarefa, você configurará funções para usar em grupos de dispositivos.
 
 Nesta tarefa, você configurará grupos de dispositivos que permitem o controle de acesso e a configuração de automação.
 
-1. No portal do Microsoft 365 Defender, selecione **Configurações** na barra de menus à esquerda e, em seguida, selecione **Pontos de extremidade**. 
+1. No portal do Microsoft Defender XDR, selecione **Configurações** na barra de menus à esquerda e, em seguida, escolha **Ponto de Extremidade**. 
 
 1. Selecione **Grupos de dispositivos** na área de permissões.
 

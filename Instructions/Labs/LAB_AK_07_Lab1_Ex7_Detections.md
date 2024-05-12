@@ -80,14 +80,14 @@ Nesta tarefa, você criará uma detecção para o primeiro ataque do exercício 
 
 1. Clique no botão **Avançar: Definir lógica da regra >**.
 
-1. Na guia *Definir lógica de regras*, a *consulta de regras* já deve estar preenchida com sua consulta KQL, bem como com as entidades em *Enriquecimento de alertas – Mapeamento de entidades*.
+1. Na guia *Definir lógica de regra*, a *Consulta de regra* já deve estar preenchida com a consulta KQL, bem como as entidades em *Aprimoramento de alerta – Mapeamento de entidade*.
 
-    |Entidade|Identificador|Campo de dados|
+    |Entity|Identificador|Campo de dados|
     |:----|:----|:----|
     |Conta|FullName|AccountCustomEntity|
     |Host|Nome do host|HostCustomEntity|
 
-1. Se **Nome do host** não estiver selecionado para Entidade de *host*, selecione-o na lista suspensa.
+1. Se a opção **Nome do host** não estiver selecionada em *Entidade de Host*, selecione-a na lista suspensa e use os parâmetros da tabela anterior para preencher os campos.
 
 1. Para *Agendamento de consulta*, defina o seguinte:
 
@@ -117,9 +117,9 @@ Nesta tarefa, você criará uma detecção para o primeiro ataque do exercício 
 
 1. Selecione **Aplicar**
 
-1. Selecione o botão **Avançar: Examinar >**.
+1. Selecione o botão **Próximo: Revisar + criar >**.
   
-1. Na guia *Examinar e criar*, selecione o botão **Criar** para criar a nova regra de Análise agendada.
+1. Na guia *Revisar e criar*, selecione o botão **Salvar** para criar a regra de Análise Agendada.
 
 ### Tarefa 2: detecção de ataque de elevação de privilégio
 
@@ -182,9 +182,16 @@ Nesta tarefa, você criará uma detecção para o segundo ataque do exercício a
     |Táticas|**Elevação de privilégio**|
     |Severidade|**Alta**|
 
-1. Clique no botão **Avançar: Definir lógica da regra >**. 
+1. Clique no botão **Avançar: Definir lógica da regra >**.
 
-1. Na guia *Definir lógica de regras*, a *consulta de regras* já deve estar preenchida com sua consulta KQL, bem como com as entidades em *Enriquecimento de alertas – Mapeamento de entidades*.
+1. Na guia *Definir lógica de regra*, a *Consulta de regra* já deve estar preenchida com a consulta KQL, bem como as entidades em *Aprimoramento de alerta – Mapeamento de entidade*.
+
+    |Entity|Identificador|Campo de dados|
+    |:----|:----|:----|
+    |Conta|FullName|AccountCustomEntity|
+    |Host|Nome do host|HostCustomEntity|
+
+1. Se a opção **Nome do host** não estiver selecionada em *Entidade de Host*, selecione-a na lista suspensa e use os parâmetros da tabela anterior para preencher os campos.
 
 1. Para *Agendamento de consulta*, defina o seguinte:
 
