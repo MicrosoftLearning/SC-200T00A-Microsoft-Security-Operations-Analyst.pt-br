@@ -19,7 +19,7 @@ As regras de análise procuram eventos ou conjuntos de eventos específicos no a
 
 ### Tarefa 1: criar uma consulta agendada
 
-Nesta tarefa, você criará uma consulta agendada e a conectará ao canal do Teams criado no exercício anterior.
+Nesta tarefa, você irá criar uma consulta agendada e a conectá-la ao canal do Teams que criou no exercício anterior.
 
 1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
@@ -101,9 +101,15 @@ Nesta tarefa, você testará sua nova regra de consulta agendada.
 
 1. Na barra superior do portal do Azure, selecione o ícone **>_** que corresponde ao Cloud Shell. Talvez seja necessário selecionar o ícone de reticências primeiro **(...)** se a resolução da tela for muito baixa.
 
-1. Selecione **PowerShell** e, em seguida, **Criar armazenamento**. Aguarde até que o Cloud Shell seja provisionado.
+1. Na janela de *Boas vindas ao Azure Cloud Shell*, selecione **PowerShell**.
 
-1. Feche a janela do Azure Cloud Shell.
+1. Na página *Introdução*, selecione **Montar conta de armazenamento** e, em seguida, selecione o seu **Azure Pass – Sponsorship** no menu suspenso *Assinatura da conta de armazenamento* e clique no botão **Aplicar**.
+
+    >**Importante:** Não selecione o botão de opção *Não é necessária conta de armazenamento*. Isso causará uma falha na criação do incidente.
+
+1. Na página *Montar conta de armazenamento*, escolha **Vamos criar uma conta de armazenamento para você** e, em seguida, selecione **Avançar**.
+
+1. Aguarde até que o Cloud Shell seja provisionado e depois feche a janela do Azure Cloud Shell.
 
 1. Na barra de Pesquisa do portal do Azure, digite *Atividade* e selecione **Log de atividades**.
 
