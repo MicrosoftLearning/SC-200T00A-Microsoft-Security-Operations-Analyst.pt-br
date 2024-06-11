@@ -37,8 +37,9 @@ Nesta tarefa, você criará um workspace do Microsoft Sentinel.
 
     >**Observação:** se você não vir um workspace do Log Analytics aqui, consulte o Módulo 3, Exercício 1, Tarefa 2 para criar um.
 
-1. Navegue pelo workspace recém-criado do Microsoft Sentinel para se familiarizar com as opções da interface do usuário.
+1. No **Microsoft Sentinel** você deve estar na seção **Geral** *Notícias e Guias* e consultar um aviso informando a *Ativação da avaliação gratuita do Microsoft Sentinel*. Clique no botão **OK**.
 
+1. Navegue pelo workspace recém-criado do Microsoft Sentinel para se familiarizar com as opções da interface do usuário.
 
 ### Tarefa 2: criar uma watchlist
 

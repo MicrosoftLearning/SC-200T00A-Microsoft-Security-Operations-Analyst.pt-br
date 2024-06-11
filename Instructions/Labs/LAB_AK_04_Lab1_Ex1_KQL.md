@@ -48,11 +48,17 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 
 >**Importante:** Para cada consulta, limpe a instrução anterior da janela Consulta ou abra uma nova janela Consulta selecionando **+** após a última guia aberta (até 25).
 
-1. A instrução a seguir demonstra o operador de **pesquisa**, que pesquisa o valor em todas as colunas da tabela. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. A instrução a seguir demonstra o operador de **pesquisa**, que pesquisa o valor em todas as colunas da tabela. 
+
+1. Altere o *Intervalo de tempo* para **Últimos 30 minutos** na janela Consulta.
+
+1. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
-    search "new"
+    search "location"
     ```
+
+    >**Observação:** Usar o operador *Pesquisa* sem tabelas específicas ou cláusulas de qualificação é menos eficiente do que a filtragem de texto específica à tabela e à coluna.
 
 1. A instrução a seguir demonstra a **pesquisa** entre tabelas listadas na cláusula **in**. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
 

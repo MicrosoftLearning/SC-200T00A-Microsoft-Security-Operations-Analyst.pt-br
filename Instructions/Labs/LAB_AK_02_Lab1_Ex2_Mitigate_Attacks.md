@@ -90,7 +90,7 @@ Nesta tarefa, você simulará um ataque à máquina virtual WIN1 e verificará s
     $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
     ```
 
-    >**Observação:** Se ocorrerem erros (em vermelho) durante a execução do script, abra o aplicativo Bloco de Notas e copie o script em um arquivo em branco. Certifique-se de que a *quebra automática de linha* esteja ativada no Bloco de Notas. Copie e execute cada linha do script separadamente no PowerShell.
+    >**Observação:** Se ocorrerem erros (em vermelho) durante a execução do script, abra o aplicativo Bloco de Notas e copie o script em um arquivo em branco. Certifique-se de que a *quebra automática de linha* esteja ativada no Bloco de Notas. Então, copie e execute cada linha do script separadamente no PowerShell. Além disso, um script do PowerShell (attacksim.ps1) foi fornecido nos arquivos baixados no início dos laboratórios. Para usar o script, no **Windows PowerShell (Administrador)** navegue até a pasta *\Users\Admin\Desktop* e digite *.\attacksim.ps1* e pressione **Enter** para executá-lo.
 
 1. O script produzirá várias linhas de saída e uma mensagem informando que ele *Falhou ao resolver controladores de domínio no domínio*. Alguns segundos depois, o aplicativo *Bloco de Notas* será aberto. Um código de ataque simulado será injetado no Bloco de Notas. Mantenha a instância do Bloco de Notas gerada automaticamente aberta para experimentar o cenário completo. O código de ataque simulado tentará se comunicar com um endereço IP externo (simulando um servidor C2).
 

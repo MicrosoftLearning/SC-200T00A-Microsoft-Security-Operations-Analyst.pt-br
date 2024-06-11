@@ -10,20 +10,20 @@ lab:
 
 ![Visão geral do laboratório.](../Media/SC-200-Lab_Diagrams_Mod3_L1_Ex2.png)
 
-Você é um analista de operações de segurança que trabalha em uma empresa que implementou o Microsoft Defender para Nuvem. Você precisa responder às recomendações e aos alertas de segurança gerados pelo Microsoft Defender para Nuvem.
+Você é analista de operações de segurança e trabalha em uma empresa que implementou o Microsoft Defender para Nuvem. Você precisa responder às recomendações e aos alertas de segurança gerados pelo Microsoft Defender para Nuvem.
 
 >**Observação:** uma **[simulação de laboratório interativa](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20threats%20using%20Microsoft%20Defender%20for%20Cloud)** está disponível e permite que você clique neste laboratório no seu próprio ritmo. Você pode encontrar pequenas diferenças entre a simulação interativa e o laboratório hospedado, mas os principais conceitos e ideias que estão sendo demonstrados são os mesmos. 
 
 
 ### Tarefa 1: explorar a conformidade regulatória
 
-Nesta tarefa, você analisará a configuração de conformidade regulatória no Microsoft Defender para Nuvem. 
+Nessa tarefa, você revisará a configuração de conformidade regulamentar no Microsoft Defender para Nuvem. 
 
 >**Importante:** As próximas etapas são feitas em uma máquina diferente daquela que você estava trabalhando anteriormente. Procure as referências de nome da máquina virtual.
 
 1. Faça logon na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
 
-1. No navegador Edge, abra o portal do Azure em (https://portal.azure.com).
+1. No navegador Microsoft Edge, abra o portal do Azure em (https://portal.azure.com).
 
 1. Na caixa de diálogo **Entrar**, copie e cole na conta **Email do locatário** fornecida pelo provedor de hospedagem de laboratório e selecione **Avançar**.
 
@@ -31,9 +31,9 @@ Nesta tarefa, você analisará a configuração de conformidade regulatória no 
 
 1. Na barra de pesquisa do portal do Azure, digite *Defender* e selecione **Microsoft Defender para Nuvem**.
 
-1. Em *Segurança da nuvem*, selecione **Conformidade regulatória** no menu do portal.
+1. Em *Segurança na nuvem*, selecione **Conformidade regulatória** nos itens do menu à esquerda.
 
-1. Selecione **Gerenciar políticas de conformidade** na barra de ferramentas.
+1. Selecione **Gerenciar padrões de conformidade** na barra de ferramentas.
 
 1. Selecione sua assinatura.
 
@@ -41,7 +41,7 @@ Nesta tarefa, você analisará a configuração de conformidade regulatória no 
 
 1. Em *Configurações*, selecione **política de segurança** no menu do portal.
 
-1. Role para baixo e examine os "padrões de segurança" disponíveis para você por padrão.
+1. Role para baixo e revise os "Padrões de segurança" disponíveis por padrão.
 
 1. Use a caixa de pesquisa para localizar a *ISO 27001:2013*.
 
@@ -57,27 +57,25 @@ Nesta tarefa, você analisará a configuração de conformidade regulatória no 
 
 ### Tarefa 2: explorar a postura e as recomendações de segurança
 
-Nesta tarefa, você revisará o gerenciamento da postura de segurança da nuvem.  As informações do Secure Score podem levar 24 horas para serem recalculadas. Recomenda-se fazer esta tarefa novamente em 24 horas.
+Nessa tarefa, você revisará o gerenciamento da postura de segurança na nuvem.  As informações do Secure Score podem levar 24 horas para serem recalculadas. Recomenda-se fazer essa tarefa novamente em 24 horas.
 
-1. Em *Segurança da nuvem*, selecione **Postura de segurança** no menu do portal.
+1. Em *Segurança na nuvem*, selecione **Postura de segurança** nos itens do menu à esquerda.
 
-1. A *Classificação de segurança* será o padrão para o *ambiente do Azure*.
+1. A *pontuação segura* é padronizada para o *ambiente Azure*
 
-1. Na guia *Ambiente*, selecione **Exibir recomendações >**.
+1. Na guia *Ambiente*, selecione **Exibir recomendações >** link.
 
-1. Na página *Recomendações*, selecione a guia **Todas as recomendações**.
+1. Selecione **Adicionar filtro** e depois selecione **Tipo de recurso**.
 
-    >**Observação:** Você também pode usar as *Recomendações de classificação de segurança*.
+1. Marque a caixa de seleção **Máquinas - Azure Arc** e selecione o botão **Aplicar**.
 
-1. Selecione o filtro **Tipo de recurso** e o seletor de lista suspensa **Valor**.
-
-1. Selecione a caixa de seleção **Computadores – Azure Arc** e, em seguida, selecione o botão **OK**.
+    >**Observação:** Se você não vir **Máquinas - Azure Arc** listado, certifique-se de ter concluído o Caminho de Aprendizagem 3 - Laboratório 1 - Exercício 1 Tarefa 4..
 
 1. Selecione qualquer recomendação cujo status não seja *"Concluído"*.
 
-1. Leia a recomendação e role para baixo até **selecionar** a caixa de seleção WINServer. **Dica:** Talvez seja necessário expandir e rolar para baixo nos **Recursos afetados** para exibi-la.
+1. Revise a recomendação e na guia **Executar ação** role para baixo até **Delegar** e selecione **Atribuir proprietário e definir data de vencimento**.
 
-1. Selecione **Atribuir proprietário** e, em seguida, expanda os **Detalhes da atribuição**.
+1. Na janela **Criar atribuição**, deixe *Tipo* definido como *Microsoft Defender para Nuvem* e expanda os **Detalhes da atribuição**.
 
 1. Na caixa `Set owner` *Endereço de email*, digite o seu email de administrador. **Dica:** você pode copiá-lo nas instruções na guia *Recursos*.
 
@@ -90,7 +88,7 @@ Nesta tarefa, você revisará o gerenciamento da postura de segurança da nuvem.
 
 ### Tarefa 3: mitigar alertas de segurança
 
-Nesta tarefa, você carregará alertas de segurança de exemplo e revisará os detalhes do alerta.
+Nessa tarefa, você carregará exemplos de alertas de segurança e revisará os detalhes do alerta.
 
 
 1. Em *Geral*, selecione **Alertas de segurança** no menu do portal.
