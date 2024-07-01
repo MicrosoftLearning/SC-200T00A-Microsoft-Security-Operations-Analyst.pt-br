@@ -10,25 +10,25 @@ lab:
 
 ![M365 Defender](../Media/SC-200-Lab_M1_L1_Ex1.png)
 
-Você é um analista de operações de segurança que trabalha em uma empresa que está implantando o Microsoft Defender XDR. Você começa atribuindo políticas de segurança predefinidas na EOP e no Microsoft Defender para Office 365.
+Você é um analista de operações de segurança que trabalha em uma empresa que está implantando o Microsoft Defender XDR. Comece atribuindo políticas de segurança predefinidas usadas na EOP (Proteção do Exchange Online) e no Microsoft Defender para Office 365.
 
->**Observação:** uma **[simulação de laboratório interativa](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Explore%20Microsoft%20365%20Defender)** está disponível e permite que você clique neste laboratório no seu próprio ritmo. Você pode encontrar pequenas diferenças entre a simulação interativa e o laboratório hospedado, mas os principais conceitos e ideias que estão sendo demonstrados são os mesmos.
+>**Observação:** há uma **[simulação interativa de laboratório](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Explore%20Microsoft%20365%20Defender)** disponível que permite que você clique neste laboratório no seu próprio ritmo. Você pode encontrar pequenas diferenças entre a simulação interativa e o laboratório hospedado, mas os principais conceitos e ideias que estão sendo demonstrados são os mesmos.
 
 >**Observação:** **Locatários do WWL – Termos de uso** Se você estiver recebendo um locatário como parte de uma entrega de treinamento com instrutor, observe que o locatário é disponibilizado com a finalidade de dar suporte aos laboratórios práticos no treinamento com instrutor. Os locatários não devem ser compartilhados ou usados para fins fora dos laboratórios práticos. O locatário usado neste curso é um locatário de avaliação e não pode ser usado ou acessado após o fim da aula e não está qualificado para extensão. Os locatários não podem ser convertidos em uma assinatura paga. Os locatários obtidos como parte deste curso permanecem a propriedade da Microsoft Corporation e reservamos o direito de obter acesso e a qualquer momento. 
 
 
 ### Tarefa 1: obter suas credenciais do Microsoft 365
 
-Depois de iniciar o laboratório, um locatário de avaliação gratuita será disponibilizado para você acessar no ambiente de laboratório virtual da Microsoft. Esse locatário receberá automaticamente um nome de usuário e uma senha exclusivos. Você deve recuperar esse nome de usuário e senha para poder entrar no Azure e no Microsoft 365 no ambiente de laboratório virtual da Microsoft. 
+Depois de iniciar o laboratório, um locatário de avaliação gratuita será disponibilizado para você acessar no ambiente do Laboratório Virtual da Microsoft. Esse locatário recebe automaticamente um nome de usuário e uma senha exclusivos. Você deve recuperar esse nome de usuário e senha para poder entrar no Azure e no Microsoft 365 no ambiente de laboratório virtual da Microsoft. 
 
 Como esse curso pode ser oferecido por parceiros de aprendizagem que usam qualquer um dos vários provedores de Hospedagem de laboratório autorizado (ALH), as etapas reais envolvidas para recuperar o ID do locatário associado ao seu locatário podem variar de acordo com o provedor de hospedagem de laboratório. Portanto, seu instrutor fornecerá as instruções necessárias sobre como recuperar essas informações para o seu curso. As informações que você deve observar para uso posterior incluem:
 
-- **ID do sufixo do locatário.** Esse ID é para as contas onmicrosoft.com que você usará para entrar no Microsoft 365 em todos os laboratórios. Isso está no formato de **{username}@ZZZZZZ.onmicrosoft.com**, em que ZZZZZZ é o ID de sufixo de locatário exclusivo fornecido pelo provedor de hospedagem do laboratório. Grave esse valor ZZZZZZ para usar mais tarde. Quando qualquer uma das etapas do laboratório direcioná-lo para entrar em portais do Microsoft 365, você deve inserir o valor ZZZZZZ que obtido aqui.
+- **ID do sufixo do locatário.** Essa ID é para as contas onmicrosoft.com que você usará para entrar no Microsoft 365 em todos os laboratórios. Isso está no formato de **{username}@ZZZZZZ.onmicrosoft.com**, em que ZZZZZZ é o ID de sufixo de locatário exclusivo fornecido pelo provedor de hospedagem do laboratório. Grave esse valor ZZZZZZ para usar mais tarde. Quando qualquer uma das etapas do laboratório direcioná-lo para entrar em portais do Microsoft 365, você deve inserir o valor ZZZZZZ que obtido aqui.
 - **Senha do locatário.** Essa é a senha da conta de administrador fornecida pelo provedor de hospedagem do laboratório.
 
 ### Tarefa 2: aplicar políticas de segurança predefinidas no Microsoft Defender para Office 365
 
-Nesta tarefa, você atribuirá políticas de segurança predefinidas à Proteção do Exchange Online (EOP) e ao Microsoft Defender para Office 365 no portal de segurança do Microsoft 365.
+Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP (Proteção do Exchange Online) e o Microsoft Defender para Office 365 no portal de segurança do Microsoft 365.
 
 1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
@@ -60,7 +60,7 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas à Proteç�
 
 1. Na seção *Aplicar Proteção do Exchange Online*, selecione **Destinatários específicos** e, em **Domínios**, comece a escrever o nome de domínio do locatário, selecione-o e clique em **Avançar**.
 
-    >**Dica:** o nome de domínio de seu locatário é o mesmo que você tem para sua conta de administrador, que pode ser algo como *WWLx######.onmicrosoft.com*. Observe que essa configuração aplica políticas para antispam, filtro de spam de saída, antimalware e antiphishing.
+    >**Dica:** O nome de domínio do locatário é o mesmo nome que você tem para sua conta de administrador, pode ser algo como *WWLx######.onmicrosoft.com*. Observe que essa configuração aplica políticas para antispam, filtro de spam de saída, antimalware e antiphishing.
 
 1. Na seção *Aplicar proteção do Defender para Office 365*, aplique a mesma configuração da etapa anterior e clique em **Avançar**. Observe que essa configuração aplica políticas para antiphishing, anexos seguros e links seguros.
 
@@ -96,10 +96,10 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas à Proteç�
 
 1. Role para baixo os itens de menu para **Ativos** e selecione **Dispositivos**.
 
-1. O processo para implantar o workspace do Defender XDR deve ser iniciado e você deverá ver mensagens informando que *carregar e inicializar* será exibida brevemente na parte superior da página e, em seguida, você verá uma imagem de uma caneca de café e uma mensagem que diz: **Espere um pouco. Estamos preparando novos espaços para seus dados e conectando-os.** A conclusão levará aproximadamente 5 minutos. *Deixe a página aberta e certifique-se de que ela conclua, pois ela será necessária para o próximo laboratório.*
+1. O processo para implantar o workspace do Defender XDR deve ser iniciado e você deverá ver mensagens informando que *carregar e inicializar* será exibida brevemente na parte superior da página e, em seguida, você verá uma imagem de uma caneca de café e uma mensagem que diz: **Espere um pouco. Estamos preparando novos espaços para seus dados e conectando-os.** O laboratório leva cerca de cinco minutos para ser concluído. *Deixe a página aberta e certifique-se de que ela seja concluída, pois ela é necessária para o próximo Laboratório.*
 
-    >**Observação:** se a mensagem "Espere! Estamos preparando novos espaços para seus dados e conectando-os" não aparece ou a página "Configurações > Microsoft Defender XDR > Conta" é aberta, mas você vê a mensagem "Falha ao carregar o local de armazenamento de dados. Tente novamente mais tarde", selecione "Configurações do serviço de alerta" no menu "Geral" ou vá para o menu de navegação, role para baixo até a seção "Ativos" e selecione "Dispositivos".
+    >**Observação:** Desconsidere as mensagens de erro pop-up informando que *Alguns de seus dados não podem ser recuperados*. Se a mensagem "Espere! Estamos preparando novos espaços para seus dados e conectando-os" não aparece ou a página "Configurações > Microsoft Defender XDR > Conta" é aberta, mas você vê a mensagem *Falha ao carregar o local de armazenamento de dados. Tente novamente mais tarde*, selecione "Configurações de serviço de alerta" no menu "Geral".
 
-1. Quando o novo espaço for concluído com êxito, você verá as configurações gerais do Microsoft Defender XDR para conta, notificações por email, configurações de serviço de alerta, permissões e funções e API de Streaming. Você também verá a **Visualização dos recursos** ativada.
+1. Quando o novo espaço for concluído com êxito, você verá as configurações gerais do Microsoft Defender XDR para conta, notificações por email, configurações de serviço de alerta, permissões e funções e API de Streaming. Você também verá as **Versões Prévias dos Recursos** ativadas.
 
 ## Você concluiu o laboratório
