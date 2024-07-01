@@ -26,7 +26,7 @@ Nesta tarefa, você confirmará se o dispositivo foi integrado com êxito e cria
 
     >**Observação:** se você tiver concluído o processo de integração e não vir dispositivos na lista de dispositivos após uma hora, isso pode indicar um problema de integração ou de conectividade.
 
-1. Selecione **Configurações** na barra de menus à esquerda e, na página Configurações, selecione **Pontos de extremidade**.
+1. Na barra de menus esquerda do portal do Microsoft Defender XDR, expanda a seção **Sistema** e selecione **Configurações**e, na página *Configurações*, selecione **Pontos de Extremidade**.
 
 1. Selecione **Integração** na seção Gerenciamento de dispositivo e verifique se *"Windows 10 e 11"* está selecionado como sistema operacional. A mensagem *"Primeiro dispositivo integrado"* agora mostra *Concluído*.
 
@@ -44,9 +44,11 @@ Nesta tarefa, você confirmará se o dispositivo foi integrado com êxito e cria
 
 Nesta tarefa, você investigará os alertas e incidentes gerados pelo script de teste de detecção de integração na tarefa anterior.
 
-1. No portal do Microsoft Defender XDR, selecione **Incidentes e alertas** na barra de menus à esquerda e, em seguida, selecione **Alertas**.
+1. No portal do Microsoft Defender XDR, expanda **Investigação e resposta** da barra de menus à esquerda, expanda **Incidentes e alertas** e selecione **Alertas**.
 
-1. No painel **Alertas**, selecione o alerta chamado *Linha de comando suspeita do PowerShell* para carregar seus detalhes.
+    >**Observação:** Em versões atualizadas da página do portal do Microsoft Defender XDR, *Incidentes e alertas* são encontrados no cabeçalho do menu *Investigações e resposta*.
+
+1. No painel **Alertas**, selecione o alerta chamado *[TestAlert] Linha de comando suspeita do PowerShell* para carregar os detalhes dele.
 
 1. Examine a linha do tempo da *História do alerta* e examine as guias *Detalhes* e *Recomendações*.
 
@@ -54,7 +56,9 @@ Nesta tarefa, você investigará os alertas e incidentes gerados pelo script de 
 
 1. No portal do Microsoft Defender XDR, selecione **Incidentes e alertas** na barra de menus à esquerda e selecione **Incidentes**
 
-1. Um novo incidente chamado *Incidente de execução em um ponto de extremidade* está no painel à direita. Selecione o nome do incidente para carregar seus detalhes.
+1. Desmarque o filtro de *Severidade de alerta* selecionando o **X** à direita do filtro.
+
+1. Um novo incidente chamado *[TestAlert] Linha de comando suspeita do PowerShell* aparece no painel direito. Selecione o nome do incidente para carregar seus detalhes.
 
 1. Selecione o link **Gerenciar incidente** (com um ícone de lápis) e uma nova folha de janela será exibida.
 
@@ -90,15 +94,19 @@ Nesta tarefa, você simulará um ataque à máquina virtual WIN1 e verificará s
     $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
     ```
 
-    >**Observação:** Se ocorrerem erros (em vermelho) durante a execução do script, abra o aplicativo Bloco de Notas e copie o script em um arquivo em branco. Certifique-se de que a *quebra automática de linha* esteja ativada no Bloco de Notas. Então, copie e execute cada linha do script separadamente no PowerShell. Além disso, um script do PowerShell (attacksim.ps1) foi fornecido nos arquivos baixados no início dos laboratórios. Para usar o script, no **Windows PowerShell (Administrador)** navegue até a pasta *\Users\Admin\Desktop* e digite *.\attacksim.ps1* e pressione **Enter** para executá-lo.
+    >**Observação:** Se ocorrerem erros (em vermelho) durante a execução do script, abra o aplicativo Bloco de Notas e copie o script em um arquivo em branco. Certifique-se de que a *quebra automática de linha* esteja ativada no Bloco de Notas. Então, copie e execute cada linha do script separadamente no PowerShell. Além disso, um script do PowerShell (attacksim.ps1) foi fornecido nos arquivos baixados no início dos laboratórios. Para usar o script, no **Windows PowerShell (Administrador)** navegue até a pasta *\Users\Admin\Desktop*, digite *.\attacksim.ps1* e pressione **Enter** para executá-lo.
 
 1. O script produzirá várias linhas de saída e uma mensagem informando que ele *Falhou ao resolver controladores de domínio no domínio*. Alguns segundos depois, o aplicativo *Bloco de Notas* será aberto. Um código de ataque simulado será injetado no Bloco de Notas. Mantenha a instância do Bloco de Notas gerada automaticamente aberta para experimentar o cenário completo. O código de ataque simulado tentará se comunicar com um endereço IP externo (simulando um servidor C2).
 
 ### Tarefa 4: Investigar o ataque simulado como um único incidente
 
-1. No portal do Microsoft Defender XDR, selecione **Incidentes e alertas** na barra de menus à esquerda e selecione **Incidentes**
+1. No portal do Microsoft Defender XDR, expanda **Investigação e resposta** da barra de menus à esquerda, expanda **Incidentes e alertas** e selecione **Incidentes**.
+
+    >**Observação:** Em versões atualizadas da página do portal do Microsoft Defender XDR, *Incidentes e alertas* são encontrados no cabeçalho do menu *Investigações e resposta*.
 
 1. Um novo incidente chamado *Incidente de vários estágios envolvendo evasão de defesa e descoberta em um ponto de extremidade* está no painel direito. Selecione o nome do incidente para carregar seus detalhes.
+
+    >**Observação:** Se você não vir o incidente, desmarque o filtro de *Severidade de alerta* selecionando o **X** à direita do filtro.
 
 1. Na guia *Histórico do ataque*, recolha os painéis de **Alertas** e **Detalhes do incidente** para exibir o **Grafo de incidentes** completo.
 
