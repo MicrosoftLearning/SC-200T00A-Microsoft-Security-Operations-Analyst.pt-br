@@ -85,7 +85,7 @@ Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 
 1. Analise os recursos do Azure que agora estão protegidos com os planos do Defender para Nuvem.
 
-    >**Importante:** se todos os planos do Defender estiverem *desativados*, selecione **Habilitar todos os planos** e clique em **Salvar**. Aguarde até que a notificação *"O planejamento de recursos na assinatura do Azure Pass foi salvo com êxito!"* seja exibida.
+    >**Importante:** Se todos os planos do Defender estiverem *Desativados*, selecione **Habilitar todos os planos**. Selecione o *Plano 1 do Microsoft Defender para APIs de US$ 200/mês* e selecione **Salvar**. Selecione **Salvar** na parte superior da página e aguarde que as notificações *"Os planos do Defender para sua assinatura foram salvos com sucesso!"* sejam exibidas.
 
 1. Selecione a guia **Configurações e monitoramento** na área Configurações (ao lado de Salvar).
 
