@@ -12,6 +12,8 @@ lab:
 
 Você é um analista de operações de segurança que trabalha em uma empresa que implantou o Microsoft Defender XDR e o Microsoft Sentinel. Você precisa se preparar para a Plataforma de Operações de Segurança Unificada conectando o Microsoft Sentinel ao Defender XDR. A próxima etapa será instalar a solução do Hub de Conteúdo do Defender XDR e implantar o conector de dados do Defender XDR no Microsoft Sentinel.
 
+>**Importante:** Lembre-se de que há diferenças de funcionalidade entre o portal do Microsoft Sentinel do Azure e o Sentinel no portal do Microsoft Defender XDR **[Diferenças de funcionalidade do Portal](https://learn.microsoft.com/azure/sentinel/microsoft-sentinel-defender-portal#capability-differences-between-portals)**.
+
 ### Tarefa 1: Microsoft Defender XDR
 
 Nesta tarefa, você implantará o conector do Microsoft Defender XDR.
