@@ -84,7 +84,7 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP 
 
 1. Leia o conteúdo em *Revisar e confirmar suas alterações* e clique em **Confirmar** para aplicar as alterações. Depois, clique em **Concluído** para concluir.
 
-    >**Observação:** se você receber a mensagem *"O URI ''https://outlook.office365.com/psws/service.svc/AntiPhishPolicy" não é válido para a operação PUT. O URI deve apontar para um único recurso para operações PUT."*, Selecione **OK** e, em seguida, selecione **Cancelar** para retornar à página principal. Você verá que a opção *Proteção estrita está ativada* está habilitada.
+    >**Observação:** se você receber a mensagem *"O URI ''<https://outlook.office365.com/psws/service.svc/AntiPhishPolicy>" não é válido para a operação PUT. O URI deve apontar para um único recurso para operações PUT."*, Selecione **OK** e, em seguida, selecione **Cancelar** para retornar à página principal. Você verá que a opção *Proteção estrita está ativada* está habilitada.
 
 ### Tarefa 3: Preparar o workspace do Microsoft Defender XDR
 
@@ -92,14 +92,12 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP 
 
     >**Observação:** talvez seja necessário rolar até o topo do menu.
 
-1. Na página **Inicial ** do portal, a faixa **Obtenha SIEM e XDR em um só lugar** é exibida.
-
 1. Role para baixo os itens de menu para **Ativos** e selecione **Dispositivos**.
 
 1. O processo para implantar o workspace do Defender XDR deve ser iniciado e você deverá ver mensagens informando que *carregar e inicializar* será exibida brevemente na parte superior da página e, em seguida, você verá uma imagem de uma caneca de café e uma mensagem que diz: **Espere um pouco. Estamos preparando novos espaços para seus dados e conectando-os.** O laboratório leva cerca de cinco minutos para ser concluído. *Deixe a página aberta e certifique-se de que ela seja concluída, pois ela é necessária para o próximo Laboratório.*
 
     >**Observação:** Desconsidere as mensagens de erro pop-up informando que *Alguns de seus dados não podem ser recuperados*. Se a mensagem "Espere! Estamos preparando novos espaços para seus dados e conectando-os" não aparece ou a página "Configurações > Microsoft Defender XDR > Conta" é aberta, mas você vê a mensagem *Falha ao carregar o local de armazenamento de dados. Tente novamente mais tarde*, selecione "Configurações de serviço de alerta" no menu "Geral".
 
-1. Quando o novo espaço for concluído com êxito, você verá as configurações gerais do Microsoft Defender XDR para conta, notificações por email, configurações de serviço de alerta, permissões e funções e API de Streaming. Você também verá as **Versões Prévias dos Recursos** ativadas.
+1. Quando a inicialização do novo workspace for concluída, a página do portal **Página Inicial** exibirá um banner **Tenha o SIEM e o XDR em um só lugar**. E, em **Configurações**, as configurações gerais do Microsoft Defender XDR para Conta, Notificações por email, **Recursos de visualização**, Configurações do serviço de alerta, Permissões e funções e API de streaming agora estão ativadas.
 
 ## Você concluiu o laboratório

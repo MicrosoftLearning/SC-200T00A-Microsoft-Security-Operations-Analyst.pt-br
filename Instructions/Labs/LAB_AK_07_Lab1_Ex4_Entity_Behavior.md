@@ -35,13 +35,13 @@ Nesta tarefa, você explorará a Análise de comportamento da entidade no Micros
 
 1. No pop-up de *Configurações de comportamento da entidade*, selecione **Definir UEBA**.
 
-1. Na próxima página, selecione **Definir UEBA**.
+1. Na guia *Configurações*, em *Análise de comportamento da entidade*, selecione **Definir UEBA**.
 
 1. Analise as três etapas de pré-requisito para habilitar a análise do comportamento da entidade.
 
 1. Feche a página de *Configuração do comportamento da entidade* selecionando o "x" no canto superior direito da página.
 
-1. Role para baixo na página *Configurações* e leia o parágrafo *Anomalias*.
+1. Role para baixo na página *Configurações* até a seção *Anomalias* e leia o parágrafo.
 
 1. Selecione **Ir para análise para configurar as anomalias**.
 
@@ -74,7 +74,7 @@ Nesta tarefa, você confirmará se as regras de análise de anomalias estão hab
 
 1. Defina o valor como **1** e então selecione **Avançar: Enviar comentários**.
 
-1. Selecione **Avançar: Examinar** e depois **Salvar** para atualizar a regra.
+1. Selecione **Avançar: Revisar e criar** e depois **Salvar** para atualizar a regra.
 
     >**Observação:** você pode atualizar a regra **Disponibilizar versão piloto** para **Produção** alterando a configuração dessa regra e salvando as alterações. A regra de **Produção** se tornará a regra **Disponibilizar versão piloto** posteriormente.
     

@@ -23,7 +23,7 @@ Nessa tarefa, você revisará a configuração de conformidade regulamentar no M
 
 1. Faça logon na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
 
-1. No navegador Microsoft Edge, abra o portal do Azure em (https://portal.azure.com).
+1. No navegador Microsoft Edge, abra o portal do Azure em <https://portal.azure.com>.
 
 1. Na caixa de diálogo **Entrar**, copie e cole na conta **Email do locatário** fornecida pelo provedor de hospedagem de laboratório e selecione **Avançar**.
 
@@ -39,7 +39,7 @@ Nessa tarefa, você revisará a configuração de conformidade regulamentar no M
 
     >**Dica:** Selecione **Expandir tudo** para localizar sua assinatura se você tiver uma hierarquia de Grupos de Gerenciamento.
 
-1. Em *Configurações*, selecione **política de segurança** no menu do portal.
+1. Em *Configurações*, selecione **Políticas de segurança** no menu do portal.
 
 1. Role para baixo e revise os "Padrões de segurança" disponíveis por padrão.
 

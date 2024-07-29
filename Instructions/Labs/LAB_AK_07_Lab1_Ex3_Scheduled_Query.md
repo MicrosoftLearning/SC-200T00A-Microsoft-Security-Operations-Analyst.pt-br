@@ -68,7 +68,7 @@ Nesta tarefa, você irá criar uma consulta agendada e a conectá-la ao canal do
 
 1. Selecione o botão **Próximo: Resposta automatizada >**.
 
-1. Na guia *Resposta automatizada*, em *Regras de automação*, selecione **Adicionar novo**.
+1. Na guia *Resposta automatizada*, em *Regras de automação*, selecione **+ Adicionar novo**.
 
 1. Para *Nome da regra de automação*, insira **Nível 2**.
 
@@ -129,7 +129,7 @@ Nesta tarefa, você testará sua nova regra de consulta agendada.
 
 1. Selecione o Incidente e revise as informações na folha direita.
 
-1. Volte para o Microsoft Teams selecionando a guia no navegador Microsoft Edge. Se você o fechou, basta abrir uma nova aba e digitar https://teams.microsoft.com. Acesse o Teams *SOC*, selecione o canal *Novos alertas* e veja o post da mensagem sobre o incidente.
+1. Volte para o Microsoft Teams selecionando a guia no navegador Microsoft Edge. Se você o fechou, basta abrir uma nova aba e digitar <https://teams.microsoft.com>. Acesse o Teams *SOC*, selecione o canal *Novos alertas* e veja o post da mensagem sobre o incidente.
 
 
 ## Prossiga para o Exercício 4
