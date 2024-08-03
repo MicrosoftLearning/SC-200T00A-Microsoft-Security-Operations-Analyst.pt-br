@@ -80,14 +80,14 @@ Nesta tarefa, você criará uma detecção para o primeiro ataque do exercício 
 
 1. Clique no botão **Avançar: Definir lógica da regra >**.
 
-1. Na guia *Definir lógica de regra*, a *Consulta de regra* já deve estar preenchida com a consulta KQL, bem como as entidades em *Aprimoramento de alerta – Mapeamento de entidade*.
+1. Na guia *Definir lógica de regra*, a *Consulta de regra* já deverá estar preenchida com sua consulta KQL.
+
+1. Configure as entidades em *Aprimoramento de alerta – Mapeamento de entidade* usando os parâmetros na tabela abaixo.
 
     |Entity|Identificador|Campo de dados|
     |:----|:----|:----|
     |Conta|FullName|AccountCustomEntity|
     |Host|Nome do host|HostCustomEntity|
-
-1. Se a opção **Nome do host** não estiver selecionada em *Entidade de Host*, selecione-a na lista suspensa e use os parâmetros da tabela anterior para preencher os campos.
 
 1. Para *Agendamento de consulta*, defina o seguinte:
 

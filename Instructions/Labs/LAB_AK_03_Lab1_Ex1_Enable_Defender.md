@@ -10,9 +10,9 @@ lab:
 
 ![Visão geral do laboratório.](../Media/SC-200-Lab_Diagrams_Mod3_L1_Ex1.png)
 
-Você é um analista de operações de segurança e trabalha em uma empresa que está implementando a proteção de cargas de trabalho de nuvem com o Microsoft Defender para Nuvem.  Neste laboratório, você habilitará o Microsoft Defender para Nuvem.
+Você é um analista de operações de segurança e trabalha em uma empresa que está implementando a proteção de cargas de trabalho de nuvem com o Microsoft Defender para Nuvem. Neste laboratório, você habilitará o Microsoft Defender para Nuvem.
 
->**Observação:** uma **[simulação de laboratório interativa](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Enable%20Microsoft%20Defender%20for%20Cloud)** está disponível e permite que você clique neste laboratório no seu próprio ritmo. Você pode encontrar pequenas diferenças entre a simulação interativa e o laboratório hospedado, mas os principais conceitos e ideias que estão sendo demonstrados são os mesmos. 
+>**Observação:** há uma **[simulação interativa de laboratório](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Enable%20Microsoft%20Defender%20for%20Cloud)** disponível que permite que você clique neste laboratório no seu próprio ritmo. Você pode encontrar pequenas diferenças entre a simulação interativa e o laboratório hospedado, mas os principais conceitos e ideias que estão sendo demonstrados são os mesmos. 
 
 
 ### Tarefa 1: acessar o portal do Azure e configurar uma assinatura
@@ -23,7 +23,7 @@ Nesta tarefa, você configurará uma assinatura do Azure necessária para conclu
 
 1. Abra o navegador Microsoft Edge ou uma nova guia, caso ela já estiver aberta.
 
-1. No navegador Edge, acesse o portal do Azure em (https://portal.azure.com).
+1. No navegador Microsoft Edge, acesse o portal do Azure em <https://portal.azure.com>.
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
@@ -50,7 +50,7 @@ Nesta tarefa, você configurará uma assinatura do Azure necessária para conclu
 
 ### Tarefa 2: criar um workspace do Log Analytics
 
-Nesta tarefa, você criará um workspace do Log Analytics para uso com o Microsoft Defender para Nuvem.
+Nesta tarefa, você criará um workspace do Log Analytics para uso com o Azure Monitoring, o Microsoft Sentinel e o Microsoft Defender para Nuvem.
 
 1. Na barra de pesquisa do portal do Azure, digite *workspace do Log Analytics* e selecione o mesmo nome de serviço.
 
@@ -108,9 +108,9 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
 >**Importante:** As próximas etapas são feitas em uma máquina diferente daquela que você estava trabalhando anteriormente. Procure as referências de nome da máquina virtual.
 
-1. Faça logon na máquina virtual **WINServer** como Administrador com a senha: **Passw0rd!** se necessário.  
+1. Faça logon na máquina virtual **WINServer** como Administrador com a senha: **Passw0rd!** Se necessário.  
 
-1. Abra o navegador Microsoft Edge e acesse o portal do Azure em https://portal.azure.com.
+1. Abra o navegador Microsoft Edge e acesse o portal do Azure em <https://portal.azure.com>.
 
 1. Na caixa de diálogo **Entrar**, copie e cole na conta **Email do locatário** fornecida pelo provedor de hospedagem de laboratório e selecione **Avançar**.
 
@@ -136,7 +136,7 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
 1. Revise as marcas padrão disponíveis. Selecione **Avançar** para acessar a guia Baixar e executar script.
 
-1. Role a página para baixo e clique no botão **Download**. **Dica:** se o seu navegador bloquear o download, execute uma ação no navegador para permiti-lo. No Navegador Edge, clique no botão de reticências (...) se necessário e depois selecione **Manter**.
+1. Role a página para baixo e clique no botão **Download**. **Dica:** se o seu navegador bloquear o download, execute uma ação no navegador para permiti-lo. No navegador Microsoft Edge, clique no botão de reticências (...) se necessário e depois em **Manter**.
 
 1. Clique com o botão direito do mouse no botão Iniciar do Windows e selecione **Windows PowerShell (Administrador)**.
 
@@ -156,7 +156,7 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
 1. Insira **R** para Executar uma vez e pressione Enter (isso pode levar alguns minutos).
 
-1. O processo de instalação abrirá uma nova guia do navegador Edge para autenticar o agente do Azure Arc. Selecione sua conta de administrador, aguarde a mensagem "Autenticação concluída" e volte para a janela do Windows PowerShell.
+1. O processo de instalação abrirá uma nova guia do navegador Microsoft Edge para autenticar o agente do Azure Arc. Selecione sua conta de administrador, aguarde a mensagem "Autenticação concluída" e volte para a janela do Windows PowerShell.
 
 1. Quando a instalação for concluída, volte para a página do portal do Azure onde você baixou o script e selecione **Fechar**. Feche a página **Adicionar servidores com o Azure Arc** para voltar à página **Máquinas** do Azure Arc.
 
@@ -167,7 +167,7 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
 ### Tarefa 5: proteger um servidor local
 
-Nesta tarefa, você instalará manualmente o *Agente do Azure Monitor* adicionando uma *Regra de coleta de dados (DCR)* na máquina virtual **WINServer**.
+Nesta tarefa, você instalará manualmente o *Agente do Azure Monitor* adicionando uma *DCR (Regra de coleta de dados)* na máquina virtual **WINServer**.
 
 1. Vá para **Microsoft Defender para Nuvem** e selecione a página **Introdução** no menu esquerdo.
 
@@ -175,7 +175,7 @@ Nesta tarefa, você instalará manualmente o *Agente do Azure Monitor* adicionan
 
 1. Role para baixo e selecione **Configurar** na seção *Adicionar servidores que não sejam do Azure*.
 
-1. Selecione **Upgrade** ao lado do workspace criado anteriormente. Isso pode levar alguns minutos, então aguarde até que você veja a notificação *"Plano do Microsoft Defender para workspace uniquenameDefender foi salvo com êxito!"*.
+1. Selecione **Upgrade** ao lado do workspace criado anteriormente. Isso pode levar alguns minutos. Aguarde até que você veja a notificação *"O plano do Microsoft Defender para o workspace uniquenameDefender foi salvo."*.
 
 1. Selecione **+ Adicionar servidores** ao lado do workspace criado anteriormente.
 
@@ -189,7 +189,7 @@ Nesta tarefa, você instalará manualmente o *Agente do Azure Monitor* adicionan
 
 1. Você pode manter a região padrão *Leste dos EUA* ou selecionar outro local preferencial.
 
-1. Selecione o botão de opção do **Windows** para *Tipo de plataforma* e selecione **Avançar: Recursos**.
+1. Clique no botão de opção do **Windows** em *Tipo de plataforma* e selecione **Avançar: Recursos**.
 
 1. Na guia **Recursos**, selecione **+ Adicionar recursos**.
 
@@ -197,7 +197,7 @@ Nesta tarefa, você instalará manualmente o *Agente do Azure Monitor* adicionan
 
     >**Observação:** talvez seja necessário definir o filtro de coluna para *Tipo de recurso* como *Server-Azure Arc* se o **WINServer** não for exibido.
 
-1. Selecione **Avançar: Coletar e entregar**
+1. Selecione **Avançar: Coletar e entregar**.
 
 1. Na guia **Coletar e entregar**, selecione **+ Adicionar fonte de dados**
 
@@ -205,7 +205,7 @@ Nesta tarefa, você instalará manualmente o *Agente do Azure Monitor* adicionan
 
     >**Observação:** para a finalidade deste laboratório, você pode selecionar *Logs de eventos do Windows*. Essas seleções podem ser revisadas posteriormente.
 
-1. Clique na guia **Destino**
+1. Selecione a guia **Destino**
 
 1. Selecione **Logs do Azure Monitor** no menu suspenso **Tipo de destino**
 
@@ -213,7 +213,7 @@ Nesta tarefa, você instalará manualmente o *Agente do Azure Monitor* adicionan
 
 1. Selecione o nome do workspace **Dica:** *RG-Defender* do menu suspenso da **conta ou do namespace**
 
-1.  Selecione **Adicionar fonte de dados** e depois **Examinar + criar**
+1. Selecione **Adicionar fonte de dados** e depois **Examinar + criar**
 
 1. Depois que a mensagem *Validação aprovada* for exibida, selecione **Criar**.
 

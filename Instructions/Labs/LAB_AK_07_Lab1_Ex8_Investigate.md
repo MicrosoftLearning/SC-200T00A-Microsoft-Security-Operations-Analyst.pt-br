@@ -59,11 +59,11 @@ Nesta tarefa, você investigará um incidente.
 
 1. Revise a janela **Entidades**. Pelo menos a entidade *Host* que mapeamos na consulta KQL do exercício anterior deve aparecer. **Dica:** se nenhuma entidade aparecer, atualize a página.
 
-1. Selecione o novo botão **Tarefas (Visualização)** na barra de comandos.
+1. Selecione o novo botão **Tarefas** na barra de comandos.
 
 1. Selecione **+ Adicionar tarefa**, digite **Revisar quem é o proprietário da máquina** na caixa Título e selecione **Salvar**.
 
-1. Feche a folha *Tarefas de incidente (Visualização)* selecionando o ícone **x** no canto superior direito.
+1. Feche a folha *Tarefas de incidente* clicando no ícone **x** no canto superior direito.
 
 1. Selecione o novo botão **Log de atividades** na barra de comandos.
 

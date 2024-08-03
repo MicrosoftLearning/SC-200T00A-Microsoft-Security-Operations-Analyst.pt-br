@@ -64,8 +64,10 @@ Nessa tarefa, você revisará os analisadores de esquema de registro incluídos 
 
     >**Dica:** Digitar ctrl+f na janela de código traz *Find* e faz a busca por *EventID: 4657* muito fácil.
 
+1. Em *Logs*, abra uma guia Nova consulta.
+
 1. Volte para a folha *Esquema e Filtro* e agora passe o mouse sobre **_Im_RegistryEvent_MicrosoftWindowsEventxxx** *Analisador de filtragem ASIM de evento de registro para eventos do Microsoft Windows e eventos de segurança* e selecione **Usar no editor**.
 
-1. **Execute** a consulta da função ASIM. Você não deve obter nenhum resultado nem erros, é apenas para fins de validação.
+1. **Execute** a consulta da função ASIM. Se você concluiu os exercícios de laboratório anteriores, verá resultados e mensagens noerror.
 
 ## Prossiga para o Exercício 10

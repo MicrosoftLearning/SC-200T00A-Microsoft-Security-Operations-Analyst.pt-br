@@ -40,8 +40,6 @@ Nesta tarefa, você implantará o conector do Microsoft Defender XDR.
 
 1. Na página de detalhes da solução do *Microsoft Defender XDR*, selecione **Gerenciar**
 
->**Observação:** A solução *Microsoft Defender XDR* instala o conector de dados *Microsoft Defender XDR*, consultas de busca, Pastas de Trabalho e regras de análise.
-
 1. Marque a caixa de seleção do Conector de dados *Microsoft Defender XDR* e selecione **Abrir página do conector**.
 
 1. Na seção de *Configuração*, na guia *Instruções*, **desmarque** a caixa de seleção *Desativar todas as regras de criação de incidentes da Microsoft para esses produtos. Recomendado* e selecione o botão **Conectar incidentes e alertas**.
@@ -58,7 +56,7 @@ Nesta tarefa, você conectará um workspace do Microsoft Sentinel ao Microsoft D
 
 1. Inicie o navegador Microsoft Edge.
 
-1. No navegador Edge, acesse o portal do Microsoft Defender XDR em (https://security.microsoft.com).
+1. No navegador Edge, acesse o portal do Microsoft Defender XDR em <https://security.microsoft.com>.
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
@@ -80,7 +78,7 @@ Nesta tarefa, você conectará um workspace do Microsoft Sentinel ao Microsoft D
 
 1. Você deverá ver uma mensagem *Conectar o workspace* seguida por um workspace *conectado com êxito* mensagem.
 
-1. Selecione o botão **Fechar**. 
+1. Selecione o botão **Fechar**.
 
 1. Na tela **Inicial** do portal do **Defender XDR**, você deverá ver uma faixa na parte superior com a mensagem, *SIEM unificado e o XDR estiverem prontos*. Selecione o botão **Iniciar Busca**.
 
@@ -88,6 +86,6 @@ Nesta tarefa, você conectará um workspace do Microsoft Sentinel ao Microsoft D
 
 1. Expanda o painel de menu principal esquerdo se recolhido e expanda os novos itens de menu do **Microsoft Sentinel**. Você deverá ver *Gerenciamento de ameaças*, *Gerenciamento de conteúdo* e seleções de *Configuração*.
 
- >**Observação:** Alguns recursos podem não estar disponíveis na visualização pública e a interface do usuário pode ser diferente das instruções do laboratório. Além disso, a sincronização entre o Microsoft Sentinel e o Microsoft Defender XDR pode levar alguns minutos para ser concluída, portanto, talvez você não veja todos os *conectores de dados* instalados, por exemplo.
+ >**Observação:** a sincronização entre o Microsoft Sentinel e o Microsoft Defender XDR pode levar alguns minutos para ser concluída, portanto, talvez você não veja todos os *conectores de dados* instalados, por exemplo.
 
 ## Você concluiu o laboratório

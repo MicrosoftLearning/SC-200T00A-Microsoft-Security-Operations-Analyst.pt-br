@@ -25,7 +25,7 @@ Nesta tarefa, você criará uma consulta de busca, marcará um resultado e criar
 
 1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
-1. No navegador Edge, acesse o portal do Azure em https://portal.azure.com.
+1. No navegador Edge, acesse o portal do Azure em <https://portal.azure.com>.
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de **email do locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
@@ -56,7 +56,7 @@ Nesta tarefa, você criará uma consulta de busca, marcará um resultado e criar
 
 1. Marque a caixa de seleção dos resultados que mostra o *"-file c2.ps1"*.
 
-1. Na barra de comandos do meio, selecione o botão **Adicionar indicador**.
+1. Na barra de comandos do painel *Resultados*, clique no botão **Adicionar indicador**.
 
 1. Selecione **+ Adicionar nova entidade** em *Mapeamento de entidade*.
 
@@ -64,7 +64,7 @@ Nesta tarefa, você criará uma consulta de busca, marcará um resultado e criar
 
 1. Em *Táticas e técnicas*, selecione **Comando e controle**.
 
-1. Volte para a folha *Adicionar indicador* e selecione **Criar**. Mapearemos este indicador para um incidente mais tarde.
+1. Na folha *Adicionar indicador*, selecione **Criar**. Mapearemos este indicador para um incidente mais tarde.
 
 1. Feche a janela *Logs* selecionando o **X** no canto superior direito da janela e selecione **OK** para descartar as alterações. 
 
@@ -123,7 +123,7 @@ Nesta tarefa, você criará uma consulta de busca, marcará um resultado e criar
 
 1. Selecione **Adicionar a um incidente existente**. Todos os incidentes aparecem no painel direito.
 
-1. Selecione um dos incidentes e então clique em **Adicionar**. 
+1. Selecione um dos incidentes e então clique em **Adicionar**.
 
 1. Role para a esquerda para ver que a coluna *Severidade* agora está preenchida com os dados do incidente.
 
@@ -132,11 +132,11 @@ Nesta tarefa, você criará uma consulta de busca, marcará um resultado e criar
 
 Nesta tarefa, em vez de usar um LiveStream, você criará uma regra de consulta de análise NRT. As regras NRT são executadas a cada minuto e retrocedem um minuto. O benefício das regras NRT é que elas podem usar a lógica de criação de alertas e incidentes.
 
-1. Selecione a página **Análise** em *Configuração* no Microsoft Sentinel. 
+1. No Microsoft Sentinel, em *Configuração*, selecione a página **Análise**. 
 
-1. Selecione a guia **Criar** e, em seguida, a **Regra de consulta NRT (Visualização)**.
+1. Selecione a guia **Criar** e, em seguida, a **Regra de consulta NRT**.
 
-1. Isso abrirá o "Assistente de regra de análise". Para a regra *Geral*, digite:
+1. Isso abre o "Assistente de regras de análise". Para a regra *Geral*, digite:
 
     |Configuração|Valor|
     |---|---|
@@ -171,9 +171,11 @@ Nesta tarefa, em vez de usar um LiveStream, você criará uma regra de consulta 
     - Na lista suspensa *Identificador*, selecione **Nome do host**.
     - Na lista suspensa *Valor*, selecione **Computador**.
 
-1. Role para baixo e clique no botão **Avançar: Configurações de incidente >**.
+1. Role para baixo e selecione o botão **Avançar: Configurações de Incidentes>**.
 
-1. Para a guia *Configurações de incidente*, deixe os valores padrão e clique no botão **Avançar: Examinar e criar >**.
+1. Na guia *Configurações de Incidentes*, deixe os valores padrão e clique no botão **Avançar: Resposta automatizada >**.
+
+1. Na guia *Resposta automatizada*, clique no botão **Avançar: Revisar e criar >**.
 
 1. Na guia *Examinar e criar*, selecione o botão **Salvar** para criar e salvar a nova regra de Análise agendada.
 
