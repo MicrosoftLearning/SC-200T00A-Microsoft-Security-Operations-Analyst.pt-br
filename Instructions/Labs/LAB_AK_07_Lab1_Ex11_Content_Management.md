@@ -46,7 +46,7 @@ Nesta tarefa, você habilitará a análise do comportamento da entidade no Micro
 
 Nesta tarefa, você criará um repositório do Azure DevOps.
 
-1. Abra outra guia no navegador e navegue até (https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US).
+1. Abra outra guia no navegador e navegue até <https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US>.
 
 1. Na página *Precisamos de mais alguns detalhes*, selecione **Continuar**.
 
