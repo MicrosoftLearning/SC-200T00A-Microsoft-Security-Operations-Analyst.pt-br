@@ -88,4 +88,4 @@ Nesta tarefa, você conectará um workspace do Microsoft Sentinel ao Microsoft D
 
  >**Observação:** a sincronização entre o Microsoft Sentinel e o Microsoft Defender XDR pode levar alguns minutos para ser concluída, portanto, talvez você não veja todos os *conectores de dados* instalados, por exemplo.
 
-## Você concluiu o laboratório
+## Você concluiu o laboratório – Prossiga para o Roteiro de Aprendizagem 7 – Laboratório 1 – Exercício 2 – Criar um Guia Estratégico no Microsoft Sentinel
