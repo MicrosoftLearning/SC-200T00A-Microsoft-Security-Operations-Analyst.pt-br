@@ -1,6 +1,8 @@
 # Módulo 7 – Busca de ameaças no Microsoft Sentinel
 
-**Observação** A conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [Documento de pré-requisitos](00-prerequisites.md). 
+**Observação** A conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [Documento de pré-requisitos](00-prerequisites.md).
+
+**Importante:** esta demonstração não é necessária para o VTD-5002-FY25.
 
 ## Criar uma consulta de busca
 

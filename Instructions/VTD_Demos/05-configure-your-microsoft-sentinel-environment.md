@@ -1,6 +1,8 @@
 # Módulo 5: configurar seu ambiente do Microsoft Sentinel
 
-**Observação** A conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [Documento de pré-requisitos](00-prerequisites.md). 
+**Observação** A conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [Documento de pré-requisitos](00-prerequisites.md).
+
+**Importante:** esta demonstração não é necessária para o VTD-5002-FY25.
 
 ## Explorar a interface do Microsoft Sentinel
 

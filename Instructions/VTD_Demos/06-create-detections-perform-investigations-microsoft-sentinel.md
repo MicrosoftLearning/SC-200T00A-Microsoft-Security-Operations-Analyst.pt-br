@@ -1,6 +1,8 @@
 # Módulo 6: criar detecções e executar investigações com o Microsoft Sentinel
 
-**Observação**: a conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [documento de Pré-requisitos](00-prerequisites.md). 
+**Observação**: a conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [documento de Pré-requisitos](00-prerequisites.md).
+
+**Importante:** esta demonstração não é necessária para o VTD-5002-FY25.
 
 ## Criar uma regra de consulta NRT
 

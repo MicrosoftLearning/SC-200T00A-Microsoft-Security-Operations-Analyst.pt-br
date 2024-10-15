@@ -18,6 +18,8 @@ Os laboratórios deste curso exigem um locatário licenciado do Microsoft 365 E5
 
 ## Ativar o Azure Pass
 
+>**Observação:** há determinadas demonstrações que exigem uma assinatura do Azure conectada a um locatário do Microsoft 365 E5. Você pode usar sua própria assinatura do Azure e o locatário do Microsoft 365 E5 se os Azure Passes não estiverem disponíveis. Acesse o site do [Programa de Desenvolvedores do Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program/) para solicitar a associação e configurar uma assinatura gratuita do desenvolvedor do Microsoft 365 E5.
+
 ## Implantar o Defender para Ponto de Extremidade
 
 ### Obter suas credenciais do Microsoft 365
@@ -36,31 +38,29 @@ Nesta tarefa, você executará a inicialização do Microsoft Defender para Pont
 
 1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
-1. No navegador Edge, vá para o portal do Microsoft 365 Defender em (https://security.microsoft.com).
+1. No navegador Edge, vá para o portal do Microsoft Defender em (https://security.microsoft.com).
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
 1. Na caixa de diálogo **Inserir senha**, copie e cole a senha de locatário do administrador fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.
 
-No portal **Microsoft 365 Defender**, no menu de navegação, selecione **Início** à esquerda.
+No portal **Microsoft Defender**, no menu de navegação, selecione **Configurações** à esquerda.
 
     >**Note:** You may need to scroll all the way to the menu top.
 
-1. Na página de **Início** do portal, é exibida a mensagem **Bem-vindo ao Microsoft 365 Defender**.
+1. Na página de **Início** do portal, é exibida a mensagem **Bem-vindo ao Microsoft Defender**.
 
-1. Role para baixo nos blocos até encontrar o bloco denominado **Microsoft 365 Defender** com a mensagem **Ativar o Microsoft 365 Defender.**
+1. Role para baixo os itens de menu para **Ativos** e selecione **Dispositivos**.
 
-    >**Dica:** Deve estar na parte inferior direita dos blocos.
+1. O processo para implantar o workspace do Defender XDR deve ser iniciado e você deverá ver mensagens informando que *carregar e inicializar* será exibida brevemente na parte superior da página e, em seguida, você verá uma imagem de uma caneca de café e uma mensagem que diz: **Espere um pouco. Estamos preparando novos espaços para seus dados e conectando-os.** O laboratório leva cerca de cinco minutos para ser concluído. *Deixe a página aberta e certifique-se de que ela seja concluída, pois ela é necessária para o próximo Laboratório.*
 
-1. Selecione o botão que diz **Ativar novos recursos.**
+    >**Observação:** Desconsidere as mensagens de erro pop-up informando que *Alguns de seus dados não podem ser recuperados*. Se a mensagem "Espere! Estamos preparando novos espaços para seus dados e conectando-os" não aparece ou a página "Configurações > Microsoft Defender XDR > Conta" é aberta, mas você vê a mensagem *Falha ao carregar o local de armazenamento de dados. Tente novamente mais tarde*, selecione "Configurações de serviço de alerta" no menu "Geral".
 
-1. Você verá mensagens dizendo *Carregando e inicializando* exibidas brevemente na parte superior da página e, em seguida, verá uma imagem de uma caneca de café e uma mensagem que diz: **Aguarde! Estamos preparando novos espaços para seus dados e conectando-os.** A conclusão levará aproximadamente 5 minutos. *Deixe a página aberta e certifique-se de que ela conclua, pois ela será necessária para o próximo laboratório.*
-
-    >**Observação:** se a mensagem "Espere! Estamos preparando novos espaços para seus dados e conectando-os" não aparecer, ou a página "Configurações > Microsoft 365 Defender > Conta" for aberta, mas você vir a mensagem "Falha ao carregar o local de armazenamento de dados. Tente novamente mais tarde", selecione "Configurações do serviço de alerta" no menu "Geral" ou vá para o menu de navegação, role para baixo até a seção "Ativos" e selecione "Dispositivos".
+1. Quando a inicialização do novo workspace for concluída, a página do portal **Página Inicial** exibirá um banner **Tenha o SIEM e o XDR em um só lugar**. E, em **Configurações**, as configurações gerais do Microsoft Defender XDR para Conta, Notificações por email, **Recursos de visualização**, Configurações do serviço de alerta, Permissões e funções e API de streaming agora estão ativadas.
 
 1. Quando o novo espaço for concluído com êxito, você verá as configurações gerais do Microsoft 365 Defender para Conta, Notificações por email, Configurações do serviço de alerta, Permissões e funções e API de streaming. Você também verá a **Visualização dos recursos** ativada.
 
-**Observação**: no ambiente de laboratório hospedado, seu local de armazenamento de dados deve estar selecionado para você. Além disso, ele deve estar na área geográfica apropriada para o local onde esse locatário de treinamento é gerenciado. Você ainda pode selecionar a duração da Retenção de dados, mas isso não é necessário.
+    >**Observação**: no ambiente de laboratório hospedado, seu local de armazenamento de dados deve estar selecionado para você. Além disso, ele deve estar na área geográfica apropriada para o local onde esse locatário de treinamento é gerenciado. Você ainda pode selecionar a duração da Retenção de dados, mas isso não é necessário.
 
 1. Em **Configurações**, selecione **Pontos de extremidade**.
 
@@ -395,7 +395,6 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
     >**Observação:** este comando levará alguns minutos.
 
-
 ### Tarefa 6: proteger um servidor local
 
 Nesta tarefa, você adicionará uma máquina virtual Windows que não seja do Azure conectada ao Azure Arc ao Microsoft Sentinel.  
@@ -418,6 +417,37 @@ Nesta tarefa, você adicionará uma máquina virtual Windows que não seja do Az
 
 1. Depois que a mensagem *Validação aprovada* for exibida, selecione **Criar**.
 
+### Tarefa 7: Conectar o Defender XDR
+
+Nesta tarefa, você implantará o conector do Microsoft Defender XDR.
+
+1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
+
+1. No navegador Microsoft Edge, navegue até o portal do Azure em (<https://portal.azure.com>).
+
+1. Na caixa de diálogo **Entrar**, copie e cole na conta **Email do locatário** fornecida pelo provedor de hospedagem de laboratório e selecione **Avançar**.
+
+1. Na caixa de diálogo **Inserir senha**, copie e cole a **Senha de locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.
+
+1. Na barra de Pesquisa do portal do Azure, digite *Sentinel* e selecione **Microsoft Sentinel**.
+
+1. Selecione o workspace do Microsoft Sentinel que você criou anteriormente.
+
+1. No menu esquerdo do Microsoft Sentinel, role para baixo até a seção **Gerenciamento de conteúdo** e selecione **Hub de conteúdos**.
+
+1. No *Hub de Conteúdo*, pesquise a solução do **Microsoft Defender XDR** e selecione-a na lista.
+
+1. Na página de detalhes da solução do *Microsoft Defender XDR*, selecione **Instalar**.
+
+1. Quando a instalação for concluída, pesquise a solução do **Microsoft Defender XDR** e selecione-a.
+
+1. Na página de detalhes da solução do *Microsoft Defender XDR*, selecione **Gerenciar**
+
+1. Marque a caixa de seleção do Conector de dados *Microsoft Defender XDR* e selecione **Abrir página do conector**.
+
+1. Na seção de *Configuração*, na guia *Instruções*, **desmarque** a caixa de seleção *Desativar todas as regras de criação de incidentes da Microsoft para esses produtos. Recomendado* e selecione o botão **Conectar incidentes e alertas**.
+
+1. Você deve ver uma mensagem informando que a conexão foi bem-sucedida.
 
 <!--- ### Task 4: Connect the Microsoft Defender for Cloud connector.
 
