@@ -1,6 +1,8 @@
 # Módulo 3: Mitigar ameaças usando o Microsoft Defender para Nuvem
 
-**Observação** A conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [Documento de pré-requisitos](00-prerequisites.md). 
+**Observação:** a conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [Documento de pré-requisitos](00-prerequisites.md).
+
+**Importante:** esta demonstração não é necessária para o VTD-5002-FY25.
 
 ## Mitigar os alertas de segurança
 
