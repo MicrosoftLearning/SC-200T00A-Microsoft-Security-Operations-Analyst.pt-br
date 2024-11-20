@@ -14,13 +14,11 @@ Você é um analista de operações de segurança que trabalha em uma empresa qu
 
 Para explorar os recursos de mitigação de ataque do Defender para Ponto de Extremidade, você verificará a integração bem-sucedida do dispositivo e investigará alertas e incidentes criados durante esse processo.
 
->**Observação:** uma **[simulação de laboratório interativo](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** está disponível e permite que você clique neste laboratório em seu próprio ritmo. Você pode encontrar pequenas diferenças entre a simulação interativa e o laboratório hospedado, mas os principais conceitos e ideias que estão sendo demonstrados são os mesmos.
-
 ### Tarefa 1: verificar integração de dispositivos
 
 Nesta tarefa, você confirmará se o dispositivo foi integrado com êxito e criará um alerta de teste.
 
-1. Se você ainda não estiver no portal do Microsoft Defender XDR em seu navegador Microsoft Edge, acesse (https://security.microsoft.com) e faça logon como Administrador do seu locatário.
+1. Se você ainda não estiver no portal do Microsoft Defender XDR em seu navegador Microsoft Edge, acesse (<https://security.microsoft.com> e faça logon como Administrador do seu locatário.
 
 1. No menu à esquerda, na área **Ativos** , selecione **Dispositivos**. Aguarde até que WIN1 apareça na página Dispositivos antes de continuar. Caso contrário, talvez seja necessário repetir essa tarefa para ver os alertas que serão gerados posteriormente.
 
@@ -70,7 +68,7 @@ Nesta tarefa, você investigará os alertas e incidentes gerados pelo script de 
 
 1. Em **Atividade esperada e informativa**, selecione **Teste de segurança**.
 
-1. Adicione quaisquer comentários, se desejar, e selecione **Salvar** para atualizar o incidente e concluir.
+1. Selecione **Salvar** para atualizar o incidente e concluir.
 
 1. Analise o conteúdo das guias *História de ataque, Alertas, Ativos, Investigações, Evidência e resposta* e *Resumo*. Os dispositivos e usuários se encontram na guia *Ativos*. Em um incidente real, a guia *História de ataque* exibe o *Grafo do incidente*. **Dica:** Algumas guias podem estar ocultas devido ao tamanho da exibição. Selecione a guia de reticências (...) para que elas apareçam.
 

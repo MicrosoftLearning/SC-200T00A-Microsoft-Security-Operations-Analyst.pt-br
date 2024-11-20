@@ -12,8 +12,6 @@ lab:
 
 Você é um analista de operações de segurança que trabalha em uma empresa que está implantando o Microsoft Defender XDR. Comece atribuindo políticas de segurança predefinidas usadas na EOP (Proteção do Exchange Online) e no Microsoft Defender para Office 365.
 
->**Observação:** há uma **[simulação interativa de laboratório](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Explore%20Microsoft%20365%20Defender)** disponível que permite que você clique neste laboratório no seu próprio ritmo. Você pode encontrar pequenas diferenças entre a simulação interativa e o laboratório hospedado, mas os principais conceitos e ideias que estão sendo demonstrados são os mesmos.
-
 >**Observação:** **Locatários do WWL – Termos de uso** Se você estiver recebendo um locatário como parte de uma entrega de treinamento com instrutor, observe que o locatário é disponibilizado com a finalidade de dar suporte aos laboratórios práticos no treinamento com instrutor. Os locatários não devem ser compartilhados ou usados para fins fora dos laboratórios práticos. O locatário usado neste curso é um locatário de avaliação e não pode ser usado ou acessado após o fim da aula e não está qualificado para extensão. Os locatários não podem ser convertidos em uma assinatura paga. Os locatários obtidos como parte deste curso permanecem a propriedade da Microsoft Corporation e reservamos o direito de obter acesso e a qualquer momento. 
 
 
@@ -34,7 +32,7 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP 
 
 1. Inicie o navegador Microsoft Edge.
 
-1. No navegador Edge, acesse o portal do Microsoft Defender XDR em (https://security.microsoft.com).
+1. No navegador Microsoft Edge, acesse o portal do Microsoft Defender XDR em (<https://security.microsoft.com>).
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
@@ -70,7 +68,7 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP 
 
 1. Leia o conteúdo em *Revisar e confirmar suas alterações* e clique em **Confirmar** para aplicar as alterações. Depois, clique em **Concluído** para concluir.
 
-    >**Observação:** se você receber a mensagem *"O URI ''https://outlook.office365.com/psws/service.svc/AntiPhishPolicy" não é válido para a operação PUT. O URI deve apontar para um único recurso para operações PUT."*, Selecione **OK** e, em seguida, selecione **Cancelar** para retornar à página principal. Você verá que a opção *Proteção padrão está ativada* está habilitada.
+    >**Observação:** se você receber a mensagem *"O URI ''<https://outlook.office365.com/psws/service.svc/AntiPhishPolicy>" não é válido para a operação PUT. O URI deve apontar para um único recurso para operações PUT."*, Selecione **OK** e, em seguida, selecione **Cancelar** para retornar à página principal. Você verá que a opção *Proteção padrão está ativada* está habilitada.
 
 1. Em *Proteção estrita*, selecione **Gerenciar configurações de proteção**. **Dica:** a *Proteção restrita* é encontrada em "Email e colaboração – Políticas e regras – Políticas de ameaça – Políticas de segurança predefinidas".
 
