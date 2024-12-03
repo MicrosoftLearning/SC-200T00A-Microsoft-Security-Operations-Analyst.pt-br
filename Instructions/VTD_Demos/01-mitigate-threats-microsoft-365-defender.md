@@ -2,7 +2,7 @@
 
 **Observação** A conclusão bem-sucedida desta demonstração depende da conclusão de todas as etapas no [Documento de pré-requisitos](00-prerequisites.md).
 
-## Usar o portal do Microsoft Defender
+## Use o portal do Microsoft Defender
 
 Nesta tarefa, você se familiarizará com os recursos do portal Microsoft 365 Defender.
 
