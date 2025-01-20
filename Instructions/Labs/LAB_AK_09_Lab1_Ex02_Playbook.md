@@ -18,6 +18,8 @@ Com um guia estratégico, você pode ajudar a automatizar e orquestrar sua respo
 
 Nesta tarefa, você criará um Aplicativo lógico que será usado como um Guia estratégico no Microsoft Sentinel.
 
+>**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *hub de conteúdo* foram instaladas.
+
 1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de **email do locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Avançar**.
@@ -26,7 +28,7 @@ Nesta tarefa, você criará um Aplicativo lógico que será usado como um Guia e
 
 1. Na barra de Pesquisa do portal do Azure, digite *Sentinel* e selecione **Microsoft Sentinel**.
 
-1. Selecione seu workspace do Microsoft Sentinel.
+1. Selecione o **defenderWorkspace** do Microsoft Sentinel.
 
 1. No *Microsoft Sentinel*, vá para **Hub de conteúdo**.
 

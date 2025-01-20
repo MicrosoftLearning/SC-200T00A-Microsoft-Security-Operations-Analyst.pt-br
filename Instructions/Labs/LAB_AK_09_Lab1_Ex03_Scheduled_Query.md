@@ -20,6 +20,8 @@ As regras de análise procuram eventos ou conjuntos de eventos específicos no a
 
 Nesta tarefa, você irá criar uma consulta agendada e a conectá-la ao canal do Teams que criou no exercício anterior.
 
+>**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *Hub de Conteúdo* foram instaladas.
+
 1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de **email do locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Avançar**.
@@ -28,7 +30,7 @@ Nesta tarefa, você irá criar uma consulta agendada e a conectá-la ao canal do
 
 1. Na barra de Pesquisa do portal do Azure, digite *Sentinel* e selecione **Microsoft Sentinel**.
 
-1. Selecione seu workspace do Microsoft Sentinel.
+1. Selecione o **defenderWorkspace** do Microsoft Sentinel.
 
 1. Na área Configurações, selecione **Análise**.
 

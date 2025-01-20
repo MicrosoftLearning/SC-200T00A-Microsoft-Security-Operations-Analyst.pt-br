@@ -22,8 +22,6 @@ Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 
 1. No navegador Microsoft Edge, acesse o portal do Azure em <https://portal.azure.com>.
   
-    >**Observação:** selecione a guia **Recursos** para o *Nome de usuário* e *Senha* para o laboratório. Use a conta **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** para este laboratório.
-
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
 1. Na caixa de diálogo **Inserir senha**, copie e cole a senha de locatário do administrador fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.
@@ -56,7 +54,7 @@ Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**. --->
 
-### Tarefa 3: entender o painel do Microsoft Defender para Nuvem
+### Tarefa 2: Entender o painel do Microsoft Defender para Nuvem
 
 1. Na barra de pesquisa do portal do Azure, digite *Defender* e selecione **Microsoft Defender para Nuvem**.
 

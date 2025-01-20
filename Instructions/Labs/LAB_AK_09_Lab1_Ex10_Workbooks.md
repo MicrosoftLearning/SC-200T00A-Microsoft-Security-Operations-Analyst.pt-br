@@ -22,7 +22,9 @@ O Microsoft Sentinel permite que você crie pastas de trabalho personalizadas em
 
 Nesta tarefa, você explorará os modelos de pasta de trabalho do Microsoft Sentinel.
 
-1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
+>**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *hub de conteúdo* foram instaladas.
+
+1. Faça logon na máquina virtual WIN1 como administrador com a senha: **Pa55w.rd**.  
 
 1. No navegador Edge, acesse o portal do Azure em <https://portal.azure.com>.
 
@@ -32,7 +34,7 @@ Nesta tarefa, você explorará os modelos de pasta de trabalho do Microsoft Sent
 
 1. Na barra de Pesquisa do portal do Azure, digite *Sentinel* e selecione **Microsoft Sentinel**.
 
-1. Selecione seu workspace do Microsoft Sentinel.
+1. Selecione o **defenderWorkspace** do Microsoft Sentinel.
 
 1. Selecione **Pastas de trabalho** na seção *Gerenciamento de ameaças* do menu de navegação.
 
