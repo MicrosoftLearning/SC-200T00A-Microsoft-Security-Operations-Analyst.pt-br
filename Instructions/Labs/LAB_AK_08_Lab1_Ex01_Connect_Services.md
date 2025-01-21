@@ -20,6 +20,8 @@ Você é um analista de operações de segurança que trabalha em uma empresa qu
 
 Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
+>**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *Hub de Conteúdo* foram instaladas.
+
 1. Faça logon na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
 
 1. Abra o navegador Microsoft Edge.
@@ -32,7 +34,7 @@ Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
 1. Na barra de Pesquisa do portal do Azure, digite *Sentinel* e selecione **Microsoft Sentinel**.
 
-1. Selecione o workspace do Microsoft Sentinel que você criou no laboratório anterior.
+1. Selecione o **defenderWorkspace** do Microsoft Sentinel.
 
 1. Prossiga para a próxima tarefa.
 
@@ -40,23 +42,19 @@ Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
 Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nuvem.
 
-1. No menu esquerdo do Microsoft Sentinel, role para baixo até a seção **Gerenciamento de conteúdo** e selecione **Hub de conteúdos**.
+   >**Importante:** para *habilitar* a sincronização bidirecional, revise o Roteiro de Aprendizagem 5, Exercício 1, Tarefa 1 e selecione **Configuração** no menu de navegação do *Microsoft Defender para Nuvem* para verificar se todas as assinaturas qualificadas do Azure estão integradas.
+
+1. No menu de navegação do Microsoft Sentinel, role para baixo até a seção **Gerenciamento de conteúdo** e selecione **Hub de conteúdo**.
 
 1. No *Hub de conteúdo*, procure a solução **Microsoft Defender para Nuvem** e selecione-a na lista.
 
-1. Na página de detalhes da solução do *Microsoft Defender para Nuvem*, selecione **Instalar**.
-
-1. Quando a instalação for concluída, pesquise a solução do **Microsoft Defender para Nuvem** e selecione-a.
-
-1. Na página de detalhes da solução do *Microsoft Defender para Nuvem*, selecione **Gerenciar**
+1. Na página de detalhes da solução do *Microsoft Defender para Nuvem*, selecione **Gerenciar**.
 
     >**Observação:** a solução *Microsoft Defender para Nuvem* instala o conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura*, o conector de dados do *Microsoft Defender para Nuvem (Versão preliminar) baseado em locatário* e uma regra de Análise. O conector de dados *Microsoft Defender for Cloud (versão prévia)* baseado em locatário é usado quando um locatário tem várias assinaturas.
 
 1. Selecione a caixa de seleção Conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura* e selecione a **página Abrir conector**.
 
 1. Na seção *Configuração*, na guia *Instruções*,** marque** a caixa de seleção da assinatura "Azure Pass - Patrocínio" e deslize a opção **Status** para a direita.
-
-    >**Observação:** se ele voltar a ser desconectado, revise o Roteiro de aprendizagem 3, Exercício 1, Tarefa 1 para atribuir as permissões adequadas à sua conta.
 
 1. O *Status* agora deve ser **Conectado** e "Sincronização bidirecional" deve estar *Habilitada*.
 
@@ -66,13 +64,11 @@ Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nu
 
 Nesta tarefa, você conectará o conector de dados de *Atividade do Azure*.
 
-1. No menu esquerdo do Microsoft Sentinel, role para baixo até a seção *Gerenciamento de conteúdo* e selecione **Hub de conteúdos**.
+1. No menu de navegação do Microsoft Sentinel, role para baixo até a seção *Gerenciamento de conteúdo* e selecione **Hub de conteúdo**.
 
 1. No *Hub de conteúdo*, procure a solução de **Atividade do Azure** e selecione-a na lista.
 
-1. Na página da solução *Atividade do Azure*, selecione **Instalar**.
-
-1. Quando a instalação for concluída, selecione **Gerenciar**
+1. Na página de detalhes da solução *Atividade do Azure*, selecione **Gerenciar**.
 
     >**Observação:** A solução de *Atividade do Azure* instala o conector de dados de *Atividade do Azure*, 12 regras de análise, 14 consultas de busca, 1 pasta de trabalho.
 

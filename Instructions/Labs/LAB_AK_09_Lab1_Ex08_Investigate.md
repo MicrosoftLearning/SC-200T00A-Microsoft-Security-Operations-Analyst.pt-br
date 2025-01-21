@@ -22,6 +22,8 @@ Um incidente pode incluir vários alertas. El é uma agregação de todas as evi
 
 Nesta tarefa, você investigará um incidente.
 
+>**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *hub de conteúdo* foram instaladas.
+
 1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
 1. No navegador Edge, acesse o portal do Azure em <https://portal.azure.com>.
@@ -32,7 +34,7 @@ Nesta tarefa, você investigará um incidente.
 
 1. Na barra de Pesquisa do portal do Azure, digite *Sentinel* e selecione **Microsoft Sentinel**.
 
-1. Selecione seu workspace do Microsoft Sentinel.
+1. Selecione o **defenderWorkspace** do Microsoft Sentinel.
 
 1. Selecione a página **Incidentes**.
 

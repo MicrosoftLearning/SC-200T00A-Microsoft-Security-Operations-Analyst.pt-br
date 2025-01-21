@@ -22,6 +22,8 @@ Você é um analista de operações de segurança que trabalha em uma empresa qu
 
 Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
+>**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *Hub de Conteúdo* foram instaladas.
+
 1. Faça logon na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
 
 1. Inicie o navegador Microsoft Edge.
@@ -34,8 +36,7 @@ Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
 1. Na barra de Pesquisa do portal do Azure, digite *Sentinel* e selecione **Microsoft Sentinel**.
 
-1. Selecione seu workspace do Microsoft Sentinel que você criou em um laboratório anterior.
-
+1. Selecione o **defenderWorkspace** do Microsoft Sentinel.
 
 ### Tarefa 2: conectar um host Linux usando o conector Formato comum de evento
 
@@ -45,9 +46,7 @@ Nesta tarefa, você conectará um host Linux ao Microsoft Sentinel com o Formato
 
 1. No *Hub de conteúdo*, procure a solução **Formato comum de evento** e selecione-a na lista.
 
-1. Na página da solução *Formato comum de evento*, selecione **Instalar**.
-
-1. Quando a instalação for concluída, selecione **Gerenciar**
+1. Na página da solução *Formato comum de evento*, selecione **Gerenciar**.
 
     >**Observação:** a solução *Formato comum de evento* instala os conectores de dados *Formato de evento comum (CEF) por meio do AMA* e o *Formato comum de evento (CEF)*.
 
@@ -55,13 +54,13 @@ Nesta tarefa, você conectará um host Linux ao Microsoft Sentinel com o Formato
 
 1. Na seção *Configuração*, na guia *Instruções*, copie para a área de transferência o comando mostrado em *1.2 Instalar o coletor CEF na máquina Linux*.
 
-1. Inicie sua máquina virtual **LIN1**. Faça logon com o nome de usuário e senha fornecidos pelo host do seu laboratório. **Dica:** talvez seja necessário pressionar a tecla Enter para ver o prompt de logon. 
+1. Inicie sua máquina virtual **LIN1**. Faça logon com o nome de usuário e senha fornecidos pelo host do seu laboratório. **Dica:** talvez seja necessário pressionar a tecla Enter para ver o prompt de logon.
 
 1. Anote o endereço IP do servidor LIN1. Veja a captura de tela abaixo como um exemplo:
 
     ![logon do linux](../Media/LinuxLoginExample.png)
 
-1. Vá até a máquina virtual **WIN1**. Inicie o Windows PowerShell como Administrador, clicando com o botão direito do mouse no ícone do menu Iniciar e selecionando **Windows PowerShell (Administrador)**. Selecione **Sim** para permitir que o aplicativo seja executado na janela Controle de conta de usuário exibida. **Dica:** talvez você já tenha uma janela do Windows PowerShell aberta devido aos exercícios anteriores.
+1. Vá até a máquina virtual **WIN1**. Inicie o Windows PowerShell digitando **Windows PowerShell** no formulário Pesquisar na barra de tarefas e selecione **Windows PowerShell**.
 
 1. Insira o seguinte comando do PowerShell, ajustando-o às informações específicas do seu servidor Linux, e pressione Enter:
 
@@ -97,9 +96,7 @@ Nesta tarefa, você conectará um host Linux ao Microsoft Sentinel com o conecto
 
 1. No *Hub de conteúdo*, procure a solução de **Syslog** e selecione-a na lista.
 
-1. Na página da solução *Syslog*, selecione **Instalar**.
-
-1. Quando a instalação for concluída, selecione **Gerenciar**
+1. Na página da solução *Syslog*, selecione **Gerenciar**.
 
     >**Observação:** a solução de *Syslog* instala o conector de dados de *Syslog*, 5 regras de análise, 9 consultas de busca e 1 pasta de trabalho.
 
