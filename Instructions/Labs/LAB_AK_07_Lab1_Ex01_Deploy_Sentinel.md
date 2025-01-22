@@ -22,8 +22,6 @@ Crie um workspace do Log Analytics, incluindo a opção de região. Saiba mais s
 
 1. No navegador Microsoft Edge, acesse o portal do Azure em <https://portal.azure.com>.
   
-    >**Observação:** selecione a guia **Recursos** para o *Nome de usuário* e *Senha* para o laboratório. Use a conta **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** para este laboratório.
-
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
 1. Na caixa de diálogo **Inserir senha**, copie e cole a senha de locatário do administrador fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.

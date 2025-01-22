@@ -13,7 +13,7 @@ A organização para a qual você trabalha deseja aumentar a eficiência e as ca
 Neste exercício, você passará pela *primeira experiência de execução* do Microsoft Security Copilot para provisionar o Copilot com uma SCU (unidade de computação de segurança).
 
 >**Observação:** o ambiente para este exercício é uma simulação gerada a partir do produto. Como uma simulação limitada, os links em uma página podem não estar habilitados e pode não haver suporte para entradas baseadas em texto que estejam fora do script especificado. Uma mensagem pop-up será exibida informando: "Este recurso não está disponível na simulação". Quando isso ocorrer, selecione OK e continue com as etapas do exercício.  
-> :::image type="content" source="../media/simulation-pop-up-error.png" alt-text="Captura de tela pop-up indicando que esse recurso não está disponível na simulação.":::
+> :::image type="content" source="../Media/simulation-pop-up-error.png" alt-text="Captura de tela pop-up indicando que esse recurso não está disponível na simulação.":::
 
 ### Tempo estimado para concluir este laboratório: 45 minutos
 
@@ -103,7 +103,7 @@ Nesta tarefa, você inicia a exploração no menu inicial.
 
 1. Abra o ambiente simulado selecionando este link: **[Microsoft Security Copilot](https://app.highlights.guide/start/2cac767e-42c4-4058-afbb-a9413aac461d?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
 
-1. Selecione o ícone **Menu** ![ícone do menu da página inicial](../media/home-menu-icon.png), que às vezes é chamado de ícone de hambúrguer.
+1. Selecione o ícone **Menu** ![ícone do menu da página inicial](../Media/home-menu-icon.png), que às vezes é chamado de ícone de hambúrguer.
 
 1. Selecione **Minhas sessões** e anote as opções disponíveis.
     1. Selecione Recente para exibir as sessões mais recentes
@@ -174,7 +174,7 @@ A próxima seção da página de aterrissagem do Copilot gira em torno de prompt
 
 No centro inferior da página está a barra de prompts. A barra de solicitação inclui o ícone de prompts e fontes, que você vai explorar nesta tarefa. No exercícios subsequentes, você vai inserir informações diretamente na barra de solicitação.
 
-1. Na barra de solicitação, selecione o ícone de prompts para selecionar um prompt interno ou uma sequência de solicitações. Selecione o **ícone de prompts**![ícone de prompts](../media/prompt-icon.png).
+1. Na barra de solicitação, selecione o ícone de prompts para selecionar um prompt interno ou uma sequência de solicitações. Selecione o **ícone de prompts**![ícone de prompts](../Media/prompt-icon.png).
     1. Selecione **Ver todos os promptbooks**
         1. Role para exibir todos os promptbooks disponíveis.
         1. Selecione a **seta para trás** ao lado da barra de pesquisa para voltar.
@@ -182,12 +182,12 @@ No centro inferior da página está a barra de prompts. A barra de solicitação
         1. Role para exibir todos os promptbooks disponíveis.
         1. Selecione a **seta para trás** ao lado da barra de pesquisa para voltar.
 
-1. Selecione o **ícone de fontes**![ícone de fontes](../media/sources-icon.png).
+1. Selecione o **ícone de fontes**![ícone de fontes](../Media/sources-icon.png).
     1. O ícone de fontes abre a janela Gerenciar fontes. A partir daqui, você pode acessar Plug-ins ou Arquivos. A guia **Plug-ins** é selecionada por padrão.
         1. Selecione se deseja exibir todos os plug-ins, aqueles que estão habilitados (ativados) ou aqueles que estão desabilitados (desativados).
         1. Expanda/recolha a lista de plug-ins que não são da Microsoft, plug-ins da Microsoft e plug-ins personalizados.
         1. Alguns plug-ins exigem a configuração de parâmetros. Selecione o botão **Configurar** do plug-in do Microsoft Sentinel para exibir a janela de configurações. Selecione **cancelar** para fechar a janela de configurações. Em um exercício separado, você configura o plug-in.
-    1. Você ainda deve estar na janela Gerenciar fontes. Selecionar **Arquivos**.
+    1. Você ainda deverá estar na janela Gerenciar fontes. Selecionar **Arquivos**.
         1. Examine a descrição.
         1. Os arquivos podem ser carregados e usados como uma base de conhecimento pelo Copilot. Em um exercício subsequente, você vai trabalhar com uploads de arquivos.
         1. Selecione **X** para fechar a janela de gerenciamento de fontes.
@@ -246,13 +246,15 @@ Este exercício deve levar aproximadamente **30** minutos para ser concluído.
 
 #### Subtarefa 3: Explorar a análise do script
 
-1. Vamos nos concentrar na história do alerta. Selecione **Maximizar ![ícone maximizar](../media/maximize-icon.png)**, localizado no painel principal do alerta, logo abaixo do cartão rotulado 'partycity\jonaw' para obter uma melhor visualização da árvore de processos. Do modo de exibição maximizado, você começa a ter uma visão mais clara de como esse incidente ocorreu. Muitos itens de linha indicam que powershell.exe executou um script. Como o usuário Jonathan Wolcott é um executivo de conta, é razoável supor que executar scripts do PowerShell não é algo que esse usuário provavelmente esteja fazendo regularmente.
+1. Vamos nos concentrar na história do alerta. Selecione **Maximizar ![ícone maximizar](../Media/maximize-icon.png)**, localizado no painel principal do alerta, logo abaixo do cartão rotulado 'partycity\jonaw' para obter uma melhor visualização da árvore de processos. Do modo de exibição maximizado, você começa a ter uma visão mais clara de como esse incidente ocorreu. Muitos itens de linha indicam que powershell.exe executou um script. Como o usuário Jonathan Wolcott é um executivo de conta, é razoável supor que executar scripts do PowerShell não é algo que esse usuário provavelmente esteja fazendo regularmente.
 
 1. Expanda a primeira instância de **powershell.exe executar um script**, é aquela que mostra o carimbo de data/hora de 4:57:11. O Copilot tem a capacidade de analisar scripts. Selecione **Analisar**.
     1. O Copilot gera uma análise do script e sugere que ele pode ser uma tentativa de phishing ou usado para uma entregar um software de exploração de vulnerabilidades baseado na Web.
     1. Selecione **Mostrar código**. O código mostra uma URL cujo potencial de causar dano foi eliminado.
 
 1. Há vários outros itens que indicam que powershell.exe executou um script. Expanda aquela rotulada **powershell.exe -EncodedCommand...** com o carimbo de data/hora 5:00:47. O script original foi codificado em base 64, mas o Defender decodificou isso para você. Para a versão decodificada, selecione **Analisar**. A análise destaca a sofisticação do script usado neste ataque.
+
+    >**Observação:** o carimbo de data/hora será ajustado para refletir o fuso horário do navegador do usuário. O fuso horário na simulação é definido como Horário do Pacífico.
 
 1. Feche a página de história do alerta selecionando o **X** (o X à esquerda do painel do Copilot). Agora use a trilha para retornar ao incidente. Selecione **O ataque de ransomware operado por humanos foi iniciado a partir de um ativo comprometido (interrupção de ataque)**.
 
@@ -274,15 +276,15 @@ Essa tarefa é complexa e requer o envolvimento de analistas mais experientes. N
 
 1. Selecione as reticências ao lado do resumo de Incidentes do Copilot e selecione **Abrir no Copilot da Segurança**.
 
-1. O Copilot é aberto na experiência autônoma e mostra o resumo do incidente. Você também pode executar mais prompts. Nesse caso, você executará a sequência de solicitações para um incidente. Selecione o **ícone de prompt**![ícone de prompt](../media/prompt-icon.png). 
+1. O Copilot é aberto na experiência autônoma e mostra o resumo do incidente. Você também pode executar mais prompts. Nesse caso, você executará a sequência de solicitações para um incidente. Selecione o **ícone de prompt**![ícone de prompt](../Media/prompt-icon.png). 
     1. Selecione **Ver todos os promptbooks**.
     1. Selecione **Investigação de incidentes do Microsoft 365 Defender**.
     1. A página do promptbook é aberta e solicita a ID de Incidente do Defender. Insira **30342** e selecione **Executar**.
     1. Examine as informações fornecidas. Ao dinamizar para a experiência autônoma e executar o promptbook, a investigação é capaz de invocar recursos de uma solução de segurança de conjunto mais amplo, além apenas do Defender XDR, com base nos plug-ins habilitados.
 
-1. Selecione o **ícone de caixa ![ícone de caixa](../media/box-icon.png)** ao lado do ícone de alfinete para selecionar todos os prompts e as respostas correspondentes e, em seguida, selecione o **ícone de alfinete ![ícone de alfinete](../media/pin-icon.png)** para salvar essas respostas no quadro de avisos.
+1. Selecione o **ícone de caixa ![ícone de caixa](../Media/box-icon.png)** ao lado do ícone de alfinete para selecionar todos os prompts e as respostas correspondentes e, em seguida, selecione o **ícone de alfinete ![ícone de alfinete](../Media/pin-icon.png)** para salvar essas respostas no quadro de avisos.
 
-1. O painel de fixação é aberto automaticamente. O quadro de fixação contém os prompts e respostas salvos, juntamente com um resumo de cada um deles. Você pode abrir e fechar o quadro de avisos selecionando o **ícone do quadro de avisos ![ícone do quadro de avisos](../media/pinboard-icon.png)**.
+1. O painel de fixação é aberto automaticamente. O quadro de fixação contém os prompts e respostas salvos, juntamente com um resumo de cada um deles. Você pode abrir e fechar o quadro de avisos selecionando o **ícone do quadro de avisos ![ícone do quadro de avisos](../Media/pinboard-icon.png)**.
 
 1. Na parte superior da página, selecione **Compartilhar** para exibir suas opções. Ao compartilhar o incidente por meio de um link ou email, as pessoas em sua organização com acesso ao Copilot podem ver esta sessão. Feche a janela selecionando o **X**.
 
