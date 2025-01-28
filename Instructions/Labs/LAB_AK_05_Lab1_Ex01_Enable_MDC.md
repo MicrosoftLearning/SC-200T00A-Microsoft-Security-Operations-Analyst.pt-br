@@ -12,9 +12,45 @@ Você é um analista de operações de segurança que trabalha em uma empresa qu
 
 >**Importante:** os exercícios de laboratório para o Roteiro de Aprendizagem 5 estão em um ambiente *independente*. Se você sair do laboratório antes de concluí-lo, será necessário executar as configurações novamente.
 
-### Tempo estimado para concluir este laboratório: 15 minutos
+### Tempo estimado para concluir este laboratório: 25 minutos
 
-### Tarefa 1: habilitar o Microsoft Defender para Nuvem
+### Tarefa 1: Conectar-se a um servidor local
+
+Nesta tarefa, você conectará um servidor local à sua assinatura do Azure. O Azure Arc foi pré-instalado neste servidor. O servidor será usado nos próximos exercícios para fornecer um recurso para aplicar padrões de conformidade e proteções de carga de trabalho.
+
+>**Importante:** as próximas etapas são feitas em uma máquina diferente daquela em que você estava trabalhando anteriormente. Procure o nome da máquina virtual na guia de referências.
+
+1. Faça logon na máquina virtual **WINServer** como Administrador com a senha: **Passw0rd!** Se necessário.  
+
+Conforme descrito acima, o Azure Arc foi pré-instalado na máquina **WINServer**. Agora você conectará essa máquina à sua assinatura do Azure.
+
+1. No computador *WINServer*, clique no ícone de *pesquisa* e digite **cmd**.
+
+1. Nos resultados da pesquisa, clique com o botão direito do mouse em *Prompt de Comando* e selecione **Executar como administrador**.
+
+1. Na janela do Prompt de comando, digite o seguinte comando. *Não pressione Enter*:
+
+    ```cmd
+    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    ```
+
+1. Substitua a **cadeia de caracteres da ID da assinatura** pela *ID da assinatura* fornecida pelo host do laboratório (*guia Recursos). Certifique-se de manter as aspas.
+
+1. Digite **Enter** para executar o comando (isso pode levar alguns minutos).
+
+    >**Observação**: se você vir a janela de seleção do navegador *Como deseja abrir isso?*, selecione **Microsoft Edge**.
+
+1. Na caixa de diálogo *Entrar*, digite o **Email do locatário** e a **Senha do locatário** fornecida pelo provedor de hospedagem do laboratório e clique em **Entrar**. Aguarde a mensagem *Autenticação concluída*, feche a guia do navegador e retorne à janela do *Prompt de comando*.
+
+1. Quando os comandos concluírem a execução, deixe a janela do *Prompt de comando* aberta e digite o seguinte comando para confirmar se a conexão ocorreu:
+
+    ```cmd
+    azcmagent show
+    ```
+
+1. Na saída do comando, verifique se o *Status do agente* é **Conectado**.
+
+### Tarefa 2: habilitar o Microsoft Defender para Nuvem
 
 Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 
@@ -54,7 +90,7 @@ Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**. --->
 
-### Tarefa 2: Entender o painel do Microsoft Defender para Nuvem
+### Tarefa 3: entender o painel do Microsoft Defender para Nuvem
 
 1. Na barra de pesquisa do portal do Azure, digite *Defender* e selecione **Microsoft Defender para Nuvem**.
 
