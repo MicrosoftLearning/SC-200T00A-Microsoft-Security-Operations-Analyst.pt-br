@@ -14,9 +14,13 @@ Você é um analista de operações de segurança que trabalha em uma empresa qu
 
 >**Importante:** os exercícios de laboratório para o Roteiro de Aprendizagem 10 estão em um ambiente *independente*. Se você sair do laboratório antes de concluí-lo, será necessário executar as configurações novamente.
 
->**Observação:** os dados de log criados nos exercícios de laboratório anteriores do Roteiro de Aprendizagem *Executar ataques* não estarão disponíveis neste laboratório sem executar novamente o **Ataque 3** no servidor WIN1 no Exercício 5.
+>**Observação:** os dados de log criados nos exercícios de laboratório do Roteiro de Aprendizagem 9 não estarão disponíveis neste laboratório sem executar novamente as tarefas 1 e 2 do Exercício 5 e o *Ataque 3* no servidor WIN1 no Exercício 6. Você pode abrir essas instruções em uma nova guia do navegador clicando nestes links:
 
-### Tempo estimado para concluir este laboratório: 30 minutos
+**[Laboratório 09 Exercício 5](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex05_Attacks.html)**
+
+**[Laboratório 09 Exercício 6](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex06_Perform_Attacks.html)**
+
+### Tempo estimado para concluir este laboratório: 40 minutos
 
 ### Tarefa 1: criar uma consulta de busca
 

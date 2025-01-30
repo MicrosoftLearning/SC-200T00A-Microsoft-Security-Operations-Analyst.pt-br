@@ -10,13 +10,15 @@ lab:
 
 ![Visão geral do laboratório.](../Media/SC-200-Lab_Diagrams_Mod9_L1_Ex5.png)
 
+>**Importante:** os exercícios de laboratório para o Roteiro de Aprendizagem 9 estão em um ambiente *independente*. Se você sair do laboratório antes de concluí-lo, será necessário executar as configurações novamente.
+
 ### Tempo estimado para concluir este laboratório: 30 minutos
 
 ### Tarefa 1: Conectar-se a um servidor local
 
 Nesta tarefa, você conectará um servidor local à sua assinatura do Azure. O Azure Arc foi pré-instalado neste servidor. O servidor será usado nos próximos exercícios para executar ataques simulados que você irá detectar e investigar posteriormente no Microsoft Sentinel.
 
->**Observação:** os exercícios de laboratório do Roteiro de Aprendizagem 9 estão em um ambiente *independente*. Se você sair do laboratório antes de concluí-lo, será necessário executar as configurações novamente.
+>**Importante:** as próximas etapas são feitas em uma máquina diferente daquela em que você estava trabalhando anteriormente. Procure o nome da máquina virtual na guia de referências.
 
 1. Faça logon na máquina virtual **WINServer** como Administrador com a senha: **Passw0rd!** Se necessário.  
 
@@ -35,6 +37,8 @@ Conforme descrito acima, o Azure Arc foi pré-instalado na máquina **WINServer*
 1. Substitua a **cadeia de caracteres da ID da assinatura** pela *ID da assinatura* fornecida pelo host do laboratório (*guia Recursos). Certifique-se de manter as aspas.
 
 1. Digite **Enter** para executar o comando (isso pode levar alguns minutos).
+
+    >**Observação**: se você vir a janela de seleção do navegador *Como deseja abrir isso?*, selecione **Microsoft Edge**.
 
 1. Na caixa de diálogo *Entrar*, digite o **Email do locatário** e a **Senha do locatário** fornecida pelo provedor de hospedagem do laboratório e clique em **Entrar**. Aguarde a mensagem *Autenticação concluída*, feche a guia do navegador e retorne à janela do *Prompt de comando*.
 
