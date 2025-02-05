@@ -42,7 +42,7 @@ Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
 Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nuvem.
 
-   >**Importante:** para *habilitar* a sincronização bidirecional, revise o Roteiro de Aprendizagem 5, Exercício 1, Tarefa 1 e selecione **Configuração** no menu de navegação do *Microsoft Defender para Nuvem* para verificar se todas as assinaturas qualificadas do Azure estão integradas.
+   <!--- >>**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded. --->
 
 1. No menu de navegação do Microsoft Sentinel, role para baixo até a seção **Gerenciamento de conteúdo** e selecione **Hub de conteúdo**.
 
@@ -54,9 +54,15 @@ Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nu
 
 1. Selecione a caixa de seleção Conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura* e selecione a **página Abrir conector**.
 
-1. Na seção *Configuração*, na guia *Instruções*,** marque** a caixa de seleção da assinatura "Azure Pass - Patrocínio" e deslize a opção **Status** para a direita.
+1. Na seção *Configuração*, **marque** a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* e clique no link **Conectar** ou deslize a opção **Status** para a direita.
 
-1. O *Status* agora deve ser **Conectado** e "Sincronização bidirecional" deve estar *Habilitada*.
+1. Para habilitar a sincronização bidirecional, selecione o link **Habilitar o Microsoft Defender para todas as assinaturas**.
+
+1. Na página *Microsoft Defender para Nuvem – Introdução*, a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* estará selecionada e o *plano do Microsoft Defender* exibirá *Habilitado – Parcial (30 dias de avaliação restantes)*.
+
+1. Selecione o botão **X (Fechar)** no canto superior direito para fechar a página *Introdução*. Você retornará à página de configuração do *Microsoft Defender para Nuvem*.
+
+1. O *Status* da *MOC Subscription-XXXXXXXXXXX* será **Conectada** e a *Sincronização bidirecional* estará *Habilitada*.
 
     <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
 
@@ -76,7 +82,7 @@ Nesta tarefa, você conectará o conector de dados de *Atividade do Azure*.
 
 1. Na área *Configuração*, a guia *Instruções*, role a página para baixo até "2. Conecte suas assinaturas..." e, por fim, selecione **Iniciar assistente de atribuição do Azure Policy>**.
 
-1. Na guia **Básico**, clique no botão de reticências (...) em **Escopo** e selecione sua assinatura "Azure Pass – Sponsorship" na lista suspensa e clique em **Selecionar**.
+1. Na guia **Básico**, selecione o botão de reticências (...) em **Escopo**, escolha sua assinatura *MOC Subscription-XXXXXXXXXXX* na lista suspensa e clique em **Selecionar**.
 
 1. Selecione a guia **Parâmetros**, escolha o workspace *uniquenameDefender* na lista suspensa **Workspace principal do Log Analytics**. Essa ação aplicará a configuração de assinatura para enviar as informações ao workspace do Log Analytics.
 

@@ -60,6 +60,8 @@ Nesta tarefa, você criará um Aplicativo lógico que será usado como um Guia e
 
 Nesta tarefa, você atualizará o novo guia estratégico criado com as informações de conexão adequadas.
 
+1. Quando a tarefa anterior for concluída, você estará na página *Defender_XDR_Ransomware_Playbook_SecOps-Tasks | Designer de aplicativo lógico*. Se não estiver, conclua as etapas 1 a 5 abaixo.
+
 1. Na barra de Pesquisa do portal do Azure, digite Sentinel e selecione Microsoft Sentinel.
 
 1. Selecione seu workspace do Microsoft Sentinel.
@@ -68,9 +70,9 @@ Nesta tarefa, você atualizará o novo guia estratégico criado com as informaç
 
 1. Selecione Atualizar na barra de comandos, caso não veja nenhum guia estratégico. Você deve ver o guia estratégico criado a partir da etapa anterior.
 
-1. Selecione o nome de guia estratégico **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**.
+1. Clique no link do nome do guia estratégico **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**.
 
-1. Na página Aplicativo lógico do **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, no menu de comandos, selecione Editar.
+1. Na página do designer do aplicativo lógico do **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, no menu de comandos, selecione Editar.
 
     >**Observação:** talvez seja necessário atualizar a página.
 
@@ -80,13 +82,13 @@ Nesta tarefa, você atualizará o novo guia estratégico criado com as informaç
 
 1. Selecione Adicionar novo e selecione Entrar. Na nova janela, selecione suas credenciais de administrador da assinatura do Azure quando solicitado. A última linha do bloco agora deve ser " Conectado ao nome de usuário-administrador".
 
-1. Abaixo, na divisão lógica, selecione Adicionar tarefa ao incidente.
+<!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 
 1. Selecione Salvar na barra de comandos. O Aplicativo lógico será usado em um laboratório futuro.
 
 ### Tarefa 3: criar uma regra de automação
 
-1. No Microsoft Sentinel, acesse Automação em Configuração.
+1. No Microsoft Sentinel, expanda *Configuração* no menu de navegação e selecione *Automação*.
 
 1. Selecione Criar e escolha Regra de automação.
 
@@ -96,7 +98,7 @@ Nesta tarefa, você atualizará o novo guia estratégico criado com as informaç
 
 1. Deixe o nome da Regra de análise como Todos.
 
-1. Clique em Adicionar e escolha E.
+1. Selecione **+ Adicionar** e escolha *Condição (E)*.
 
 1. Na lista suspensa, selecione Táticas.
 
@@ -120,6 +122,6 @@ Nesta tarefa, você atualizará o novo guia estratégico criado com as informaç
 
 1. Por fim, selecione **Aplicar** na parte inferior.
 
-A partir daqui, dependendo da sua função, você continuará fazendo mais exercícios de arquiteto ou passará para os exercícios de analista.
+Agora você criou um guia estratégico e uma regra de automação no Microsoft Sentinel.
 
 ## Prossiga para o Exercício 3
