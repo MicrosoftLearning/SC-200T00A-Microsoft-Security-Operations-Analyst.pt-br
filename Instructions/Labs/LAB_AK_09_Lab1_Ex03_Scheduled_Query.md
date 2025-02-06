@@ -14,13 +14,47 @@ As regras de análise procuram eventos ou conjuntos de eventos específicos no a
 
 >**Importante:** os exercícios de laboratório para o Roteiro de Aprendizagem 9 estão em um ambiente *independente*. Se você sair do laboratório antes de concluí-lo, será necessário executar as configurações novamente.
 
-### Tempo estimado para concluir este laboratório: 30 minutos
+### Tempo estimado para concluir este laboratório: 45 minutos
 
-### Tarefa 1: criar uma consulta agendada
+>**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *hub de conteúdo* foram instaladas.
 
-Nesta tarefa, você irá criar uma consulta agendada e a conectá-la ao canal do Teams que criou no exercício anterior.
+<!--- >>**Important:** To sucessfully complete this task you wil need to rerun Task 3 of **[Lab 08 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_08_Lab1_Ex01_Connect_Services.html)** to connect the Azure Activity data connector. --->
 
->**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *Hub de Conteúdo* foram instaladas.
+Para concluir esta tarefa, você precisará concluir as seguintes tarefas de pré-requisito.
+
+### Tarefa de pré-requisito: conectar o conector de dados de Atividade do Azure
+
+Nesta tarefa, você conectará o conector de dados de *Atividade do Azure*.
+
+1. No menu de navegação do Microsoft Sentinel, role para baixo até a seção *Gerenciamento de conteúdo* e selecione **Hub de conteúdo**.
+
+1. No *Hub de conteúdo*, procure a solução de **Atividade do Azure** e selecione-a na lista.
+
+1. Na página de detalhes da solução *Atividade do Azure*, selecione **Gerenciar**.
+
+    >**Observação:** A solução de *Atividade do Azure* instala o conector de dados de *Atividade do Azure*, 12 regras de análise, 14 consultas de busca, 1 pasta de trabalho.
+
+1. Selecione um conector de dados de *Atividade do Azure* e depois clique no botão **Abrir página do conector**.
+
+1. Na área *Configuração*, a guia *Instruções*, role a página para baixo até "2. Conecte suas assinaturas..." e, por fim, selecione **Iniciar assistente de atribuição do Azure Policy>**.
+
+1. Na guia **Básico**, selecione o botão de reticências (...) em **Escopo**, escolha sua assinatura *MOC Subscription-XXXXXXXXXXX* na lista suspensa e clique em **Selecionar**.
+
+1. Selecione a guia **Parâmetros**, escolha o workspace *uniquenameDefender* na lista suspensa **Workspace principal do Log Analytics**. Essa ação aplicará a configuração de assinatura para enviar as informações ao workspace do Log Analytics.
+
+1. Selecione a guia **Correção** e marque a caixa de seleção **Criar uma tarefa de correção**. Essa ação aplicará a política a recursos já existentes do Azure.
+
+1. Selecione o botão **Examinar + criar** para examinar a configuração.
+
+1. Selecione **Criar** para concluir.
+
+1. Aguarde até que o conector de dados de *Atividade do Azure* exiba o status *Conectado* antes de continuar.
+
+### Tarefa 1: criar uma regra de consulta agendada
+
+Nesta tarefa, você cria uma *regra de consulta agendada de análise do Microsoft Sentinel*.
+
+>**Observação:** as seguintes tarefas funcionam melhor na Versão Prévia do Portal do Azure – <https://preview.portal.azure.com/>.
 
 1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
@@ -38,7 +72,7 @@ Nesta tarefa, você irá criar uma consulta agendada e a conectá-la ao canal do
 
 1. Na folha de resumo da regra, verifique se você está recebendo dados revisando o ícone verde em *Fontes de dados: Atividade do Azure*.
 
-    >**Observação:** se você não vê-lo em um estado conectado, certifique-se de ter concluído a Tarefa 3 do Laboratório do Roteiro de aprendizagem 6, Exercício 1.
+    >**Observação:** se você não o vir em um estado conectado e executar novamente o Laboratório do Roteiro de Aprendizagem 8, Exercício 1, Tarefa 3, conforme observado acima, talvez seja necessário aguardar alguns minutos para que o processo seja concluído.
 
 1. Selecione **Criar regra** para continuar.
 
@@ -113,7 +147,7 @@ Nesta tarefa, você testará sua nova regra de consulta agendada.
 
 1. Na janela de *Boas vindas ao Azure Cloud Shell*, selecione **PowerShell**.
 
-1. Na página *Introdução*, selecione **Montar conta de armazenamento** e, em seguida, selecione o seu **Azure Pass – Sponsorship** no menu suspenso *Assinatura da conta de armazenamento* e clique no botão **Aplicar**.
+1. Na página *Introdução*, selecione **Montar conta de armazenamento** e, em seguida, selecione a sua **MOC Subscription-XXXXXXXXXXX** no menu suspenso *Assinatura da conta de armazenamento* e selecione o botão **Aplicar**.
 
     >**Importante:** Não selecione o botão de opção *Não é necessária conta de armazenamento*. Isso causará uma falha na criação do incidente.
 

@@ -57,7 +57,6 @@ Nesta tarefa, você realizará ataques ao host conectado ao Azure Arc e que tenh
     net localgroup administrators theusernametoadd /add
     ```
 
-
 ### Tarefa 3: ataque de comando e controle com DNS
 
 1. Copie e execute este comando para criar um script que simulará uma consulta DNS para um servidor C2:
