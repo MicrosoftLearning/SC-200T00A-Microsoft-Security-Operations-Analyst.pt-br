@@ -72,7 +72,14 @@ Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 
 1. Analise os recursos do Azure que agora estão protegidos com os planos do Defender para Nuvem.
 
-    >**Importante:** Se todos os planos do Defender estiverem *Desativados*, selecione **Habilitar todos os planos**. Selecione o *Plano 1 do Microsoft Defender para APIs de US$ 200/mês* e selecione **Salvar**. Selecione **Salvar** na parte superior da página e aguarde que as notificações *"Os planos do Defender para sua assinatura foram salvos com sucesso!"* sejam exibidas.
+<!---
+    >**Important:** If all Defender plans are *Off*, select **Enable all plans**. Select the *$200/month Microsoft Defender for APIs Plan 1* and then select **Save**. Select **Save** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.--->
+
+1. Na seção *GPSN (Gerenciamento da Postura de Segurança na Nuvem),* selecione **Ativado** para o *GPSN do Defender*.
+
+1. Na seção *CWP (Proteção de cargas de trabalho de nuvem),* selecione **Ativado** para o *Plano de Servidores 2*.
+
+1. Selecione o botão **Salvar** na parte superior da página.
 
 1. Selecione a guia **Configurações e monitoramento** na área Configurações (ao lado de Salvar).
 
@@ -107,6 +114,8 @@ Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 1. Na barra de menus superior, selecione **Assinaturas do Azure **. As configurações do ambiente abrirão e você poderá escolher entre as assinaturas disponíveis.
 
 1. Retorne à página **Visão geral** e examine o bloco **Postura de segurança**. Você pode ver sua *Classificação de segurança* junto com o número de controles e recomendações concluídos. Selecionar esse bloco redirecionará você para uma exibição detalhada das assinaturas
+
+    >**Observação**: a Classificação de Segurança e outras informações no bloco *Postura de segurança* podem levar até 24 horas para serem calculadas. Isso pode não ser totalmente preenchido durante este laboratório.
 
 1. No bloco **Conformidade regulatória**, você pode obter insights sobre sua postura de conformidade com base na avaliação contínua de ambientes de nuvem híbrida e do Azure. Este bloco mostra os seguintes padrões, que são o parâmetro de comparação de Segurança de Nuvem da Microsofte e o padrão regulatório de conformidade mais baixo. Para exibir os dados, primeiro precisamos adicionar políticas de segurança.
 
