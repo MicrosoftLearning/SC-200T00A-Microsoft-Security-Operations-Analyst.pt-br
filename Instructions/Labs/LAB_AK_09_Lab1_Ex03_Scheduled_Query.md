@@ -72,7 +72,7 @@ Nesta tarefa, você cria uma *regra de consulta agendada de análise do Microsof
 
 1. Na folha de resumo da regra, verifique se você está recebendo dados revisando o ícone verde em *Fontes de dados: Atividade do Azure*.
 
-    >**Observação:** se você não o vir em um estado conectado e executar novamente o Laboratório do Roteiro de Aprendizagem 8, Exercício 1, Tarefa 3, conforme observado acima, talvez seja necessário aguardar alguns minutos para que o processo seja concluído.
+    >**Observação:** se você não o vir no estado conectado e tiver executado a *tarefa de pré-requisito* acima, talvez seja necessário aguardar mais tempo para que o processo seja concluído.
 
 1. Selecione **Criar regra** para continuar.
 

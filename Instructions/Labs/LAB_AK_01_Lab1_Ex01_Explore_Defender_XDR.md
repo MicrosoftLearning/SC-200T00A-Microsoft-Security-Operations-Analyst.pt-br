@@ -35,7 +35,7 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP 
 
 1. Inicie o navegador Microsoft Edge.
 
-1. No navegador Microsoft Edge, acesse o portal do Microsoft Defender XDR em (<https://security.microsoft.com>).
+1. No navegador Microsoft Edge, acesse o portal do Microsoft Defender XDR em <https://security.microsoft.com>.
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
