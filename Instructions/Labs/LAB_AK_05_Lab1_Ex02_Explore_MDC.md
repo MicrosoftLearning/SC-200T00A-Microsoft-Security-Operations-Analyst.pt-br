@@ -56,29 +56,25 @@ Nessa tarefa, você revisará a configuração de conformidade regulamentar no M
 
     >**Observação:** talvez você queira voltar mais tarde à *Conformidade regulatória* para analisar os novos controles e recomendações padrão.
 
-### Tarefa 2: explorar a postura e as recomendações de segurança
+### Tarefa 2: Explorar recomendações de segurança
 
-Nessa tarefa, você revisará o gerenciamento da postura de segurança na nuvem.  As informações do Secure Score podem levar 24 horas para serem recalculadas. Recomenda-se fazer essa tarefa novamente em 24 horas.
+Nessa tarefa, você revisará as recomendações de gerenciamento da postura de segurança na nuvem.
 
-1. Em *Segurança na nuvem*, selecione **Postura de segurança** nos itens do menu à esquerda.
-
-1. A *pontuação segura* é padronizada para o *ambiente Azure*
-
-1. Na guia *Ambiente*, selecione **Exibir recomendações >** link.
+1. Na seção *Geral*, selecione **Recomendações** no menu de navegação.
 
 1. Selecione **Adicionar filtro** e depois selecione **Tipo de recurso**.
 
 1. Marque a caixa de seleção **Máquinas - Azure Arc** e selecione o botão **Aplicar**.
 
-    >**Observação:** Se você não vir **Máquinas - Azure Arc** listado, certifique-se de ter concluído o Caminho de Aprendizagem 3 - Laboratório 1 - Exercício 1 Tarefa 4..
+    >**Observação:** se você não vir a opção **Computadores – Azure Arc** listada, atualize a página.
 
-1. Selecione qualquer recomendação cujo status não seja *"Concluído"*.
+1. Selecione qualquer recomendação cujo status não seja *Concluído*. Será necessário rolar para a direita para ver a coluna *Status*.
 
 1. Revise a recomendação e na guia **Executar ação** role para baixo até **Delegar** e selecione **Atribuir proprietário e definir data de vencimento**.
 
 1. Na janela **Criar atribuição**, deixe *Tipo* definido como *Microsoft Defender para Nuvem* e expanda os **Detalhes da atribuição**.
 
-1. Na caixa `Set owner` *Endereço de email*, digite o seu email de administrador. **Dica:** você pode copiá-lo nas instruções na guia *Recursos*.
+1. Na caixa *Endereço de email*, digite o seu email de administrador. **Dica:** você pode copiá-lo nas instruções na guia *Recursos*.
 
 1. Explore as opções de *Definir o período de correção* e *Definir as notificações por email* e selecione **Criar**.
 

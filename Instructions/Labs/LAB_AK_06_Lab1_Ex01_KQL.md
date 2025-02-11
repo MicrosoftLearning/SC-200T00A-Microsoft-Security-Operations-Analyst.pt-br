@@ -10,7 +10,9 @@ lab:
 
 ![Visão geral do laboratório.](../Media/SC-200-Lab_Diagrams_Mod4_L1_Ex1.png)
 
-Você trabalha como analista de operações de segurança em uma empresa que está implementando o Microsoft Sentinel. É responsável por executar a análise de dados de log para procurar atividades mal-intencionadas, exibir visualizações e realizar a busca de ameaças. Para consultar os dados do log, você usa a KQL (Linguagem de Consulta Kusto).
+Você trabalha como analista de operações de segurança em uma empresa que está implementando o Microsoft Azure Sentinel. Você é responsável por executar a análise de dados de log para procurar atividades mal intencionadas, exibir visualizações e realizar a busca de ameaças. Para consultar os dados do log, você usa o KQL (Kusto Query Language).
+
+>**Observação:** de acordo com a SFI *(Iniciativa Futuro Seguro)* da Microsoft, qualquer informação que possa ser considerada PII *(Informações de identificação pessoal)*, como locais, nomes de usuário, endereços IP, IDs de recursos etc. foram removidos das tabelas de demonstração de LA, como *SigninLogs*. Isso pode produzir mensagens de *Nenhum resultado foi encontrado* para algumas consultas.
 
 >**Importante:** este laboratório envolve a inserção de muitos scripts KQL no Microsoft Sentinel. Os scripts foram fornecidos em um arquivo no início deste laboratório. Um local alternativo para baixá-los é: <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles>
 
@@ -19,6 +21,8 @@ Você trabalha como analista de operações de segurança em uma empresa que est
 ### Tarefa 1: acessar a área de teste da KQL
 
 Nesta tarefa, você acessará um ambiente do Log Analytics onde poderá praticar a escrita de instruções KQL.
+
+  >**Observação:** se você receber a mensagem informando que *Nenhum resultado foi encontrado* para o período padrão, altere o *Intervalo de tempo* para *Últimos sete dias*.
 
 1. Faça logon na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
 
@@ -40,7 +44,6 @@ Nesta tarefa, você acessará um ambiente do Log Analytics onde poderá praticar
 
 1. Ao lado do primeiro registro, selecione o **>** para expandir as informações da linha.
 
-
 ### Tarefa 2: executar instruções básicas do KQL
 
 Nesta tarefa, você compilará instruções básicas do KQL.
@@ -59,7 +62,7 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 
     >**Observação:** Usar o operador *Pesquisa* sem tabelas específicas ou cláusulas de qualificação é menos eficiente do que a filtragem de texto específica à tabela e à coluna.
 
-1. A instrução a seguir demonstra a **pesquisa** entre tabelas listadas na cláusula **in**. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. A instrução a seguir demonstra a **pesquisa** entre tabelas listadas na cláusula **in**. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
     search in (SecurityEvent,App*) "new"
@@ -67,7 +70,7 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 
 1. Altere novamente o *Intervalo de tempo* para **Últimas 24 horas** na janela Consulta.
 
-1. As instruções a seguir demonstram o operador **where**, que filtra em um predicado específico. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. As instruções a seguir demonstram o operador **where**, que filtra em um predicado específico. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     >**Importante:** você deve selecionar **Executar** depois de inserir cada consulta nos blocos de código abaixo.
 
@@ -213,7 +216,7 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
     | where applicationCount >= threshold
     ```
 
-1. A instrução a seguir demonstra a função **arg_max()**, que retorna uma ou mais expressões quando o argumento é maximizado. A instrução a seguir retornará a linha mais atual da tabela SecurityEvent para o computador SQL10.NA.contosohotels.com. O * na função arg_max solicita todas as colunas da linha. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. A instrução a seguir demonstra a função **arg_max()**, que retorna uma ou mais expressões quando o argumento é maximizado. A seguinte instrução retorna a linha mais recente da tabela SecurityEvent para o computador SQL10.NA.contosohotels.com. O * na função arg_max solicita todas as colunas da linha. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
 
     ```KQL
     SecurityEvent  
@@ -231,7 +234,7 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
 
 1. As instruções a seguir demonstram a importância de compreender os resultados com base na ordem do *pipe*. Na janela Consulta, insira as seguintes consultas e execute cada uma delas separadamente: 
 
-    1. A **Consulta 1** terá contas para as quais a última atividade foi um logon. A tabela SecurityEvent será primeiro resumida e retornará a linha mais atual para cada Conta. Então, apenas as linhas com EventID igual a 4624 (logon) serão retornadas.
+    1. A **Consulta 1** terá Contas que tiveram um logon como última atividade. A tabela SecurityEvent será primeiro resumida e retornará a linha mais atual para cada Conta. Então, apenas as linhas com EventID igual a 4624 (logon) serão retornadas.
 
         ```KQL
         SecurityEvent  
@@ -239,7 +242,7 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
         | where EventID == 4624  
         ```
 
-    1. A **Consulta 2** terá o logon mais recente para as Contas que fizeram logon. A tabela SecurityEvent será filtrada para incluir somente EventID = 4624. Em seguida, esses resultados serão resumidos para a linha de logon mais atual por Conta.
+    1. A **Consulta 2** terá o logon mais recente para as Contas que fizeram logon. A tabela SecurityEvent é filtrada para incluir apenas EventID = 4624. Em seguida, esses resultados são resumidos pela linha de logon mais recente por Conta.
 
         ```KQL
         SecurityEvent  
@@ -295,18 +298,20 @@ Nesta tarefa, você usará a geração de visualizações com instruções KQL.
 
 Nesta tarefa, você compilará instruções de várias tabelas em KQL.
 
+>**Importante:** as entradas na tabela *SigninLogs foram removidas*, portanto, algumas das consultas a seguir *não produzem resultados* no ambiente de demonstração de LA usado para este laboratório. No entanto, as consultas KQL demonstram conceitos e casos de uso importantes, portanto, reserve um tempo para revisá-los.
+
 1. Altere o **Intervalo de tempo** para **Última hora** na janela Consulta. Isso limitará nossos resultados para as instruções a seguir.
 
-1. A instrução a seguir demonstra o operador **union**, que pega duas ou mais tabelas e retorna todas as suas linhas. É essencial compreender como os resultados passam e sofrem impacto pelo caractere pipe. Na janela Consulta, insira as seguintes instruções e selecione **Executar** para cada consulta separadamente para ver os resultados: 
+1. A instrução a seguir demonstra o operador **union**, que pega duas ou mais tabelas e retorna todas as suas linhas. É essencial compreender como os resultados passam e sofrem impacto pelo caractere pipe. Na janela Consulta, insira as seguintes instruções e selecione **Executar** para cada consulta separadamente para ver os resultados:
 
-    1. A **Consulta 1** retornará todas as linhas do SecurityEvent e todas as linhas do SigninLogs.
+    1. A **Consulta 1** retornará todas as linhas de SecurityEvent e todas as linhas de SigninLogs.
 
         ```KQL
         SecurityEvent  
         | union SigninLogs  
         ```
 
-    1. A **Consulta 2** retornará uma linha e uma coluna, que é a contagem de todas as linhas do SecurityEvent e todas as linhas do SigninLogs.
+    1. A **Consulta 2** retornará uma linha e coluna, que é a contagem de todas as linhas de SecurityEvent e todas as linhas de SigninLogs.
 
         ```KQL
         SecurityEvent  
@@ -314,7 +319,7 @@ Nesta tarefa, você compilará instruções de várias tabelas em KQL.
         | summarize count() 
         ```
 
-    1. A **Consulta 3** retornará todas as linhas do SecurityEvent e uma (última) linha do SigninLogs. A última linha de SigninLogs terá a contagem resumida do número total de linhas.
+    1. A **Consulta 3** retornará todas as linhas de SecurityEvent e uma (última) linha de SigninLogs. A última linha de SigninLogs apresentará a contagem resumida do número total de linhas.
 
         ```KQL
         SecurityEvent  
@@ -330,7 +335,7 @@ Nesta tarefa, você compilará instruções de várias tabelas em KQL.
     | summarize count() by Type
     ```
 
-1. A instrução a seguir demonstra o operador **join**, que mescla as linhas de duas tabelas para formar uma nova tabela, combinando os valores das colunas especificadas de cada tabela. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. A instrução a seguir demonstra o operador **join**, que mescla as linhas de duas tabelas para formar uma nova tabela, combinando os valores das colunas especificadas de cada tabela. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
     SecurityEvent  
@@ -386,7 +391,7 @@ Nesta tarefa, você trabalhará com campos de cadeia de caracteres estruturados 
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
 
->**Importante:** as consultas a seguir não produzem resultados no ambiente lademo usado para este laboratório. As entradas na tabela *SigninLogs* foram removidas. No entanto, as consultas KQL demonstram conceitos e casos de uso importantes, portanto, reserve um tempo para revisá-los.
+    >**Importante:** as consultas a seguir *não produzem resultados* no ambiente de demonstração LA usado para este laboratório. As entradas na tabela *SigninLogs* foram removidas. No entanto, as consultas KQL demonstram conceitos e casos de uso importantes, portanto, reserve um tempo para revisá-los.
 
 1. A instrução a seguir demonstra o trabalho com campos **dinâmicos**, que são especiais, pois podem assumir qualquer valor de outros tipos de dados. Neste exemplo, o campo DeviceDetail da tabela SigninLogs é do tipo **dinâmico**. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
 
@@ -408,7 +413,7 @@ Nesta tarefa, você trabalhará com campos de cadeia de caracteres estruturados 
 
     >**Importante:** embora o tipo dinâmico pareça semelhante ao JSON, ele pode conter valores que o modelo JSON não representa porque não existem no JSON. Portanto, ao serializar valores dinâmicos em uma representação de JSON, os valores que o JSON não pode representar são serializados em valores de cadeia de caracteres. 
 
-1. As instruções a seguir demonstram os operadores para manipular o JSON armazenado em campos de cadeia de caracteres. Muitos logs enviam dados no formato JSON, o que exige que você saiba como transformar dados JSON em campos que possam ser consultados. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. As instruções a seguir demonstram os operadores para manipular o JSON armazenado em campos de cadeia de caracteres. Muitos logs enviam dados no formato JSON, o que exige que você saiba como transformar dados JSON em campos que possam ser consultados. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
     SigninLogs 
@@ -444,4 +449,4 @@ Nesta tarefa, você trabalhará com campos de cadeia de caracteres estruturados 
     PrivLogins  
     ```
 
-## Você concluiu o laboratório.
+## Você concluiu o laboratório
