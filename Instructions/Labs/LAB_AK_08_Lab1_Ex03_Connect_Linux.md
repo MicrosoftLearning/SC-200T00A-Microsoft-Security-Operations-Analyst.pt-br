@@ -98,9 +98,9 @@ Nesta tarefa, você conectará um host Linux ao Microsoft Sentinel com o conecto
 
 1. Na página da solução *Syslog*, selecione **Gerenciar**.
 
-    >**Observação:** a solução de *Syslog* instala o conector de dados de *Syslog*, sete regras de análise, nove consultas de busca, duas análises e 21 pastas de trabalho.
+    >**Observação:** a solução de *Syslog* instala o conector de dados de *Syslog*, 5 regras de análise, 9 consultas de busca e 1 pasta de trabalho.
 
-1. Selecione o conector de dados *Syslog via Agente herdado* e selecione **Abrir página do conector** na folha de informações do conector
+1. Selecione o conector de dados *Syslog* e selecione **Abrir página do conector** na folha de informações do conector
 
 1. Na seção *Configuração*, expanda **Instalar agente em uma máquina Linux que não seja do Azure**.
 
