@@ -76,13 +76,15 @@ Nesta tarefa, você conectará o conector de dados de *Atividade do Azure*.
 
 1. Na página de detalhes da solução *Atividade do Azure*, selecione **Gerenciar**.
 
-    >**Observação:** A solução de *Atividade do Azure* instala o conector de dados de *Atividade do Azure*, 12 regras de análise, 14 consultas de busca, 1 pasta de trabalho.
+    >**Observação:** A solução de *Atividade do Azure* instala o conector de dados de *Atividade do Azure*, 13 regras de análise, 14 consultas de busca e 1 pasta de trabalho.
 
 1. Selecione um conector de dados de *Atividade do Azure* e depois clique no botão **Abrir página do conector**.
 
 1. Na área *Configuração*, a guia *Instruções*, role a página para baixo até "2. Conecte suas assinaturas..." e, por fim, selecione **Iniciar assistente de atribuição do Azure Policy>**.
 
 1. Na guia **Básico**, selecione o botão de reticências (...) em **Escopo**, escolha sua assinatura *MOC Subscription-XXXXXXXXXXX* na lista suspensa e clique em **Selecionar**.
+
+    >**Observação:***Não* selecione um grupo de recursos opcional.
 
 1. Selecione a guia **Parâmetros**, escolha o workspace *uniquenameDefender* na lista suspensa **Workspace principal do Log Analytics**. Essa ação aplicará a configuração de assinatura para enviar as informações ao workspace do Log Analytics.
 
