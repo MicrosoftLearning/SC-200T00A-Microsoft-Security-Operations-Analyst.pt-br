@@ -58,13 +58,15 @@ Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nu
 
 1. Para habilitar a sincronização bidirecional, selecione o link **Habilitar o Microsoft Defender para todas as assinaturas**.
 
+    >**Observação:** talvez seja necessário rolar para a direita para ver o link.
+
 1. Na página *Microsoft Defender para Nuvem – Introdução*, a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* estará selecionada e o *plano do Microsoft Defender* exibirá *Habilitado – Parcial (30 dias de avaliação restantes)*.
 
 1. Selecione o botão **X (Fechar)** no canto superior direito para fechar a página *Introdução*. Você retornará à página de configuração do *Microsoft Defender para Nuvem*.
 
 1. O *Status* da *MOC Subscription-XXXXXXXXXXX* será **Conectada** e a *Sincronização bidirecional* estará *Habilitada*.
 
-    <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
+    >**Observação:** talvez seja necessário atualizar a página.
 
 ### Tarefa 3: conector o conector de dados de Atividade do Azure
 
@@ -76,7 +78,7 @@ Nesta tarefa, você conectará o conector de dados de *Atividade do Azure*.
 
 1. Na página de detalhes da solução *Atividade do Azure*, selecione **Gerenciar**.
 
-    >**Observação:** A solução de *Atividade do Azure* instala o conector de dados de *Atividade do Azure*, 13 regras de análise, 14 consultas de busca e 1 pasta de trabalho.
+    >**Observação:** a solução de *Atividade do Azure* instala o conector de dados de *Atividade do Azure*, 13 regras de análise, 14 consultas de busca e 1 pasta de trabalho.
 
 1. Selecione um conector de dados de *Atividade do Azure* e depois clique no botão **Abrir página do conector**.
 
