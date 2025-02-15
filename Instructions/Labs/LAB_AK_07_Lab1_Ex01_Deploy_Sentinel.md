@@ -48,7 +48,11 @@ Crie um workspace do Log Analytics, incluindo a opção de região. Saiba mais s
 
 Implantar o Microsoft Sentinel no workspace.
 
-1. Quando a implantação do workspace for concluída, selecione **Atualizar** para exibir o novo workspace.
+1. Quando a implantação do workspace for concluída, selecione **Página Inicial** no menu "estrutural" do Microsoft Azure.
+
+1. Você verá o **Microsoft Sentinel** na seção de *serviços do Azure* do portal. Selecione-a.
+
+1. Nos itens do menu, selecione **+ Criar**.
 
 1. Selecione o workspace ao qual você deseja adicionar o Sentinel (criado na Tarefa 1).
 
@@ -62,7 +66,7 @@ Implantar o Microsoft Sentinel no workspace.
 
 1. Expanda a seção *Configurações* no menu de navegação e selecione **Uso e custos estimados**.
 
-1. Selecione **Retenção de dados**.
+1. Selecione **Retenção de dados** nos itens de menu.
 
 1. Altere o período de retenção de dados para **180 dias**.
 
@@ -90,6 +94,10 @@ Nesta tarefa, você criará uma watchlist no Microsoft Sentinel.
 
 1. Feche o Bloco de notas.
 
+1. No menu "estrutural" do Microsoft Azure, selecione **Página Inicial**.
+
+1. Você verá o **Microsoft Sentinel** na seção de *serviços do Azure* do portal. Selecione-a.
+
 1. No Microsoft Sentinel, selecione a opção **Watchlist** na área Configuração.
 
 1. Escolha **+ Novo** na barra de comandos.
@@ -114,6 +122,8 @@ Nesta tarefa, você criará uma watchlist no Microsoft Sentinel.
 
 1. A tela retorna à página Watchlist.
 
+1. Selecione **Atualizar** no menu para ver a nova lista de observação.
+
 1. Selecione a watchlist *HighValueHosts* e, no painel direito, selecione **Exibir em logs**.
 
     >**Importante:** pode levar até dez minutos para que a watchlist apareça. **Prossiga para a tarefa a seguir e execute este comando no próximo laboratório**.
@@ -130,21 +140,29 @@ Nesta tarefa, você criará um indicador no Microsoft Sentinel.
 
 1. Na barra de comandos, selecione **+ Adicionar novo**.
 
-1. Analise os diferentes tipos de indicadores disponíveis na lista suspensa *Tipos*. Selecione **domain-name**. 
+1. Selecione o **Objeto de TI**.
+
+1. No menu suspenso *Tipo de objeto*, selecione **Indicador**.
+
+1. Selecione a lista suspensa **+ Novo observável** e selecione **Nome de domínio**.
 
 1. Em Domínio, insira o nome de domínio, por exemplo, *contoso.com*.
 
-1. Para *Tipos de ameaça*, selecione **+ Adicionar** e digite **malicious-activity**. Escolha **Aplicar**.
+1. No campo **Nome**, insira o mesmo valor usado para o Domínio.
 
-1. Insira uma **Descrição**
-
-1. Para o **Nome**, insira o mesmo valor usado para o Domínio.
+1. Nos *Tipos de indicador*, selecione **malicious-activity**.
 
 1. Defina o campo **Válido de** como a data de hoje.
 
-1. Selecione **Aplicar**.
+1. Role para baixo até a **Descrição** e digite *Este domínio é conhecido por ser malicioso*.
 
-1. Selecione a opção **Logs** na área Geral. Talvez você queira desabilitar a opção " Sempre mostrar consultas" e fechar a janela *Consultas* para executar as instruções KQL.
+1. Selecione **Adicionar**.
+
+1. Selecione a opção **Logs** na área *Geral* do menu de navegação do *Sentinel*. Talvez você queira desabilitar a opção " Sempre mostrar consultas" e fechar a janela *Consultas* para executar as instruções KQL.
+
+    >**Observação:** na guia padrão *Nova Consulta 1*, a consulta **_GetWatchList('HighValueHosts')** ainda estará lá e agora produzirá resultados se for executada.
+
+1. Selecione o sinal *+* para criar uma guia de consulta.
 
 1. Execute a seguinte instrução KQL.
 
@@ -154,7 +172,7 @@ Nesta tarefa, você criará um indicador no Microsoft Sentinel.
 
     >**Observação:** pode levar até dez minutos para que o indicador apareça.
 
-1. Role os resultados para a direita para ver a coluna DomainName. Você também pode executar a seguinte instrução KQL para ver apenas a coluna DomainName. 
+1. Role os resultados para a direita para ver a coluna DomainName. Você também pode executar a seguinte instrução KQL para ver apenas a coluna DomainName.
 
     ```KQL
     ThreatIntelligenceIndicator 
@@ -171,11 +189,15 @@ Nesta tarefa, você alterará o período de retenção da tabela SecurityEvent.
 
 1. No workspace do Log Analytics, selecione a opção **Tabelas** na área *Configurações*.
 
-1. Pesquise e selecione a tabela **SecurityEvent** e, em seguida, clique no botão de reticências (...).
+1. Pesquise e selecione a tabela **SecurityEvent** e, em seguida, clique no link de reticências (...).
+
+    >**Observação:** talvez seja necessário rolar para a direita para ver o link de reticências.
 
 1. Selecionar **Gerenciar tabela**.
 
-1. Selecione **180 dias** para *Período de retenção total*. Observe que o *Período de arquivamento* é de apenas 150 dias, pois ele usa 30 dias da *Retenção interativa* (padrão).
+1. Altere o *Período de retenção interativa* para **90 dias**.
+
+1. Redefina o *Período de retenção total* para **180 dias** (se necessário). Observe que o *período de arquivo* agora está definido como *90 dias*, pois o *Azure Monitor* trata automaticamente os 90 dias restantes de retenção total como retenção de longo prazo e baixo custo.
 
 1. Selecione **Salvar** para aplicar as alterações.
 
