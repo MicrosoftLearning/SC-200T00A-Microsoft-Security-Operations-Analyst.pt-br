@@ -113,7 +113,7 @@ Nesta tarefa, você criará uma detecção para o primeiro ataque do exercício 
     |Nome da regra de automação|RegKey de inicialização|
     |Gatilho|Quando o incidente é criado|
     |Ações |Executar guia estratégico|
-    |guia estratégico |PostMessageTeams-OnIncident|
+    |guia estratégico |Defender_XDR_Ransomware_Playbook_SecOps-Tasks|
 
     >**Observação:** você já atribuiu permissões ao guia estratégico, então ele estará disponível.
 

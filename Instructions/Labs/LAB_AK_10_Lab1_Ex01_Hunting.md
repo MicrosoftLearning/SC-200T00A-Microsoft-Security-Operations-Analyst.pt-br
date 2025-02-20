@@ -102,6 +102,14 @@ Nesta tarefa, você adicionará uma máquina local conectada do Azure Arc ao Mic
 
 ### Tarefa de pré-requisito 3: Ataque de comando e controle com DNS
 
+>**Importante:** as próximas etapas são feitas em uma máquina diferente daquela em que você estava trabalhando anteriormente. Procure o nome da máquina virtual na guia de referências.
+
+1. Faça logon na máquina virtual **WINServer** como Administrador com a senha: **Passw0rd!** Se necessário.
+
+1. No computador *WINServer*, clique no ícone de *pesquisa* e digite **cmd**.
+
+1. Nos resultados da pesquisa, clique com o botão direito do mouse em *Prompt de Comando* e selecione **Executar como administrador**.
+
 1. Copie e execute este comando para criar um script que simulará uma consulta DNS para um servidor C2:
 
     ```CommandPrompt
@@ -375,7 +383,7 @@ Nesta tarefa, você usará um trabalho de Pesquisa para procurar um C2.
 
 1. Selecione o menu suspenso **Ações de busca** próximo ao meio da tela, acima dos filtros.
 
-1. Selecione **Criar nova busca**. Todas as consultas selecionadas são clonadas para essa nova busca.
+1. Selecione **Criar busca**. Todas as consultas selecionadas são clonadas para essa nova busca.
 
 1. Preencha o nome da busca e os campos opcionais. A descrição é um bom lugar para verbalizar sua hipótese. O menu suspenso Hipótese é onde você define o status da hipótese de trabalho.
 
