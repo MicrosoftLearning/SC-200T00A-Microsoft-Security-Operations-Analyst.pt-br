@@ -40,7 +40,7 @@ Nesta tarefa, você acessará um ambiente do Log Analytics onde poderá praticar
 
 1. Observe que você atingiu o número máximo de resultados (30.000).
 
-1. Altere o *Intervalo de tempo* para **Últimos 30 minutos** na janela Consulta.
+1. Altere o *Intervalo de tempo* para **Últimos 7 dias** na janela Consulta.
 
 1. Ao lado do primeiro registro, selecione o **>** para expandir as informações da linha.
 
@@ -76,26 +76,26 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     ```
 
     >**Observação:** o *intervalo de tempo* agora mostra *Definir na consulta*, pois estamos filtrando com a coluna TimeGenerated.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == 4624
+    | where TimeGenerated > ago(7d) and EventID == 4624
     ```
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | where EventID == 4624  
     | where AccountType =~ "user"
     ```
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID in (4624, 4625)
+    | where TimeGenerated > ago(7d) and EventID in (4624, 4625)
  
     ```
 
@@ -117,7 +117,7 @@ Nesta tarefa, você compilará instruções básicas do KQL.
       @"NT AUTHORITY\SYSTEM"
     ];
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | where Account in (suspiciousAccounts)
     ```
 
@@ -139,7 +139,7 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) 
+    | where TimeGenerated > ago(7d) 
     | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
     ```
@@ -148,7 +148,7 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) 
+    | where TimeGenerated > ago(7d) 
     | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
     | order by StartDir desc, Process asc
@@ -158,7 +158,7 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) 
+    | where TimeGenerated > ago(7d) 
     | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
     | order by StartDir desc, Process asc 
@@ -169,7 +169,7 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) 
+    | where TimeGenerated > ago(7d) 
     | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
     | order by StartDir desc, Process asc 
@@ -184,7 +184,7 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == 4688  
+    | where TimeGenerated > ago(7d) and EventID == 4688  
     | summarize count() by Process, Computer
     ```
 
@@ -192,7 +192,7 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == 4624  
+    | where TimeGenerated > ago(7d) and EventID == 4624  
     | summarize cnt=count() by AccountType, Computer
     ```
 
@@ -200,7 +200,7 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | summarize dcount(IpAddress)
     ```
 
@@ -256,7 +256,7 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | where EventID == 4624  
     | summarize make_list(Account) by Computer
     ```
@@ -265,7 +265,7 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | where EventID == 4624  
     | summarize make_set(Account) by Computer
     ```
@@ -279,7 +279,7 @@ Nesta tarefa, você usará a geração de visualizações com instruções KQL.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | summarize count() by Account
     | render barchart
     ```
@@ -288,7 +288,7 @@ Nesta tarefa, você usará a geração de visualizações com instruções KQL.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | summarize count() by bin(TimeGenerated, 1m)
     | render timechart
     ```
@@ -300,7 +300,7 @@ Nesta tarefa, você compilará instruções de várias tabelas em KQL.
 
 >**Importante:** as entradas na tabela *SigninLogs foram removidas*, portanto, algumas das consultas a seguir *não produzem resultados* no ambiente de demonstração de LA usado para este laboratório. No entanto, as consultas KQL demonstram conceitos e casos de uso importantes, portanto, reserve um tempo para revisá-los.
 
-1. Altere o **Intervalo de tempo** para **Última hora** na janela Consulta. Isso limitará nossos resultados para as instruções a seguir.
+1. Altere o **Intervalo de tempo** para **Sete últimos dias** na janela Consulta. Isso limitará nossos resultados para as instruções a seguir.
 
 1. A instrução a seguir demonstra o operador **union**, que pega duas ou mais tabelas e retorna todas as suas linhas. É essencial compreender como os resultados passam e sofrem impacto pelo caractere pipe. Na janela Consulta, insira as seguintes instruções e selecione **Executar** para cada consulta separadamente para ver os resultados:
 
@@ -352,7 +352,7 @@ Nesta tarefa, você compilará instruções de várias tabelas em KQL.
 
     >**Importante:** a primeira tabela especificada no operador join é a tabela esquerda. A tabela depois do operador **join** é a tabela direita. Ao trabalhar com colunas das tabelas, o nome $left.Column e o nome $right.Column servem para distinguir quais colunas das tabelas são referenciadas. O operador **join** dá suporte a uma gama completa de tipos: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
 
-1. Altere novamente o **Intervalo de tempo** para **Últimas 24 horas** na janela Consulta.
+1. Você pode deixar o **Intervalo de tempo** em **Últimos 7 dias** na janela Consulta.
 
 ### Tarefa 6: trabalhar com dados de cadeia de caracteres em KQL
 
