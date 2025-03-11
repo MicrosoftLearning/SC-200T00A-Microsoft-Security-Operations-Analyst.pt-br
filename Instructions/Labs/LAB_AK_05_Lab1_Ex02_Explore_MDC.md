@@ -34,6 +34,8 @@ Nessa tarefa, você revisará a configuração de conformidade regulamentar no M
 
 1. Em *Segurança na nuvem*, selecione **Conformidade regulatória** nos itens do menu à esquerda.
 
+    >**Observação:** talvez seja necessário atualizar esta página se você não vir as guias da *barra de ferramentas*.
+
 1. Selecione **Gerenciar padrões de conformidade** na barra de ferramentas.
 
 1. Selecione sua assinatura.
@@ -66,9 +68,9 @@ Nessa tarefa, você revisará as recomendações de gerenciamento da postura de 
 
 1. Marque a caixa de seleção **Máquinas - Azure Arc** e selecione o botão **Aplicar**.
 
-    >**Observação:** se você não vir a opção **Computadores – Azure Arc** listada, atualize a página.
+    >**Observação:** se você não vir **Máquinas – Azure Arc** listado, atualize a página.
 
-1. Selecione qualquer recomendação cujo status não seja *Concluído*. Será necessário rolar para a direita para ver a coluna *Status*.
+1. Selecione qualquer recomendação cujo status não seja *Concluído*. Talvez seja necessário rolar para a direita para ver a coluna *Status*.
 
 1. Revise a recomendação e na guia **Executar ação** role para baixo até **Delegar** e selecione **Atribuir proprietário e definir data de vencimento**.
 
@@ -110,4 +112,4 @@ Nessa tarefa, você carregará exemplos de alertas de segurança e revisará os 
 
     - Revise as informações de *Executar ação*. Observe as seções disponíveis para tomar medidas, dependendo do tipo de alerta: Inspecionar o contexto do recurso, Mitigar a ameaça, Prevenir ataques futuros, Disparar resposta automatizada e Suprimir alertas semelhantes.
 
-## Você concluiu o laboratório.
+## Você concluiu o laboratório

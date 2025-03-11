@@ -77,7 +77,7 @@ Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 
 1. Na seção *GPSN (Gerenciamento da Postura de Segurança na Nuvem),* selecione **Ativado** para o *GPSN do Defender*.
 
-1. Na seção *CWP (Proteção de cargas de trabalho de nuvem),* selecione **Ativado** para o *Plano de Servidores 2*.
+1. Na seção *CWP (Proteção de cargas de trabalho de nuvem),* selecione **Ativado** para o *Plano 2 para Servidores*.
 
 1. Selecione o botão **Salvar** na parte superior da página.
 
@@ -85,7 +85,7 @@ Neste tarefa, você habilitará e configurará o Microsoft Defender para Nuvem.
 
 1. Revise as extensões de monitoramento. Elas incluem configurações para Máquinas virtuais, Contêineres e Contas de armazenamento.
 
-1. Selecione o botão **Continuar** ou feche a página "Configurações e monitoramento" selecionando o 'X' no canto superior direito da página.
+1. Selecione o botão **Continuar** ou feche a página "Configurações e monitoramento" clicando no "X" no canto superior direito da página.
 
 1. Feche a página de configurações selecionando o 'X' no canto superior direito da página para retornar às **Configurações do ambiente**.
 
