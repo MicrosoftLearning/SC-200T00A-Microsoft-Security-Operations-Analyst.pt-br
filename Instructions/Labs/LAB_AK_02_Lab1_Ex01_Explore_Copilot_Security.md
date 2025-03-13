@@ -23,7 +23,7 @@ Para esse exercício, você está conectado como Avery Howard e tem uma função
 
 Este exercício deve levar aproximadamente **15** minutos para ser concluído.
 
->**Observação:** quando uma instrução de laboratório solicita a abertura de um link para o ambiente simulado, geralmente é recomendável abrir o link em uma nova janela do navegador para que você possa visualizar simultaneamente as instruções e o ambiente do exercício. Para fazer isso, selecione a tecla direita do mouse e selecione a opção.
+>**Observação:** quando uma instrução de laboratório solicita a abertura de um link para o ambiente simulado, geralmente é recomendável abrir o link em uma nova janela do navegador para que você possa visualizar simultaneamente as instruções e o ambiente do exercício. Para fazer isso, selecione a tecla do mouse à direita e selecione a opção.
 
 Antes que os usuários possam começar a usar o Copilot, os administradores precisam provisionar e alocar a capacidade. Para provisionar a capacidade:
 
@@ -274,7 +274,7 @@ Essa tarefa é complexa e requer o envolvimento de analistas mais experientes. N
 
 1. Retorne à página de incidentes selecionando a guia **História do ataque** na parte superior da página.
 
-1. Selecione as reticências ao lado do resumo de Incidentes do Copilot e selecione **Abrir no Copilot da Segurança**.
+1. Selecione as reticências ao lado do resumo do incidente do Copilot e selecione **Abrir no Security Copilot**.
 
 1. O Copilot é aberto na experiência autônoma e mostra o resumo do incidente. Você também pode executar mais prompts. Nesse caso, você executará a sequência de solicitações para um incidente. Selecione o **ícone de prompt**![ícone de prompt](../Media/prompt-icon.png). 
     1. Selecione **Ver todos os promptbooks**.

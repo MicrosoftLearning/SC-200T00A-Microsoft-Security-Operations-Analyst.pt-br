@@ -20,7 +20,7 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP 
 
 1. Inicie o navegador Microsoft Edge.
 
-1. No navegador Microsoft Edge, acesse o portal do Microsoft Defender XDR em <https://security.microsoft.com>.
+1. No navegador Microsoft Edge, acesse o portal do Microsoft Defender XDR em (<https://security.microsoft.com>).
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
@@ -30,9 +30,7 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP 
 
 1. No painel **Mais recursos**, selecione o botão **Abrir** no bloco *portal do Microsoft Purview*.
 
-1. Quando o portal do Microsoft Purview abrir, uma mensagem será exibida informando que *O portal de conformidade está desativado*. Essa mensagem atingirá o tempo limite e redirecionará você para o novo *portal do Microsoft Purview*.
-
-1. Na mensagem *Bem-vindo ao novo portal do Microsoft Purview*, escolha a opção para concordar com os termos de divulgação de fluxo de dados e a política de privacidade e clique em **Experimentar agora**.
+1. Quando o portal do Microsoft Purview for aberto, uma mensagem sobre o *novo portal do Microsoft Purview* aparecerá na tela. Escolha a opção para concordar com os termos de divulgação de fluxo de dados e a política de privacidade e clique em **Experimentar agora**.
 
     ![Captura de tela mostrando a tela de Boas-vindas ao novo porta do Microsoft Purview.](../Media/welcome-purview-portal.png)
 
