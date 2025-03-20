@@ -8,37 +8,33 @@ Este documento destina-se aos apresentadores que se preparam para ensinar o Micr
 
 ## Pré-requisitos da demonstração
 
-Os laboratórios deste curso exigem um locatário licenciado do Microsoft 365 E5, bem como uma assinatura do Azure.
+Para os laboratórios deste curso é necessário um locatário licenciado do Microsoft 365 E5 com uma licença P2 do Microsoft Defender para Ponto de Extremidade e uma assinatura do Azure.
 
-* Você pode solicitar Azure Passes do Microsoft Learning para seu próprio benefício.
-* Certifique-se de solicitar esses passes pelo menos duas semanas antes de realizar as demonstrações. Depois de receber o passe, você precisará ativá-lo. 
-* O Azure Pass funciona efetivamente da mesma forma que a Assinatura de avaliação do Microsoft Azure disponível ao público. Isso significa que há limitações sobre o que você pode fazer com o passe.
+* Como o curso SC-200 Analista de operações de segurança da Microsoft, essas demonstrações são projetadas para serem executadas em um ambiente de hospedagem de laboratório autorizado.
 * As instruções do laboratório estão presentes no [repositório GitHub do SC-200 Microsoft Learning.](https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Instructions/VTD_Demos/)
-* Verifique se o computador que usará para as demonstrações tem o novo navegador Microsoft Edge instalado.
+* Verifique se o computador que está usando para as demonstrações tem o novo navegador Microsoft Edge instalado.
 
-## Ativar o Azure Pass
-
->**Observação:** há determinadas demonstrações que exigem uma assinatura do Azure conectada a um locatário do Microsoft 365 E5. Você pode usar sua própria assinatura do Azure e o locatário do Microsoft 365 E5 se os Azure Passes não estiverem disponíveis. Acesse o site do [Programa de Desenvolvedores do Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program/) para solicitar a associação e configurar uma assinatura gratuita do desenvolvedor do Microsoft 365 E5.
+>**Observação:** como informado anteriormente, há determinadas demonstrações que precisam de uma assinatura do Azure conectada a um locatário do Microsoft 365 E5. Você pode usar sua própria assinatura do Azure e o locatário do Microsoft 365 E5. Acesse o site do [Programa de Desenvolvedores do Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program/) para solicitar a associação e configurar uma assinatura gratuita do desenvolvedor do Microsoft 365 E5.
 
 ## Implantar o Defender para Ponto de Extremidade
 
 ### Obter suas credenciais do Microsoft 365
 
-Depois de iniciar o laboratório, um locatário de avaliação gratuita será disponibilizado para você acessar no ambiente de laboratório virtual da Microsoft. Esse locatário receberá automaticamente um nome de usuário e uma senha exclusivos. Você deve recuperar esse nome de usuário e senha para poder entrar no Azure e no Microsoft 365 no ambiente de laboratório virtual da Microsoft.
+Depois de iniciar o laboratório hospedado, um locatário de avaliação gratuita será disponibilizado para você no ambiente de Laboratório Virtual da Microsoft. Esse locatário recebe automaticamente um nome de usuário e uma senha exclusivos. Você deve recuperar esse nome de usuário e senha para poder entrar no Azure e no Microsoft 365 no ambiente de laboratório virtual da Microsoft.
 
 Como esse curso pode ser oferecido por parceiros de aprendizagem que usam qualquer um dos vários provedores de hospedagem de laboratório autorizados, as etapas reais envolvidas para recuperar o ID do locatário associado ao seu locatário podem variar de acordo com o provedor de hospedagem de laboratório. Portanto, seu instrutor fornecerá as instruções necessárias sobre como recuperar essas informações para o seu curso. As informações que você deve observar para uso posterior incluem:
 
-    - **ID do sufixo do locatário.** Essa ID é para as contas onmicrosoft.com que você usará para entrar no Microsoft 365 em todos os laboratórios. Isso está no formato de **{username}@M365xZZZZZZ.onmicrosoft.com**, em que ZZZZZZ é o ID de sufixo de locatário exclusivo fornecido pelo provedor de hospedagem do laboratório. Grave esse valor ZZZZZZ para usar mais tarde. Quando qualquer uma das etapas do laboratório direcioná-lo para entrar em portais do Microsoft 365, você deve inserir o valor ZZZZZZ que obtido aqui.
-    - **Senha do locatário.** Essa é a senha da conta de administrador fornecida pelo provedor de hospedagem do laboratório.
-    
+-**ID do sufixo do locatário.** Essa ID é para as contas onmicrosoft.com que você usa para entrar no Microsoft 365 em todos os laboratórios. Isso está no formato de **{username}@M365xZZZZZZ.onmicrosoft.com**, em que ZZZZZZ é o ID de sufixo de locatário exclusivo fornecido pelo provedor de hospedagem do laboratório. Grave esse valor ZZZZZZ para usar mais tarde. Quando qualquer uma das etapas do laboratório direcioná-lo para entrar em portais do Microsoft 365, você deve inserir o valor ZZZZZZ que obtido aqui.
+
+-**Senha do locatário.** Essa é a senha da conta de administrador fornecida pelo provedor de hospedagem do laboratório.
 
 ### Inicializar o Microsoft Defender para Ponto de Extremidade
 
-Nesta tarefa, você executará a inicialização do Microsoft Defender para Ponto de Extremidade.
+Nesta tarefa, você vai executar a inicialização do Microsoft Defender para Ponto de Extremidade.
 
-1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
+1. Entre na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
-1. No navegador Edge, vá para o portal do Microsoft Defender em (https://security.microsoft.com).
+1. No navegador Microsoft Edge, acesse o portal do Microsoft Defender em (https://security.microsoft.com)).
 
 1. Na caixa de diálogo **Entrar**, copie e cole a conta de email do locatário referente ao nome de usuário do administrador fornecido pelo provedor de hospedagem do laboratório e selecione **Avançar**.
 
@@ -58,7 +54,7 @@ No portal **Microsoft Defender**, no menu de navegação, selecione **Configura�
 
 1. Quando a inicialização do novo workspace for concluída, a página do portal **Página Inicial** exibirá um banner **Tenha o SIEM e o XDR em um só lugar**. E, em **Configurações**, as configurações gerais do Microsoft Defender XDR para Conta, Notificações por email, **Recursos de visualização**, Configurações do serviço de alerta, Permissões e funções e API de streaming agora estão ativadas.
 
-1. Quando o novo espaço for concluído com êxito, você verá as configurações gerais do Microsoft 365 Defender para Conta, Notificações por email, Configurações do serviço de alerta, Permissões e funções e API de streaming. Você também verá a **Visualização dos recursos** ativada.
+1. Quando o novo espaço for concluído com êxito, você verá as configurações gerais do Microsoft 365 Defender para Conta, Notificações por email, Configurações do serviço de alerta, Permissões e funções e API de streaming. Você também verá as **Versões Prévias dos Recursos** ativadas.
 
     >**Observação**: no ambiente de laboratório hospedado, seu local de armazenamento de dados deve estar selecionado para você. Além disso, ele deve estar na área geográfica apropriada para o local onde esse locatário de treinamento é gerenciado. Você ainda pode selecionar a duração da Retenção de dados, mas isso não é necessário.
 
@@ -132,7 +128,7 @@ Nesta tarefa, você configurará grupos de dispositivos que permitem o controle 
 1. . Na guia Dispositivos, para a condição do sistema operacional, selecione **Windows 10** e selecione **Avançar**.
 
 1. Na guia Visualização dos dispositivos, selecione **Mostrar visualização** para ver a máquina virtual WIN1. Selecione **Avançar**. 
-**Dica:** Se você não vir a máquina virtual na lista de visualização, volte e selecione também *Nenhum* para a condição do sistema operacional. Os dados da VM ainda não foram preenchidos.
+**Dica:** se você não vir a máquina virtual na lista de visualização, volte e selecione também *Nenhum* para a condição do sistema operacional. Os dados da VM ainda não são preenchidos.
 
 1. Na guia Acesso do usuário, selecione **sg-IT** e, em seguida, selecione **Adicionar grupos selecionados**
 
@@ -169,11 +165,11 @@ In this task, you will load sample security alerts and review the alert details.
 
 Nesta tarefa, você criará um workspace do Microsoft Sentinel.
 
- >**Observação:** você precisará ter um Azure Pass ou outra assinatura do Azure ativa para a demonstração a seguir.
+ >**Observação:** você precisará ter uma assinatura do Azure ativa para a demonstração a seguir.
 
-1. No navegador Edge, acesse o portal do Azure em https://portal.azure.com.
+1. No navegador Microsoft Edge, acesse o portal do Azure em https://portal.azure.com.
 
-1. Na caixa de diálogo **Entrar**, copie e cole a conta de **email do locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Avançar**.
+1. Na caixa de diálogo **Entrar**, copie e cole na conta **Email do locatário** fornecida pelo provedor de hospedagem de laboratório e selecione **Avançar**.
 
 1. Na caixa de diálogo **Inserir senha**, copie e cole a **Senha de locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.
 
@@ -207,13 +203,13 @@ Nesta tarefa, você criará um workspace do Microsoft Sentinel.
 
 Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
-1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
+1. Entre na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
-1. Abra o navegador, pesquise, baixe e instale o novo navegador Microsoft Edge. Inicie o novo navegador Edge.
+1. Abra o navegador, pesquise, baixe e instale o novo navegador Microsoft Edge. Inicie o novo navegador Microsoft Edge.
 
-1. No navegador Edge, acesse o portal do Azure em https://portal.azure.com.
+1. No navegador Microsoft Edge, acesse o portal do Azure em https://portal.azure.com.
 
-1. Na caixa de diálogo **Entrar**, copie e cole a conta de **email do locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Avançar**.
+1. Na caixa de diálogo **Entrar**, copie e cole na conta **Email do locatário** fornecida pelo provedor de hospedagem de laboratório e selecione **Avançar**.
 
 1. Na caixa de diálogo **Inserir senha**, copie e cole a **Senha de locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.
 
@@ -239,9 +235,9 @@ Nesta tarefa, você conectará o conector de dados de *Atividade do Azure*.
 
 1. Na área *Configuração*, a guia *Instruções*, role a página para baixo até "2. Conecte suas assinaturas..." e, por fim, selecione **Iniciar assistente de atribuição do Azure Policy>**.
 
-1. Na guia **Básico**, clique no botão de reticências (...) em **Escopo** e selecione sua assinatura "Azure Pass – Sponsorship" na lista suspensa e clique em **Selecionar**.
+1. Na guia **Básico**, selecione o botão de reticências (...) em **Escopo** e selecione sua Assinatura hospedada do Azure na lista suspensa e clique em **Selecionar**.
 
-1. Selecione a guia **Parâmetros** e escolha seu workspace na lista suspensa **Workspace principal do Log Analytics**. Essa ação aplicará a configuração de assinatura para enviar as informações ao workspace do Log Analytics.
+1. Selecione a guia **Parâmetros** e escolha seu workspace na lista suspensa **Workspace principal do Log Analytics**. Essa ação aplica a configuração de assinatura para enviar as informações para o workspace do Log Analytics.
 
 1. Selecione a guia **Correção** e marque a caixa de seleção **Criar uma tarefa de correção**. Essa ação aplicará a política a recursos já existentes do Azure.
 
@@ -253,7 +249,7 @@ Nesta tarefa, você conectará o conector de dados de *Atividade do Azure*.
 
 Nesta tarefa, você criará uma máquina virtual do Windows no Azure.
 
-1. Faça logon na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
+1. Entre na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
 
 1. No navegador Microsoft Edge, acesse o portal do Azure em https://portal.azure.com.
 
@@ -341,7 +337,7 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
 >**Importante:** As próximas etapas são feitas em uma máquina diferente daquela que você estava trabalhando anteriormente. Procure as referências de nome da máquina virtual.
 
-1. Faça logon na máquina virtual **WINServer** como Administrador com a senha: **Passw0rd!** se necessário.  
+1. Entre na máquina virtual **WINServer** como Administrador com a senha: **Passw0rd!** Se necessário.  
 
 1. Abra o navegador Microsoft Edge e acesse o portal do Azure em https://portal.azure.com.
 
@@ -367,7 +363,7 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
 1. Revise as marcas padrão disponíveis. Selecione **Avançar** para acessar a guia Baixar e executar script.
 
-1. Role a página para baixo e clique no botão **Download**. **Dica:** se o seu navegador bloquear o download, execute uma ação no navegador para permiti-lo. No Navegador Edge, clique no botão de reticências (...) se necessário e depois selecione **Manter**.
+1. Role a página para baixo e clique no botão **Download**. **Dica:** se o seu navegador bloquear o download, execute uma ação no navegador para permiti-lo. No navegador Microsoft Edge, clique no botão de reticências (...) se necessário e depois em **Manter**.
 
 1. Clique com o botão direito do mouse no botão Iniciar do Windows e selecione **Windows PowerShell (Administrador)**.
 
@@ -387,7 +383,7 @@ Nesta tarefa, você instalará o Azure Arc em um servidor local para facilitar a
 
 1. Insira **R** para Executar uma vez e pressione Enter (isso pode levar alguns minutos).
 
-1. O processo de instalação abrirá uma nova guia do navegador Edge para autenticar o agente do Azure Arc. Selecione sua conta de administrador, aguarde a mensagem "Autenticação concluída" e volte para a janela do Windows PowerShell.
+1. O processo de instalação abrirá uma nova guia do navegador Microsoft Edge para autenticar o agente do Azure Arc. Selecione sua conta de administrador, aguarde a mensagem "Autenticação concluída" e volte para a janela do Windows PowerShell.
 
 1. Quando a instalação for concluída, volte para a página do portal do Azure onde você baixou o script e selecione **Fechar**. Feche a página **Adicionar servidores com o Azure Arc** para voltar à página **Máquinas** do Azure Arc.
 
@@ -421,7 +417,7 @@ Nesta tarefa, você adicionará uma máquina virtual Windows que não seja do Az
 
 Nesta tarefa, você implantará o conector do Microsoft Defender XDR.
 
-1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
+1. Entre na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
 1. No navegador Microsoft Edge, navegue até o portal do Azure em (<https://portal.azure.com>).
 
@@ -606,7 +602,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 Nesta tarefa, você realizará ataques em um host com o Microsoft Defender para Ponto de Extremidade configurado.
 
-1. Faça logon na máquina virtual `WIN1` como Administrador com a senha: **Pa55w.rd**.  
+1. Entre na máquina virtual `WIN1` como Administrador com a senha: **Pa55w.rd**.  
 
 1. Em Pesquisa da barra de tarefas, insira *Comando*.  O prompt de comando será exibido nos resultados da pesquisa.  Clique com o botão direito do mouse no prompt de comando e selecione **Executar como administrador**. Confirme todos os prompts do Controle de conta de usuário exibidos.
 
@@ -626,7 +622,7 @@ Nesta tarefa, você realizará ataques em um host com o Microsoft Defender para 
 
 ### Tarefa 2: criar ataque C2 (comando e controle)
 
-1. Faça logon na máquina virtual `WIN1` como Administrador com a senha: **Pa55w.rd**.  
+1. Entre na máquina virtual `WIN1` como Administrador com a senha: **Pa55w.rd**.  
 
 1. Em Pesquisa da barra de tarefas, insira *Comando*.  O prompt de comando será exibido nos resultados da pesquisa.  Clique com o botão direito do mouse no prompt de comando e selecione **Executar como administrador**. Confirme todos os prompts do Controle de conta de usuário exibidos.
 
@@ -695,7 +691,7 @@ Selecione **Sim** para criar um novo arquivo e copie o seguinte script do PowerS
     Until ($TimeNow -ge $RunEnd)
     ```
 
-No prompt de comando, insira o comando em cada linha pressionando a tecla Enter após cada linha:
+No prompt de comando do , digite o seguinte: Insira o comando em cada linha pressionando a tecla Enter após cada linha:
 
     ```PowerShell
     .\c2.ps1
@@ -710,7 +706,7 @@ Nesta tarefa, você realizará ataques em um host com o conector Eventos de Segu
 
 1. Selecione a máquina virtual `AZWIN01` que você criou anteriormente.  
 
-1. No menu à esquerda, role para baixo até **Operações** e selecione **Executar comando**
+1. No menu de navegação à esquerda, role para baixo até **Operações** e selecione **Executar comando**
 
 1. No painel **Executar comando**, selecione **RunPowerShellScript**
 
