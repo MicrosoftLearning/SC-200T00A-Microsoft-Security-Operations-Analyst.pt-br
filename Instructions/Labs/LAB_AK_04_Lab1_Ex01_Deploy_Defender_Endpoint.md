@@ -120,9 +120,9 @@ Nesta tarefa, você configurará grupos de dispositivos que permitem o controle 
 
 1. Selecione **Avançar**.
 
-1. Na guia Dispositivos, para a condição do sistema operacional, selecione **Windows 10** e selecione **Avançar**.
+1. Na guia Dispositivos, para a condição do sistema operacional, selecione **Windows 11** e **Avançar**.
 
-    >**Observação:** alguns provedores de hospedagem de laboratório podem ter configurado imagens do *Windows 11* para WIN1. Você pode selecionar um ou ambos.
+    >**Observação:** alguns provedores de hospedagem de laboratório podem ter imagens do *Windows 10* para WIN1. Você pode selecionar um ou ambos.
 
 1. Na guia Visualizar dispositivos, o botão *Mostrar visualização* pode mostrar a máquina virtual WIN1, mas provavelmente os dados ainda não estão preenchidos. Selecione **Avançar** para continuar.
 
