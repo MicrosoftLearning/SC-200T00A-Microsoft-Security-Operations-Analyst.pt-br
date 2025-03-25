@@ -58,7 +58,7 @@ Nesta tarefa, você investigará os alertas e incidentes gerados pelo script de 
 
 1. Desmarque o filtro de *Severidade de alerta* selecionando o **X** à direita do filtro.
 
-1. Um novo incidente chamado *[TestAlert] Linha de comando suspeita do PowerShell* aparece no painel direito. Selecione o nome do incidente para carregar seus detalhes.
+1. Um novo incidente chamado *Incidente de execução em um ponto de extremidade* aparecerá no painel à direita. Selecione o nome do incidente para carregar seus detalhes.
 
 1. Selecione o link **Gerenciar incidente** (com um ícone de lápis) e uma nova folha de janela será exibida.
 
