@@ -126,7 +126,7 @@ Nesta tarefa, você conectará uma máquina virtual do Windows do Azure ao Micro
 
 1. Selecione o conector de dados *Eventos de Segurança do Windows via AMA* e selecione **Abrir página do conector** na folha de informações do conector.
 
-1. Na seção *Configuração*, selecione **Criar regra de coleta de dados**.
+1. Na seção *Configuração*, clique no botão **+ Criar regra de coleta de dados**.
 
 1. Insira **AZWINDCR** para Nome da regra e depois selecione **Avançar: Recursos**.
 
