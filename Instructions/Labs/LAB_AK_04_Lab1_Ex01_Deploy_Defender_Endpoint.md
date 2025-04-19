@@ -78,28 +78,45 @@ Nesta tarefa, você integrará um dispositivo ao Microsoft Defender para Ponto d
 
 Nesta tarefa, você configurará funções para usar em grupos de dispositivos.
 
-1. Na barra de menus esquerda do portal do Microsoft Defender XDR, expanda a seção **Sistema**, selecione **Configurações** e, em seguida, selecione **Pontos de extremidade**.
+1. No menu de navegação do portal do Microsoft Defender XDR, expanda a seção **Sistema**, selecione **Configurações** e, em seguida, selecione **Microsoft Defender XDR**.
 
-1. Selecione **Funções** na área de permissões.
+1. Selecione **Permissões e Funções** na seção *Conta*.
 
-1. Selecione o botão **Ativar funções**.
+1. Role a página para baixo e clique no link **Ir para Permissões e funções**.
 
-1. Selecione **+ Adicionar função**.
+1. Na página *Permissões e funções*, clique em **+ Criar função personalizada**.
 
-1. No diálogo Adicionar função, insira as seguintes informações:
+1. Na página *Informações básicas*, na caixa de diálogo Adicionar função, insira:
 
-    |Configurações gerais|Valor|
+    |Configuração básica|Valor|
     |---|---|
     |Nome da função|**Suporte de Nível 1**|
-    |Permissões|Recursos de Resposta imediata – Avançado|
 
 1. Selecione **Avançar**.
 
-1. Na página **Grupos de usuários atribuídos**, digite **sg-IT** no formulário *Filtrar grupos de usuários* e selecione **Adicionar grupos selecionados**. Verifique se ele aparece em *Grupos de usuários do Azure AD com essa função*.
+1. Na página **Permissões**, selecione as seguintes permissões:
+
+    |Grupo de permissões|Descrição|  |Operações de segurança|Gerencia as operações cotidianas e responde a incidentes e avisos|
+
+1. Na página pop-out em *Operações de segurança*, clique no botão de opção **All read and manage permissions** 
+
+1. Clique em **Apply** e **Next**.
+
+1. Na página **Atribuir usuários e fontes de dados**, clique no botão **Create assignment** 
+
+1. No diálogo *Adicionar atribuição*, insira:
+
+    |Configuração de atribuição|Valor|
+    |---|---|
+    |Nome da atribuição|**Suporte de Nível 1**|
+    |funcionários|****sg-IT**|
+    |Fontes de dados|**Manter o padrão**|
+
+1. Clique em **Adicionar** e **Avançar**.
 
 1. Selecione **Enviar** e, em seguida, **Concluído** quando terminar.
 
-    >**Observação:** se você receber o erro *"O usuário não pode executar esta ação porque seu UserAuthEnforcementMode é Rbac e esta ação requer um dos seguintes: RbacV2"*, selecione **OK** e tente novamente.
+<!--- 1. On the *Permissions and roles* page, select the **Activate workloads** button. --->
 
 ### Tarefa 4: configurar grupos de dispositivos
 
@@ -116,7 +133,7 @@ Nesta tarefa, você configurará grupos de dispositivos que permitem o controle 
     |Configurações gerais|Valor|
     |---|---|
     |O nome do grupo de dispositivos|**Regular**|
-    |Nível de correção|Completo – corrija ameaças automaticamente|
+    |Nível de correção|Correção completa|
 
 1. Selecione **Avançar**.
 

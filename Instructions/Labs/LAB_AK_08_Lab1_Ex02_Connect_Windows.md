@@ -40,7 +40,7 @@ Nesta tarefa, você criará uma máquina virtual do Windows no Azure.
 
 1. Selecione **Desenvolvimento/Teste** e, em seguida, selecione **Continuar para criar uma VM**.
 
-1. Selecione **Criar novo** para o *Grupo de recursos*, insira RG-AZWIN01 como Nome e selecione **OK**.
+1. Selecione **Criar novo** em *Grupo de recursos*, insira RG-AZWIN01 em Nome e clique em **OK**.
 
     >**Observação:** esse será um novo grupo de recursos para fins de acompanhamento. 
 
@@ -66,7 +66,7 @@ Nesta tarefa, você criará uma máquina virtual do Windows no Azure.
 
 1. Selecione **Criar**. Aguarde até que o recurso seja criado, o que pode levar alguns minutos.
 
-### Tarefa 2: Conectar-se a um servidor local no Azure
+### Tarefa 2: Conectar um servidor local no Azure
 
 Nesta tarefa, você conectará um servidor local à sua assinatura do Azure. O Azure Arc foi pré-instalado neste servidor. O servidor será usado nos próximos exercícios para executar ataques simulados que você irá detectar e investigar posteriormente no Microsoft Sentinel.
 
@@ -134,7 +134,7 @@ Nesta tarefa, você conectará uma máquina virtual do Windows do Azure ao Micro
 
     >**Dica:** Você pode expandir toda a hierarquia *Escopo* selecionando o ">" antes da coluna *Escopo*.
 
-1. Expanda **defender-RG** e selecione **AZWIN01**.
+1. Expanda **RG-AZWIN01** e selecione **AZWIN01**.
 
 1. Selecione **Avançar: coletar**.
 
