@@ -89,11 +89,7 @@ Nesta tarefa, você atribuirá políticas de segurança predefinidas para a EOP 
 
 ### Tarefa 3: Preparar o workspace do Microsoft Defender XDR
 
-1. No portal **Microsoft Defender**, no menu de navegação, selecione **Configurações** à esquerda.
-
-    >**Observação:** talvez seja necessário rolar até o topo do menu.
-
-1. Role para baixo os itens de menu para **Ativos** e selecione **Dispositivos**.
+1. Na tela **Página Inicial** do portal do *Microsoft Defender*, role para baixo os itens do menu de navegação atéŒ a seção **Ativos** e selecione **Dispositivos**.
 
 1. O processo para implantar o workspace do Defender XDR deve ser iniciado e você deverá ver mensagens informando que *carregar e inicializar* será exibida brevemente na parte superior da página e, em seguida, você verá uma imagem de uma caneca de café e uma mensagem que diz: **Espere um pouco. Estamos preparando novos espaços para seus dados e conectando-os.** O laboratório leva cerca de cinco minutos para ser concluído. *Deixe a página aberta e certifique-se de que ela seja concluída, pois ela é necessária para o próximo Laboratório.*
 
