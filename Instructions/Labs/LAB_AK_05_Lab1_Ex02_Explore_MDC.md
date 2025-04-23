@@ -68,9 +68,9 @@ Nessa tarefa, você revisará as recomendações de gerenciamento da postura de 
 
 1. Marque a caixa de seleção **Máquinas - Azure Arc** e selecione o botão **Aplicar**.
 
-    >**Observação:** se você não vir **Máquinas – Azure Arc** listado, atualize a página.
+    >**Observação:** se você não vir a opção **Computadores – Azure Arc** listada, atualize a página.
 
-1. Selecione qualquer recomendação cujo status não seja *Concluído*. Talvez seja necessário rolar para a direita para ver a coluna *Status*.
+1. Selecione qualquer recomendação cujo status não seja *Concluído*. Será necessário rolar para a direita para ver a coluna *Status*.
 
 1. Revise a recomendação e na guia **Executar ação** role para baixo até **Delegar** e selecione **Atribuir proprietário e definir data de vencimento**.
 
