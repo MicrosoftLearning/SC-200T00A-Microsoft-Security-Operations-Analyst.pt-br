@@ -96,7 +96,9 @@ Nesta tarefa, você configurará funções para usar em grupos de dispositivos.
 
 1. Na página **Permissões**, selecione as seguintes permissões:
 
-    |Grupo de permissões|Descrição|  |Operações de segurança|Gerencia as operações cotidianas e responde a incidentes e avisos|
+    |Grupo de permissões|Descrição|
+    |---|---|
+    |Operações de segurança|Gerencia as operações cotidianas e responde a incidentes e avisos|
 
 1. Na página pop-out em *Operações de segurança*, clique no botão de opção **All read and manage permissions** 
 
@@ -109,7 +111,7 @@ Nesta tarefa, você configurará funções para usar em grupos de dispositivos.
     |Configuração de atribuição|Valor|
     |---|---|
     |Nome da atribuição|**Suporte de Nível 1**|
-    |funcionários|****sg-IT**|
+    |funcionários|**sg-IT**|
     |Fontes de dados|**Manter o padrão**|
 
 1. Clique em **Adicionar** e **Avançar**.
