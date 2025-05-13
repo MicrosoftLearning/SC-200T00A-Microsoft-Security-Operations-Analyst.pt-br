@@ -10,7 +10,7 @@ lab:
 
 Você é um analista de operações de segurança que trabalha em uma empresa que implementou o Microsoft Sentinel. Você deve aprender a detectar e mitigar ameaças usando o Microsoft Sentinel. Agora, você deseja responder e corrigir ações que podem ser executadas pelo Microsoft Sentinel como uma rotina.
 
-Com um guia estratégico, você pode ajudar a automatizar e orquestrar sua resposta a ameaças, integrar-se a outros sistemas internos e externos e pode ser configurado para ser executado automaticamente em resposta a alertas ou incidentes específicos, quando disparado por uma regra de análise ou uma regra de automação, respectivamente.
+Com um guia estratégico, você pode ajudar a automatizar e orquestrar sua resposta a ameaças, integrar-se a outros sistemas internos e externos e ele pode ser configurado para ser executado automaticamente em resposta a alertas ou incidentes específicos, quando disparado por uma regra de análise ou uma regra de automação.
 
 >**Importante:** os exercícios de laboratório para o Roteiro de Aprendizagem 9 estão em um ambiente *independente*. Se você sair do laboratório antes de concluí-lo, será necessário executar as configurações novamente.
 
@@ -20,9 +20,9 @@ Nesta tarefa, você criará um Aplicativo lógico que será usado como um Guia e
 
 >**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *hub de conteúdo* foram instaladas.
 
-1. Faça logon na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
+1. Entre na máquina virtual WIN1 como Administrador com a senha: **Pa55w.rd**.  
 
-1. Na caixa de diálogo **Entrar**, copie e cole a conta de **email do locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Avançar**.
+1. Na caixa de diálogo **Entrar**, copie e cole na conta **Email do locatário** fornecida pelo provedor de hospedagem de laboratório e selecione **Avançar**.
 
 1. Na caixa de diálogo **Inserir senha**, copie e cole a **Senha de locatário** fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.
 
@@ -46,7 +46,7 @@ Nesta tarefa, você criará um Aplicativo lógico que será usado como um Guia e
 
 1. Para Grupo de recursos, selecione **Criar novo**, insira **RG-Playbooks** e selecione OK.
 
-1. Remova **for** do nome do manual (excederia o limite de 64 caracteres).
+1. Remova **for** e os *sublinhados* extras do nome do guia estratégico (isso excederia o limite de 64 caracteres). Deve ser lido **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**.
 
 1. Selecione **Conexões**.
 
@@ -66,7 +66,7 @@ Nesta tarefa, você atualizará o novo guia estratégico criado com as informaç
 
 1. Selecione seu workspace do Microsoft Sentinel.
 
-1. Selecione Automação na área Configuração e, em seguida, selecione a guia Guias estratégicos ativos.
+1. Selecione Automação na área Configuração e, em seguida, selecione a guia *Guias estratégicos ativos*.
 
 1. Selecione Atualizar na barra de comandos, caso não veja nenhum guia estratégico. Você deve ver o guia estratégico criado a partir da etapa anterior.
 
@@ -78,33 +78,37 @@ Nesta tarefa, você atualizará o novo guia estratégico criado com as informaç
 
 1. Selecione o primeiro bloco, incidentes do Microsoft Sentinel.
 
-1. Selecione o link Alterar conexão.
+1. Selecione o link **Alterar conexão***.
 
-1. Selecione Adicionar novo e selecione Entrar. Na nova janela, selecione suas credenciais de administrador da assinatura do Azure quando solicitado. A última linha do bloco agora deve ser " Conectado ao nome de usuário-administrador".
+1. Selecione **Adicionar novo** e selecione **Entrar**. Na nova janela, selecione suas credenciais de administrador da assinatura do Azure quando solicitado. A última linha do bloco agora deve ser " Conectado ao nome de usuário-administrador".
 
 <!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 
-1. Selecione Salvar na barra de comandos. O Aplicativo lógico será usado em um laboratório futuro.
+1. Selecione **Salvar** na barra de comandos.
+
+1. Selecione o **X** na janela para fechá-la. O Aplicativo lógico será usado em um laboratório futuro.
 
 ### Tarefa 3: criar uma regra de automação
 
 1. No Microsoft Sentinel, expanda *Configuração* no menu de navegação e selecione *Automação*.
 
-1. Selecione Criar e escolha Regra de automação.
+1. Selecione  **+ Criar** e escolha **Regra de automação**.
 
 1. Dê um nome para a regra
 
-1. Deixe o provedor de incidentes como Todos.
+1. Deixe o *Gatilho* como **Quando um incidente for criado**.
 
-1. Deixe o nome da Regra de análise como Todos.
+1. Em *Condições*, deixe o provedor de incidentes como *Todos*.
+
+1. Deixe o *Nome da regra de análise* como *Todos*.
 
 1. Selecione **+ Adicionar** e escolha *Condição (E)*.
 
-1. Na lista suspensa, selecione Táticas.
+1. Na lista suspensa, selecione **Táticas**.
 
 1. Selecione o operador **Contém** no menu suspenso.
 
-1. Selecione as seguintes táticas:
+1. Selecione os seguintes *Valores* de táticas:
     - Reconhecimento
     - Execução
     - Persistência
@@ -112,7 +116,7 @@ Nesta tarefa, você atualizará o novo guia estratégico criado com as informaç
     - Exfiltração
     - PreAttack
 
-1. Em Ações, selecione Executar Guia estratégico.
+1. Em Ações, selecione **Executar guia estratégico**.
 
 1. Selecione o link para **Gerenciar permissões do guia estratégico**.
 
@@ -121,6 +125,8 @@ Nesta tarefa, você atualizará o novo guia estratégico criado com as informaç
 1. Na lista suspensa, selecione o guia estratégico **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**.
 
 1. Por fim, selecione **Aplicar** na parte inferior.
+
+1. Selecione o **X** na janela *Criar nova regra de automação* para fechá-la.
 
 Agora você criou um guia estratégico e uma regra de automação no Microsoft Sentinel.
 
