@@ -127,6 +127,8 @@ Nesta tarefa, você criará uma detecção para o primeiro ataque do exercício 
 
 Nesta tarefa, você criará uma detecção para o segundo ataque do exercício anterior.
 
+>**Observação:** configuramos a Política de Segurança Local na máquina WINServer para registrar os eventos 4732. Isso é configurado na *Configuração da política de auditoria avançada > Políticas de auditoria do sistema - Objeto de política de grupo local > Gerenciamento de contas > Gerenciamento de grupos de segurança de auditoria: sucessos e fracassos*.
+
 1. No portal do Microsoft Sentinel, selecione **Logs** na seção Geral caso você tenha navegado para fora desta página.
 
 1. **Execute** a seguinte instrução KQL para identificar qualquer entrada que se refira a administradores:
@@ -217,7 +219,7 @@ Nesta tarefa, você criará uma detecção para o segundo ataque do exercício a
    |Nome da regra de automação|Adição de usuários administradores locais do evento de segurança|
    |Gatilho|Quando o incidente é criado|
    |Ações |Executar guia estratégico|
-   |guia estratégico |PostMessageTeams-OnIncident|
+   |guia estratégico |Defender_XDR_Ransomware_Playbook_SecOps-Tasks|
 
    >**Observação:** você já atribuiu permissões ao guia estratégico, então ele estará disponível.
 
