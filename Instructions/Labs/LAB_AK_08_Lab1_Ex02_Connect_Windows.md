@@ -30,11 +30,11 @@ Nesta tarefa, você criará uma máquina virtual do Windows no Azure.
 
 1. Selecione **+ Criar um Recurso**. **Dica:** se você já estiver no Portal do Azure, talvez seja necessário selecionar *Microsoft Azure* na barra superior para ir para a página inicial.
 
-1. Na caixa **Pesquisar serviços e marketplace**, insira *Windows 10* e selecione **Microsoft Windows 10** na lista suspensa.
+1. Na caixa **Pesquisar serviços e marketplace**, insira *Windows 11* e selecione **Windows 11** na lista suspensa.
 
-1. Selecione a caixa para **Microsoft Windows 10**.
+1. Selecione a caixa para **Windows 11**.
 
-1. Abra a lista suspensa *Plano* e selecione **Windows 10 Enterprise, versão 22H2**.
+1. Abra a lista suspensa *Plano* e selecione **Windows 11 Enterprise, versão 22H2**.
 
 1. Selecione **Iniciar com uma configuração predefinida** para continuar.
 
@@ -48,15 +48,15 @@ Nesta tarefa, você criará uma máquina virtual do Windows no Azure.
 
 1. Mantenha **(EUA) Leste dos EUA** como valor padrão para *Região*.
 
-1. Role para baixo e revise a *imagem* da máquina virtual. Se ele estiver vazio, selecione **Windows 10 Enterprise, versão 22H2**.
+1. Role para baixo e revise a *imagem* da máquina virtual. Se ele estiver vazio, selecione **Windows 11 Enterprise, versão 22H2**.
 
-1. Revise o *Tamanho* da máquina virtual. Se ele estiver vazio, selecione **Ver todos os tamanhos**, escolha o primeiro tamanho de VM em *Mais usado pelos usuários do Azure* e clique em **Selecionar**.
+1. Revise o *Tamanho* da máquina virtual. Se estiver vazio, selecione **Ver todos os tamanhos**, escolha o primeiro tamanho de VM (série D) relacionado e selecione **Selecionar**.
 
     >**Observação:** se você vir a mensagem *Esta imagem não tem suporte para Gerenciamento automatizado do Azure. Para desabilitar esse recurso, navegue até a guia Gerenciamento. Caso contrário, selecione uma imagem com suporte.* Vá para a guia Gerenciamento e desabilite "Gerenciamento automatizado". O processo de criação progredirá depois.
 
 1. Role para baixo e insira um *Nome de usuário* de sua escolha. **Dica:** Evite palavras reservadas como "admin" (administrador) ou "root" (raiz).
 
-1. Insira uma *senha* de sua escolha. **Dica:** pode ser mais fácil reutilizar sua senha de locatário. Ele pode ser encontrado na guia Recursos.
+1. Insira uma *senha* de sua escolha. **Dica:** pode ser mais fácil reutilizar sua senha LabUser. A senha pode ser enconrada na guia de recursos. Pode ser necessário inseri-la duas vezes.
 
 1. Role para baixo até a parte inferior da página e marque a caixa de seleção abaixo de *Licenciamento* para confirmar que você tem a licença qualificada.
 
