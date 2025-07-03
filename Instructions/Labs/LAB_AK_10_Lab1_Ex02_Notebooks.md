@@ -77,7 +77,7 @@ Nesta tarefa, você explorará o uso de notebooks no Microsoft Sentinel.
 
 1. Selecione o botão **Examinar + Criar** na parte inferior da tela e, em seguida, role para baixo e selecione **Criar**. Feche qualquer janela de comentário que possa aparecer. Isso leva alguns minutos, mas você verá uma notificação (ícone de sino) quando isso for feito e o ícone à esquerda *Instância de computação* passa de azul para verde.
 
-1. Depois que a Computação tiver sido criado e estiver em execução, verifique se o kernel a ser usado é *Python 3.8 - Pytorch e Tensorflow*. **Dica:** isso é mostrado à direita da barra de comandos.
+1. Depois que a Computação tiver sido criada e estiver em execução, verifique se o kernel a ser usado é *Python 3.10 - PyTorch e TensorFlow*. **Dica:** isso é mostrado à direita da barra de comandos.
 
 1. Clique no botão **Autenticar** e aguarde até a conclusão da autenticação.
 
