@@ -13,7 +13,8 @@ A organização para a qual você trabalha deseja aumentar a eficiência e as ca
 Neste exercício, você passará pela *primeira experiência de execução* do Microsoft Security Copilot para provisionar o Copilot com uma SCU (unidade de computação de segurança).
 
 >**Observação:** o ambiente para este exercício é uma simulação gerada a partir do produto. Como uma simulação limitada, os links em uma página podem não estar habilitados e pode não haver suporte para entradas baseadas em texto que estejam fora do script especificado. Uma mensagem pop-up será exibida informando: "Este recurso não está disponível na simulação". Quando isso ocorrer, selecione OK e continue com as etapas do exercício.  
-> :::image type="content" source="../Media/simulation-pop-up-error.png" alt-text="Captura de tela pop-up indicando que esse recurso não está disponível na simulação.":::
+
+![Mensagem de erro pop-up](../Media/simulation-pop-up-error.png)
 
 ### Tempo estimado para concluir este laboratório: 45 minutos
 
@@ -34,7 +35,7 @@ Nesta tarefa, você percorre o processo de garantir que tenha as permissões de 
 
 Depois de receber a função de Administrador de Acesso do Usuário no Azure, você poderá atribuir a um usuário o acesso necessário para provisionar SCUs para o Copilot.  Apenas para o propósito deste exercício, que é mostrar as etapas envolvidas, você atribuirá a si mesmo o acesso necessário.  As etapas a seguir irão guiá-lo durante o processo.
 
-1. Abra o ambiente simulado selecionando este link: **[Portal do Azure](https://app.highlights.guide/start/6373500f-1f10-4584-a14e-ca0b4aa7399f?link=1&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Abra o ambiente simulado selecionando este link: **[Portal do Azure](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true)**.
 
 1. Você começará habilitando o gerenciamento de acesso para recursos do Azure. Para acessar essa configuração:
     1. No portal do Azure, selecione **Microsoft Entra ID**.
@@ -65,7 +66,7 @@ Nesta tarefa, você percorre as etapas do provisionamento de capacidade para sua
 
 Para esse exercício, você vai provisionar a capacidade por meio do Security Copilot. Ao abrir o Security Copilot pela primeira vez, um assistente vai orientar você ao longo das etapas de configuração de capacidade para a sua organização.
 
-1. Abra o ambiente simulado selecionando este link: **[Microsoft Security Copilot](https://app.highlights.guide/start/6373500f-1f10-4584-a14e-ca0b4aa7399f?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Abra o ambiente simulado selecionando este link: **[Microsoft Security Copilot](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**.
 
 1. Siga as etapas no Assistente, selecione **Introdução**.
 1. Nesta página, você configurará a sua capacidade de segurança. Para qualquer um dos campos listados abaixo, você pode selecionar o ícone de informações para obter mais informações.
@@ -101,7 +102,7 @@ Este exercício deve levar aproximadamente **15** minutos para ser concluído.
 
 Nesta tarefa, você inicia a exploração no menu inicial.
 
-1. Abra o ambiente simulado selecionando este link: **[Microsoft Security Copilot](https://app.highlights.guide/start/2cac767e-42c4-4058-afbb-a9413aac461d?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Abra o ambiente simulado selecionando este link: **[Microsoft Security Copilot](https://app.highlights.guide/start/7608581a-ee3a-4fe0-be03-309a58b78c60?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**.
 
 1. Selecione o ícone **Menu** ![ícone do menu da página inicial](../Media/home-menu-icon.png), que às vezes é chamado de ícone de hambúrguer.
 
@@ -212,7 +213,7 @@ Este exercício deve levar aproximadamente **30** minutos para ser concluído.
 
 #### Subtarefa 1: Explorar o resumo do incidente e as respostas guiadas
 
-1. Abra o ambiente simulado selecionando este link: **[Portal do Microsoft Defender](https://app.highlights.guide/start/f4f590f6-8937-40f9-91ec-632de546ab98?token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Abra o ambiente simulado selecionando este link: **[Portal do Microsoft Defender](https://app.highlights.guide/start/be8a91c3-3979-4048-ad38-fd38deaf7117?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**.
 
 1. No portal do Microsoft Defender:
     1. Expanda **Investigação e resposta**.

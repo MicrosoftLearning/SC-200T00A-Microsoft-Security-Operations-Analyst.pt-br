@@ -10,7 +10,7 @@ lab:
 
 ![Visão geral do laboratório.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex1.png)
 
-Você é um analista de operações de segurança que trabalha em uma empresa que implementou o Microsoft Sentinel. Você deve saber como conectar os dados de log de várias fontes de dados na organização. A organização tem dados do Microsoft 365, do Microsoft 365 Defender, dos recursos do Azure, de máquinas virtuais que não pertencem ao Azure etc. Comece a conectar as fontes da do Microsoft primeiro.
+Você é um analista de operações de segurança que trabalha em uma empresa que implementou o Microsoft Sentinel. Você deve saber como conectar os dados de log de várias fontes de dados na organização. A organização tem dados do Microsoft 365, do Microsoft Defender XDR, dos recursos do Azure, das máquinas virtuais não relacionadas ao Azure etc. Você começa a conectar as fontes da Microsoft primeiro.
 
 >**Importante:** os exercícios de laboratório para o Roteiro de Aprendizagem 8 estão em um ambiente *independente*. Se você sair do laboratório antes de concluí-lo, será necessário executar as configurações novamente.
 
@@ -18,9 +18,9 @@ Você é um analista de operações de segurança que trabalha em uma empresa qu
 
 ### Tarefa 1: acessar o workspace do Microsoft Sentinel
 
-Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
+Nesta tarefa, você irá acessar seu workspace do Microsoft Sentinel.
 
->**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *Hub de Conteúdo* foram instaladas.
+>**Observação:** o Microsoft Sentinel foi pré-implantado em sua assinatura do Azure com o nome **defenderWorkspace** e as soluções necessárias do *hub de conteúdo* foram instaladas.
 
 1. Faça logon na máquina virtual **WIN1** como Administrador com a senha: **Pa55w.rd**.  
 
@@ -40,29 +40,29 @@ Nesta tarefa, você acessará seu workspace do Microsoft Sentinel.
 
 ### Tarefa 2: conectar o conector de dados do Microsoft Defender para Nuvem
 
-Nesta tarefa, você conectará o conector de dados do Microsoft Defender para Nuvem.
-
-   <!--- >>**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded. --->
+Nesta tarefa, você irá se conectar ao conector de dados do Microsoft Defender para Nuvem.
 
 1. No menu de navegação do Microsoft Sentinel, role para baixo até a seção **Gerenciamento de conteúdo** e selecione **Hub de conteúdo**.
 
 1. No *Hub de conteúdo*, procure a solução **Microsoft Defender para Nuvem** e selecione-a na lista.
 
-1. Na página de detalhes da solução do *Microsoft Defender para Nuvem*, selecione **Gerenciar**.
+1. Na página de detalhes da solução do Microsoft Defender para Nuvem, selecione **Gerenciar**.
 
     >**Observação:** a solução *Microsoft Defender para Nuvem* instala o conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura*, o conector de dados do *Microsoft Defender para Nuvem (Versão preliminar) baseado em locatário* e uma regra de Análise. O conector de dados *Microsoft Defender for Cloud (versão prévia)* baseado em locatário é usado quando um locatário tem várias assinaturas.
 
 1. Selecione a caixa de seleção Conector de dados do *Microsoft Defender para Nuvem (Herdado) baseado em assinatura* e selecione a **página Abrir conector**.
 
-1. Na seção *Configuração*, **marque** a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* e clique no link **Conectar** ou deslize a opção **Status** para a direita.
+1. Na seção *Configuração*, **marque** a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* e clique no link **Conectar**.
 
 1. Para habilitar a sincronização bidirecional, selecione o link **Habilitar o Microsoft Defender para todas as assinaturas**.
 
     >**Observação:** talvez seja necessário rolar para a direita para ver o link.
 
-1. Na página *Microsoft Defender para Nuvem – Introdução*, a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* estará selecionada e o *plano do Microsoft Defender* exibirá *Habilitado – Parcial (30 dias de avaliação restantes)*.
+1. Na página *Microsoft Defender para Nuvem – Introdução*, a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* estará selecionada e o *plano do Microsoft Defender* exibirá *Desativado (30 dias de avaliação restantes)*.
 
 1. Selecione o botão **X (Fechar)** no canto superior direito para fechar a página *Introdução*. Você retornará à página de configuração do *Microsoft Defender para Nuvem*.
+
+1. Deslize a opção **Status** para a direita.
 
 1. O *Status* da *MOC Subscription-XXXXXXXXXXX* será **Conectada** e a *Sincronização bidirecional* estará *Habilitada*.
 
@@ -88,7 +88,7 @@ Nesta tarefa, você conectará o conector de dados de *Atividade do Azure*.
 
     >**Observação:***Não* selecione um grupo de recursos opcional.
 
-1. Selecione a guia **Parâmetros**, escolha o workspace *uniquenameDefender* na lista suspensa **Workspace principal do Log Analytics**. Essa ação aplicará a configuração de assinatura para enviar as informações ao workspace do Log Analytics.
+1. Selecione a guia **Parâmetros**, escolha o workspace *uniquenameDefender* na lista suspensa **Workspace principal do Log Analytics**. Essa ação aplica a configuração de assinatura para enviar as informações para o workspace do Log Analytics.
 
 1. Selecione a guia **Correção** e marque a caixa de seleção **Criar uma tarefa de correção**. Essa ação aplicará a política a recursos já existentes do Azure.
 
