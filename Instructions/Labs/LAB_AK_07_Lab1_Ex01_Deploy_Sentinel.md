@@ -8,7 +8,7 @@ lab:
 
 ## Cenário do laboratório
 
-Você trabalha como analista de operações de segurança em uma empresa que está implementando o Microsoft Sentinel. Você é responsável por configurar o ambiente do Microsoft Sentinel para atender aos requisitos da empresa, a fim de minimizar os custos, atender às normas de conformidade e fornecer o ambiente mais gerenciável para que a equipe de segurança cumpra as responsabilidades de trabalho diárias.
+Você trabalha como analista de operações de segurança em uma empresa que está implementando o Microsoft Azure Sentinel. Você é responsável por configurar o ambiente do Microsoft Azure Sentinel para atender aos requisitos da empresa, a fim de minimizar os custos, atender às normas de conformidade e fornecer o ambiente mais gerenciável para que a equipe de segurança cumpra as responsabilidades de trabalho diárias.
 
 >**Importante:** Os exercícios de laboratório para o Roteiro de Aprendizagem 7 estão em um ambiente *independente*. Se você sair do laboratório antes de concluí-lo, será necessário executar as configurações novamente.
 
@@ -54,7 +54,7 @@ Implantar o Microsoft Sentinel no workspace.
 
 1. Nos itens do menu, selecione **+ Criar**.
 
-1. Selecione o workspace ao qual você deseja adicionar o Sentinel (criado na Tarefa 1).
+1. Selecione o workspace ao qual você deseja adicionar o Microsoft Sentinel (criado na Tarefa 1).
 
 1. Selecione **Adicionar**.
 
@@ -74,7 +74,7 @@ Implantar o Microsoft Sentinel no workspace.
 
 ### Tarefa 4: Criar uma lista de observação
 
-Nesta tarefa, você criará uma watchlist no Microsoft Sentinel.
+Nesta tarefa, você irá criar uma watchlist no Microsoft Sentinel.
 
 1. Na caixa de pesquisa na parte inferior da tela do Windows 10, insira *Bloco de notas*. Selecione **Bloco de notas** nos resultados.
 
@@ -96,7 +96,9 @@ Nesta tarefa, você criará uma watchlist no Microsoft Sentinel.
 
 1. No menu "estrutural" do Microsoft Azure, selecione **Página Inicial**.
 
-1. Você verá o **Microsoft Sentinel** na seção de *serviços do Azure* do portal. Selecione-a.
+1. Você verá o bloco **Microsoft Sentinel** na seção *Serviços do Azure* no portal. Selecione-a.
+
+1. Selecione o workspace do Microsoft Sentinel **defenderWorkspace**.
 
 1. No Microsoft Sentinel, selecione a opção **Watchlist** na área Configuração.
 
@@ -112,9 +114,9 @@ Nesta tarefa, você criará uma watchlist no Microsoft Sentinel.
 
 1. Selecione **Avançar: Fonte >**.
 
-1. Selecione **Procurar arquivos** em *Carregar arquivo* e procure o arquivo *HighValue.csv* que você acabou de criar.
+1. Selecione **Procurar arquivos** em *Carregar arquivo* e procure o arquivo *HighValue.csv* que você criou.
 
-1. No *campo SearchKey*, selecione **Nome do host**.
+1. No campo *SearchKey,* selecione **Nome do host**.
 
 1. Clique em **Avançar: Examinar e criar >**.
 
@@ -134,7 +136,7 @@ Nesta tarefa, você criará uma watchlist no Microsoft Sentinel.
 
 ### Tarefa 5: Criar um indicador de ameaça
 
-Nesta tarefa, você criará um indicador no Microsoft Sentinel.
+Nesta tarefa, você irá criar um indicador no Microsoft Sentinel.
 
 1. No Microsoft Sentinel, selecione a opção **Inteligência contra ameaças** na área Gerenciamento de ameaças.
 
@@ -181,7 +183,7 @@ Nesta tarefa, você criará um indicador no Microsoft Sentinel.
 
 ### Tarefa 6: Configurar retenção de log
 
-Nesta tarefa, você alterará o período de retenção da tabela SecurityEvent.
+Nesta tarefa, você irá alterar o período de retenção da tabela SecurityEvent.
 
 1. No Microsoft Sentinel, selecione a opção **Configurações** na área *Configuração*.
 
@@ -197,7 +199,7 @@ Nesta tarefa, você alterará o período de retenção da tabela SecurityEvent.
 
 1. Altere o *Período de retenção interativa* para **90 dias**.
 
-1. Redefina o *Período de retenção total* para **180 dias** (se necessário). Observe que o *período de arquivo* agora está definido como *90 dias*, pois o *Azure Monitor* trata automaticamente os 90 dias restantes de retenção total como retenção de longo prazo e baixo custo.
+1. Redefina o *Período de retenção total* para **180 dias** (se necessário). Observe que o *Período de arquivo* está definido como *90 dias*, pois o *Azure Monitor* trata automaticamente os 90 dias restantes de retenção total como retenção de longo prazo e baixo custo.
 
 1. Selecione **Salvar** para aplicar as alterações.
 
