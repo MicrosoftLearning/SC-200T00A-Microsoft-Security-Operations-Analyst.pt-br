@@ -161,7 +161,7 @@ A próxima seção da página de aterrissagem do Copilot gira em torno de prompt
 
 1. Cada bloco mostra o título do promptbook, uma breve descrição, o número de prompts e um ícone de execução. Selecione o título de qualquer um dos blocos da sequência de solicitações para abrir essa página. Selecione a **Avaliação de impacto de vulnerabilidade**, como exemplo.
     1. A janela do promptbook selecionado fornece informações, incluindo quem criou o promptbook, marcas, uma breve descrição, entradas necessárias para executar o promptbook e uma listagem dos prompts.
-    2. Observe que as informações sobre a sequência de solicitações e as opções disponíveis. Para esta simulação, você não pode iniciar uma nova sessão, você fará isso em um exercício subsequente. 
+    1. Observe que as informações sobre a sequência de solicitações e as opções disponíveis. Para esta simulação, você não pode iniciar uma nova sessão, você fará isso em um exercício subsequente. 
     1. Selecione **X** para fechar a janela.
 
 1. Selecione **Exibir a biblioteca de promptbook**.
@@ -220,28 +220,28 @@ Este exercício deve levar aproximadamente **30** minutos para ser concluído.
     1. Expanda **Incidentes e alertas**.
     1. Selecione **Incidentes**.
 
-1. Selecione o primeiro incidente na lista, **ID do incidente: 30342** O ataque de ransomware operado por humanos foi iniciado a partir de um ativo comprometido (interrupção de ataque).
+1. Selecione o primeiro incidente na lista, **ID do incidente: 185856**, chamado Ataque de ransomware operado por humanos, foi iniciado por meio de um ativo comprometido (interrupção de ataque).
 
-1. Esse é um incidente complexo. O Defender XDR fornece uma grande quantidade de informações, mas com 72 alertas, pode ser um desafio saber onde se concentrar. No lado direito da página de incidentes, o Copilot gera automaticamente um **Resumo de incidentes** que ajuda a orientar seu foco e resposta. Selecione **Ver mais**.
+1. Esse é um incidente complexo. O Defender XDR fornece uma grande quantidade de informações, porém, com 50 alertas, pode ser um desafio saber onde se concentrar. No lado direito da página de incidentes, o Copilot gera automaticamente um **Resumo de incidentes** que ajuda a orientar seu foco e resposta. Selecione **Ver mais**.
     1. O resumo do Copilot descreve como esse incidente evoluiu, incluindo acesso inicial, movimento lateral, coleção, acesso de credenciais e exfiltração. Ele identifica dispositivos específicos, indica que a ferramenta PsExec foi usada para inicializar arquivos executáveis e muito mais.
     1. Esses são todos os itens que você pode aproveitar para uma investigação mais aprofundada. Você explora algumas delas em tarefas subsequentes.
 
 1. Role para baixo no painel do Copilot e logo abaixo do resumo há **Respostas guiadas**. As respostas guiadas recomendam ações em suporte à triagem, à contenção, à investigação e à correção.
     1. O primeiro item na categoria de triagem é Classificar esse incidente. Selecione **Classificar** para exibir as opções. Examine as respostas guiadas nas outras categorias.
-    1. Selecione o botão **Status** na parte superior da seção de respostas guiadas e filtre em **Concluído**. Duas atividades concluídas são rotuladas como Interrupção de Ataque. A interrupção automática de ataque foi projetada para conter ataques em andamento, limitar o impacto nos ativos de uma organização e fornecer mais tempo para as equipes de segurança mitigarem totalmente o ataque.
+    1. Selecione o botão **Status** acima do *Resumo* e filtre por **Concluído**. Quatro atividades concluídas aparecem rotuladas como *Interrupção de ataque*. A interrupção automática de ataque foi projetada para conter ataques em andamento, limitar o impacto nos ativos de uma organização e fornecer mais tempo para as equipes de segurança mitigarem totalmente o ataque.
 1. Mantenha a página de incidentes aberta, pois você vai usá-la na próxima tarefa.
 
 #### Subtarefa 2: Explorar o resumo do dispositivo e da identidade
 
-1. Na página de incidentes, selecione o primeiro alerta, **URL suspeita clicada**.
+1. Na página incidente, na guia *História do ataque*, role para baixo pelos alertas e selecione o alerta de **Sessão RDP suspeita**.
 
 1. O Copilot gera automaticamente um **Resumo de alerta**, que fornece uma riqueza de informações para análise posterior. Por exemplo, o resumo identifica atividades suspeitas, de coleta de dados, acesso a credenciais, malware, atividades de descoberta e muito mais.
 
 1. Há muitas informações na página, portanto, para obter uma visão melhor desse alerta, selecione **Abrir página do alerta**. Ele está no terceiro painel na página de alertas, ao lado do grafo de incidentes e abaixo do título do alerta.
 
-1. Na parte superior da página está o cartão para o dispositivo parkcity-win10v. Selecione as reticências e anote as opções. Selecione **Resumir**. O Copilot gera um **Resumo do dispositivo**. Convém notar que há várias maneiras de acessar o resumo do dispositivo e este é apenas um método prático. O resumo mostra que o dispositivo é uma VM, identifica o proprietário do dispositivo, mostra seu status de conformidade em relação às políticas do Intune e muito mais.
+1. Na parte superior da página está o cartão para o dispositivo **parkcity-win10v**. Selecione as reticências e anote as opções. Selecione **Resumir**. O Copilot gera um **Resumo do dispositivo**. Não vale nada que haja várias maneiras de acessar o resumo do dispositivo e dessa forma é apenas um método conveniente. O resumo mostra que o dispositivo é uma VM, identifica o proprietário do dispositivo, mostra seu status de conformidade em relação às políticas do Intune e muito mais.
 
-1. Ao lado do cartão do dispositivo, há um cartão para o proprietário do dispositivo. Selecione **parkcity\jonaw**. O terceiro painel da página deixa de mostrar detalhes do alerta e passa a fornecer informações sobre o usuário Jonathan Wolcott, um executivo de contas, cujo risco Microsoft Entra ID e gravidade do risco Insider são classificados como altos. Isso não é surpreendente, dado o que você aprendeu com os resumos do alerta e do incidente do Copilot. Selecione os três pontos e selecione **Resumir** para obter um resumo de identidade gerado pelo Copilot.
+1. Ao lado do cartão do dispositivo, há um cartão para o proprietário do dispositivo. Selecione **PARKCITY\jonaw**. O terceiro painel da página deixa de mostrar detalhes do alerta e passa a fornecer informações sobre o usuário Jonathan Wolcott, um executivo de contas, cujo risco Microsoft Entra ID e gravidade do risco Insider são classificados como altos. Isso não é surpreendente, dado o que você aprendeu com os resumos do alerta e do incidente do Copilot. Selecione os três pontos e selecione **Resumir** para obter um resumo de identidade gerado pelo Copilot.
 
 1. Mantenha essa página aberta, pois você vai usá-la na próxima tarefa.
 
@@ -253,21 +253,26 @@ Este exercício deve levar aproximadamente **30** minutos para ser concluído.
     1. O Copilot gera uma análise do script e sugere que ele pode ser uma tentativa de phishing ou usado para uma entregar um software de exploração de vulnerabilidades baseado na Web.
     1. Selecione **Mostrar código**. O código mostra uma URL cujo potencial de causar dano foi eliminado.
 
-1. Há vários outros itens que indicam que powershell.exe executou um script. Expanda aquela rotulada **powershell.exe -EncodedCommand...** com o carimbo de data/hora 5:00:47. O script original foi codificado em base 64, mas o Defender decodificou isso para você. Para a versão decodificada, selecione **Analisar**. A análise destaca a sofisticação do script usado neste ataque.
+1. Há vários outros itens que indicam que powershell.exe executou um script. Expanda aquele rotulado como **powershell.exe -EncodedCommand...**. O script original foi codificado em base 64, mas o Defender o decodificou para você. Para a versão decodificada, selecione **Analisar**. A análise destaca a sofisticação do script usado neste ataque.
 
-    >**Observação:** o carimbo de data/hora será ajustado para refletir o fuso horário do navegador do usuário. O fuso horário na simulação é definido como Horário do Pacífico.
+1. Na análise Script do Copilot, você tem botões para mostrar código e mostrar técnicas MITRE
+
+1. Selecione o botão **Mostrar Técnicas do MITRE** e selecione o link rotulado: T1105: Transferência de ferramenta de entrada
+
+1. Isso abre a página do site *MITRE | ATT&CK* que descreve a técnica em detalhes.
 
 1. Feche a página de história do alerta selecionando o **X** (o X à esquerda do painel do Copilot). Agora use a trilha para retornar ao incidente. Selecione **O ataque de ransomware operado por humanos foi iniciado a partir de um ativo comprometido (interrupção de ataque)**.
 
 #### Subtarefa 4: Explorar análise de arquivo
 
-1. Você está de volta à página de incidentes. No resumo do alerta, Copilot identificou o arquivo Rubeus.exe, que está associado ao malware 'Kekeo'. Você pode usar a funcionalidade de análise de arquivo no Defender XDR para ver quais outros insights você pode obter. Há várias maneiras de acessar arquivos. Na parte superior da página, selecione a guia **Evidências e Resposta**.
+1. Você está de volta à página de incidentes. No resumo do alerta, o Copilot identificou o arquivo mimikatz.exe, associado ao malware "Mimikatz". Você pode usar a funcionalidade de análise de arquivo no Defender XDR para ver quais outros insights você pode obter. Há várias maneiras de acessar arquivos. Na parte superior da página, selecione a guia **Evidências e Resposta**.
 
 1. No lado esquerdo da tela, selecione **Arquivos**.
-1. Selecione o primeiro item da lista com a entidade chamada **Rubeus.exe**.
-1. Na janela que é aberta, selecione **Analisar**. O Copilot gera um resumo.
+1. Selecione o primeiro item da lista com a entidade chamada **mimikatz.exe**.
+1. Na janela que é aberta, selecione **Abrir página de arquivo**.
+1. Selecione o ícone do Copilot (se a análise de arquivo não for aberta automaticamente), e o Copilot gerará uma análise de arquivo.
 1. Examine a análise de arquivo detalhada gerada pelo Copilot.
-1. Feche a janela de análise de arquivo.
+1. Feche a página Arquivo e use a trilha para retornar ao incidente. Selecione **O ataque de ransomware operado por humanos foi iniciado a partir de um ativo comprometido (interrupção de ataque)**.
 
 #### Subtarefa 5: Mudar para a experiência autônoma
 
@@ -280,7 +285,7 @@ Essa tarefa é complexa e requer o envolvimento de analistas mais experientes. N
 1. O Copilot é aberto na experiência autônoma e mostra o resumo do incidente. Você também pode executar mais prompts. Nesse caso, você executará a sequência de solicitações para um incidente. Selecione o **ícone de prompt**![ícone de prompt](../Media/prompt-icon.png). 
     1. Selecione **Ver todos os promptbooks**.
     1. Selecione **Investigação de incidentes do Microsoft 365 Defender**.
-    1. A página do promptbook é aberta e solicita a ID de Incidente do Defender. Insira **30342** e selecione **Executar**.
+    1. A página do promptbook é aberta e solicita a ID de Incidente do Defender. Insira **185856** e selecione **Enviar**.
     1. Examine as informações fornecidas. Ao dinamizar para a experiência autônoma e executar o promptbook, a investigação é capaz de invocar recursos de uma solução de segurança de conjunto mais amplo, além apenas do Defender XDR, com base nos plug-ins habilitados.
 
 1. Selecione o **ícone de caixa ![ícone de caixa](../Media/box-icon.png)** ao lado do ícone de alfinete para selecionar todos os prompts e as respostas correspondentes e, em seguida, selecione o **ícone de alfinete ![ícone de alfinete](../Media/pin-icon.png)** para salvar essas respostas no quadro de avisos.
@@ -288,6 +293,31 @@ Essa tarefa é complexa e requer o envolvimento de analistas mais experientes. N
 1. O painel de fixação é aberto automaticamente. O quadro de fixação contém os prompts e respostas salvos, juntamente com um resumo de cada um deles. Você pode abrir e fechar o quadro de avisos selecionando o **ícone do quadro de avisos ![ícone do quadro de avisos](../Media/pinboard-icon.png)**.
 
 1. Na parte superior da página, selecione **Compartilhar** para exibir suas opções. Ao compartilhar o incidente por meio de um link ou email, as pessoas em sua organização com acesso ao Copilot podem ver esta sessão. Feche a janela selecionando o **X**.
+
+#### Subtarefa 6: Criar e executar uma consulta KQL
+
+Em seguida, usaremos o Copilot para nos ajudar a criar uma consulta KQL (Linguagem de Consulta Kusto) para usar com a busca avançada no Defender XDR.
+
+1. Enquanto ainda estiver no Copilot de Segurança autônomo, insira a solicitação a seguir no formulário de solicitação: *Com base nesse incidente, crie uma consulta para procurar proativamente esse tipo de ataque de malware. Use o woodgrove-loganalyticsworkspace.*
+
+1. Clique no ícone Enviar solicitação para executar a solicitação.
+O Copilot escolhe a linguagem natural para KQL para a busca avançada.
+
+1. O Copilot gera uma consulta KQL e uma resposta:
+
+    1. Leia a explicação da consulta Kusto.
+
+    1. Examine o detalhamento da consulta Kusto. Isso será muito útil se você estiver apenas começando a usar o KQL.
+
+1. Copie a consulta KQL gerada pelo Copilot e retorne ao portal do Defender XDR.
+***É recomendável primeiro copiar a consulta para o Bloco de Notas ou outro editor para reduzir problemas de formatação***.
+
+1. O Defender XDR ainda deve ter a seção Investigações e resposta aberta. Selecione **Busca** e **Busca avançada** no menu de navegação.
+
+1. Na Busca avançada, selecione **Nova consulta +** para abrir uma janela e colar a consulta KQL gerada pelo Copilot no formulário.
+***É recomendável primeiro copiar a consulta para o Bloco de Notas ou outro editor para reduzir problemas de formatação***.
+
+1. Depois de executar a consulta KQL, volte ao Copilot para refiná-la ou selecione o ícone do Copilot na página consulta de Busca avançada para ajustar as consultas de busca.
 
 1. Agora você pode fechar a guia do navegador para sair da simulação.
 
