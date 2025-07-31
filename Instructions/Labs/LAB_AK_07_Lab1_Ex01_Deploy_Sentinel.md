@@ -26,7 +26,7 @@ Crie um workspace do Log Analytics, incluindo a opção de região. Saiba mais s
 
 1. Na caixa de diálogo **Inserir senha**, copie e cole a senha de locatário do administrador fornecida pelo provedor de hospedagem do laboratório e selecione **Entrar**.
 
-1. Na barra de Pesquisa do portal do Azure, digite "Microsoft Sentinel" e selecione 
+1. Na barra de Pesquisa do portal do Azure, digite "Microsoft Sentinel" e selecione
 
 1. Selecione **+ Criar**.
 
@@ -50,11 +50,11 @@ Implantar o Microsoft Sentinel no workspace.
 
 1. Quando a implantação do workspace for concluída, selecione **Página Inicial** no menu "estrutural" do Microsoft Azure.
 
-1. Você verá o **Microsoft Sentinel** na seção de *serviços do Azure* do portal. Selecione-a.
+1. Você deverá ver um bloco do **Microsoft Sentinel** na seção *Serviços do Azure* do portal. Selecione-a.
 
 1. Nos itens do menu, selecione **+ Criar**.
 
-1. Selecione o workspace ao qual você deseja adicionar o Microsoft Sentinel (criado na Tarefa 1).
+1. Selecione o *defenderWorkspace que* criado na Tarefa 1.
 
 1. Selecione **Adicionar**.
 
@@ -62,7 +62,9 @@ Implantar o Microsoft Sentinel no workspace.
 
 1. No menu de navegação estrutural do Microsoft Azure, selecione **Página Inicial**.
 
-1. Na barra de Pesquisa do portal do Azure, digite "Análise de logs" e selecione o espaço de trabalho criado na Tarefa 1.
+1. Na barra de pesquisa do portal do Azure, digite "Log Analytics" e selecione **Workspaces do Log Analytics** na seção *Serviços*.
+
+1. Selecione o *defenderWorkspace que* criado na Tarefa 1.
 
 1. Expanda a seção *Configurações* no menu de navegação e selecione **Uso e custos estimados**.
 
@@ -74,7 +76,7 @@ Implantar o Microsoft Sentinel no workspace.
 
 ### Tarefa 4: Criar uma lista de observação
 
-Nesta tarefa, você irá criar uma watchlist no Microsoft Sentinel.
+Nesta tarefa, você cria uma watchlist no Microsoft Sentinel.
 
 1. Na caixa de pesquisa na parte inferior da tela do Windows 10, insira *Bloco de notas*. Selecione **Bloco de notas** nos resultados.
 
@@ -136,7 +138,7 @@ Nesta tarefa, você irá criar uma watchlist no Microsoft Sentinel.
 
 ### Tarefa 5: Criar um indicador de ameaça
 
-Nesta tarefa, você irá criar um indicador no Microsoft Sentinel.
+Nesta tarefa, você cria um indicador no Microsoft Sentinel.
 
 1. No Microsoft Sentinel, selecione a opção **Inteligência contra ameaças** na área Gerenciamento de ameaças.
 
