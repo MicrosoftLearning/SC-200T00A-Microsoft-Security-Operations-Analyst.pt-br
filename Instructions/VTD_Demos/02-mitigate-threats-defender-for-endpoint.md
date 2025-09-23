@@ -6,7 +6,7 @@
 
 Nesta tarefa, você executará dois ataques simulados para explorar os recursos do Microsoft Defender para Ponto de Extremidade.
 
-1. Se você ainda não estiver no portal do Microsoft Defender XDR em seu navegador, acesse o Microsoft Defender XDR em (https://security.microsoft.com) conectado como Administrador do seu locatário.
+1. Se você ainda não estiver no portal do Microsoft Defender XDR em seu navegador, acesse o Microsoft Defender XDR em (<https://security.microsoft.com>) conectado como Administrador do seu locatário.
 
 Você executará os ataques *simulados* usando o *PowerShell* em *WIN1* para explorar os recursos do Microsoft Defender para Ponto de Extremidade.
 
