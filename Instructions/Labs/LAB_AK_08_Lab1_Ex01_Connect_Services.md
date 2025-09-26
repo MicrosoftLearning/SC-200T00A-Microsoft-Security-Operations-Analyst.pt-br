@@ -54,19 +54,19 @@ Nesta tarefa, você irá se conectar ao conector de dados do Microsoft Defender 
 
 1. Na seção *Configuração*, **marque** a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* e clique no link **Conectar**.
 
+1. O **Status** agora deve ser **Conectado**.
+
 1. Para habilitar a sincronização bidirecional, selecione o link **Habilitar o Microsoft Defender para todas as assinaturas**.
 
     >**Observação:** talvez seja necessário rolar para a direita para ver o link.
 
-1. Na página *Microsoft Defender para Nuvem – Introdução*, a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* estará selecionada e o *plano do Microsoft Defender* exibirá *Desativado (30 dias de avaliação restantes)*.
+1. Na página *Microsoft Defender para Nuvem – Introdução*, a caixa de seleção da *MOC Subscription-XXXXXXXXXXX* estará selecionada e o *plano do Microsoft Defender* exibirá *Habilitado – Parcial (30 dias de avaliação restantes)*.
 
 1. Selecione o botão **X (Fechar)** no canto superior direito para fechar a página *Introdução*. Você retornará à página de configuração do *Microsoft Defender para Nuvem*.
 
-1. Deslize a opção **Status** para a direita.
+1. O *Status* da *MOC Subscription-XXXXXXXXXXX* será *Conectado* e a *Sincronização bidirecional* deve estar **Habilitada**.
 
-1. O *Status* da *MOC Subscription-XXXXXXXXXXX* será **Conectada** e a *Sincronização bidirecional* estará *Habilitada*.
-
-    >**Observação:** talvez seja necessário atualizar a página.
+    >**Observação:** talvez seja necessário repetir este procedimento para ver a *Sincronização bidirecional habilitada*. Depois de executar novamente as etapas, tente definir o menu suspenso *Sincronização bidirecional* como **Habilitada**.
 
 ### Tarefa 3: conector o conector de dados de Atividade do Azure
 
