@@ -321,7 +321,9 @@ Nesta tarefa, em vez de usar um LiveStream, você criará uma regra de consulta 
 
 1. Selecione **Testar com dados atuais** em *Simulação de resultados*. Observe o número esperado de *Alertas por dia*.
 
-1. Em *Mapeamento de entidade*, selecione:
+1. Na seção *Aprimoramento de alerta*, selecione *Mapeamento de entidade >*, **+ Adicionar nova entidade**.
+
+1. Em *Entidade*, selecione:
 
     - Na lista suspensa *Tipo de entidade*, selecione **Host**.
     - Na lista suspensa *Identificador*, selecione **Nome do host**.
