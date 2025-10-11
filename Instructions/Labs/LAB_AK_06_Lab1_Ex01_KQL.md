@@ -130,10 +130,10 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 1. A instrução a seguir demonstra o uso da instrução **let** para declarar *variáveis*. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
-    let timeOffset = 1h;
+    let timeOffset = 10m;
     let discardEventID = 4688;
     SecurityEvent_CL
-    | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
+    | where TimeGenerated > ago(timeOffset*60) and TimeGenerated < ago(timeOffset)
     | where EventID_s != discardEventID
     ```
 
@@ -189,14 +189,14 @@ Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize*
     | summarize dcount(IpAddress)
     ```
 
-1. A instrução a seguir é uma regra para detectar falhas de senha inválida em vários aplicativos para a mesma conta. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
+1. A instrução a seguir é uma regra para detectar falhas de *A conta de usuário está desabilitada* em vários aplicativos em relação à mesma conta. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
     let timeframe = 30d;
     let threshold = 1;
     SigninLogs_CL
     | where TimeGenerated >= ago(timeframe)
-    | where ResultDescription has "Invalid password"
+    | where ResultDescription has "User account is disabled"
     | summarize applicationCount = dcount(AppDisplayName_s) by UserPrincipalName_s, IPAddress
     | where applicationCount >= threshold
     ```
@@ -309,10 +309,10 @@ Nesta tarefa, você compilará instruções de várias tabelas em KQL.
 
     >**Observação:** a "linha vazia" nos resultados mostrará a contagem resumida de SigninLogs_CL.
 
-1. A instrução a seguir demonstra o suporte do operador **union** para unir várias tabelas com curingas. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. A instrução a seguir demonstra o suporte do operador **union** para unir várias tabelas com curingas. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
-    union App*  
+    union Sec*  
     | summarize count() by Type
     ```
 
