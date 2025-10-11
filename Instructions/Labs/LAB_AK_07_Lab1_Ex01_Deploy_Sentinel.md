@@ -199,9 +199,9 @@ Nesta tarefa, você irá alterar o período de retenção da tabela SecurityEven
 
 1. Selecionar **Gerenciar tabela**.
 
-1. Altere o *Período de retenção interativa* para **90 dias**.
+1. Altere a *Retenção de análise* para **90 dias**.
 
-1. Redefina o *Período de retenção total* para **180 dias** (se necessário). Observe que o *Período de arquivo* está definido como *90 dias*, pois o *Azure Monitor* trata automaticamente os 90 dias restantes de retenção total como retenção de longo prazo e baixo custo.
+1. Redefina a *Retenção total* para **180 dias** (se necessário). Observe que a *Retenção de longo prazo* está definida como *90 dias*, pois o *Azure Monitor* trata automaticamente os 90 dias restantes de retenção total como retenção de longo prazo e baixo custo.
 
 1. Selecione **Salvar** para aplicar as alterações.
 

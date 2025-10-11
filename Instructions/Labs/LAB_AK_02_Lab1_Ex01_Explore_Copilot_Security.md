@@ -26,7 +26,7 @@ Este exercício deve levar aproximadamente **15** minutos para ser concluído.
 
 >**Observação:** quando uma instrução de laboratório solicita a abertura de um link para o ambiente simulado, geralmente é recomendável abrir o link em uma nova janela do navegador para que você possa visualizar simultaneamente as instruções e o ambiente do exercício. Para fazer isso, selecione a tecla do mouse à direita e selecione a opção.
 
-Antes que os usuários possam começar a usar o Copilot, os administradores precisam provisionar e alocar a capacidade. Para provisionar a capacidade:
+Antes que os usuários possam começar a usar o Copilot, os administradores precisam provisionar e alocar a capacidade. Para provisionar a capacidade:
 
 - Você deve ter uma assinatura do Azure.
 - Você precisa ser um proprietário do Azure ou colaborador do Azure, em um nível de grupo de recursos, no mínimo.
@@ -35,7 +35,11 @@ Nesta tarefa, você percorre o processo de garantir que tenha as permissões de 
 
 Depois de receber a função de Administrador de Acesso do Usuário no Azure, você poderá atribuir a um usuário o acesso necessário para provisionar SCUs para o Copilot.  Apenas para o propósito deste exercício, que é mostrar as etapas envolvidas, você atribuirá a si mesmo o acesso necessário.  As etapas a seguir irão guiá-lo durante o processo.
 
-1. Abra o ambiente simulado selecionando este link: **[Portal do Azure](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true)**.
+1. Verifique se a função Administrador de Acesso de Usuário está atribuída à sua conta.
+
+1. Abra o ambiente simulado selecionando este link: <https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true>.
+
+    <!--- Open the simulated environment by selecting this link: **[Azure portal](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true)**.--->
 
 1. Você começará habilitando o gerenciamento de acesso para recursos do Azure. Para acessar essa configuração:
     1. No portal do Azure, selecione **Microsoft Entra ID**.

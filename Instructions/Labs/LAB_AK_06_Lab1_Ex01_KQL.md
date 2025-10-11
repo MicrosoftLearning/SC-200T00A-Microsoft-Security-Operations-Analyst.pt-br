@@ -130,10 +130,10 @@ Nesta tarefa, você compilará instruções básicas do KQL.
 1. A instrução a seguir demonstra o uso da instrução **let** para declarar *variáveis*. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
-    let timeOffset = 1h;
+    let timeOffset = 10m;
     let discardEventID = 4688;
     SecurityEvent_CL
-    | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
+    | where TimeGenerated > ago(timeOffset*60) and TimeGenerated < ago(timeOffset)
     | where EventID_s != discardEventID
     ```
 
@@ -161,54 +161,11 @@ Nesta tarefa, você compilará instruções básicas do KQL.
     LowActivityAccounts | where Account_s contains "sql"
     ```
 
-    <!--- 1. Change the **Time range** to **Last hour** in the Query Window. This limits our results for the following statements.
+### Tarefa 4: Analisar resultados em KQL com o operador Summarize
 
-    1. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window, enter the following statement and select **Run**: 
+Nesta tarefa, você compilará instruções KQL para agregar dados. **Summarize** agrupa as linhas de acordo com as colunas do grupo **by** e calcula as agregações em cada grupo.
 
-    ```KQL
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(7d) 
-    | where ProcessName != "" and Process != "" 
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
-    ```
-
-    1. The following statement demonstrates the **order by** operator, which sorts the rows of the input table by one or more columns in ascending or descending order. The **order by** operator is an alias to the **sort by** operator. In the Query Window, enter the following statement and select **Run**: 
-
-    ```KQL
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(7d) 
-    | where ProcessName != "" and Process != "" 
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-    | order by StartDir desc, Process asc
-    ```
-
-    1. The following statements demonstrate the **project** operator, which selects the columns to include in the order specified. In the Query Window, enter the following statement and select **Run**: 
-
-    ```KQL
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(7d) 
-    | where ProcessName != "" and Process != "" 
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-    | order by StartDir desc, Process asc 
-    | project Process, StartDir
-    ```
-
-    1. The following statements demonstrate the **project-away** operator, which selects the columns to exclude from the output. In the Query Window, enter the following statement and select **Run**: 
-
-    ```KQL
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(7d) 
-    | where ProcessName != "" and Process != "" 
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-    | order by StartDir desc, Process asc 
-    | project-away ProcessName --->
-    ```
-
-### Task 4: Analyze Results in KQL with the Summarize Operator
-
-In this task, you'll build KQL statements to aggregate data. **Summarize** groups the rows according to the **by** group columns, and calculates aggregations over each group.
-
-1. The following statement demonstrates the **count()** function, which returns a count of the group. In the Query Window enter the following statement and select **Run**: 
+1. A instrução a seguir demonstra a função **count()**, que retorna uma contagem do grupo. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
     SecurityEvent_CL  
@@ -216,7 +173,7 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize count() by Computer
     ```
 
-1. A instrução a seguir demonstra a função **count()**, mas, neste exemplo, nomeamos a coluna como *cnt*. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. A instrução a seguir demonstra a função **count()**, mas, neste exemplo, nomeamos a coluna como *cnt*. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
     SecurityEvent_CL  
@@ -232,14 +189,14 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize dcount(IpAddress)
     ```
 
-1. A instrução a seguir é uma regra para detectar falhas de senha inválida em vários aplicativos para a mesma conta. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
+1. A instrução a seguir é uma regra para detectar falhas de *A conta de usuário está desabilitada* em vários aplicativos em relação à mesma conta. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
     let timeframe = 30d;
     let threshold = 1;
     SigninLogs_CL
     | where TimeGenerated >= ago(timeframe)
-    | where ResultDescription has "Invalid password"
+    | where ResultDescription has "User account is disabled"
     | summarize applicationCount = dcount(AppDisplayName_s) by UserPrincipalName_s, IPAddress
     | where applicationCount >= threshold
     ```
@@ -352,10 +309,10 @@ Nesta tarefa, você compilará instruções de várias tabelas em KQL.
 
     >**Observação:** a "linha vazia" nos resultados mostrará a contagem resumida de SigninLogs_CL.
 
-1. A instrução a seguir demonstra o suporte do operador **union** para unir várias tabelas com curingas. Na janela Consulta, insira a instrução a seguir e selecione **Executar**: 
+1. A instrução a seguir demonstra o suporte do operador **union** para unir várias tabelas com curingas. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
     ```KQL
-    union App*  
+    union Sec*  
     | summarize count() by Type
     ```
 
@@ -414,35 +371,6 @@ Nesta tarefa, você trabalhará com campos de cadeia de caracteres estruturados 
     | parse EventText with * "resourceName=" resourceName ", totalSlices=" totalSlices:long * "sliceNumber=" sliceNumber:long * "lockTime=" lockTime ", releaseTime=" releaseTime:date "," * "previousLockTime=" previousLockTime:date ")" *  
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
-
-    <!--- 1. The following statement demonstrates working with **dynamic** fields, which are special since they can take on any value of other data types. In this example, The DeviceDetail_s field from the SigninLogs_CL table is of type **dynamic**. In the Query Window, enter the following statement and select **Run**:
-
-    ```KQL
-    SigninLogs
-    | extend OS = DeviceDetail.operatingSystem
-    ```
-
-     1. The following example shows how to break out packed fields for SigninLogs_CL. In the Query Window, enter the following statement and select **Run**:
-
-    ```KQL
-    SigninLogs_CL 
-    | extend OS = DeviceDetail.operatingSystem, Browser = DeviceDetail.browser 
-    | extend StatusCode = tostring(Status.errorCode), StatusDetails = tostring(Status.additionalDetails) 
-    | extend Date = startofday(TimeGenerated) 
-    | summarize count() by Date, Identity, UserDisplayName, UserPrincipalName, IPAddress, ResultType, ResultDescription, StatusCode, StatusDetails 
-    | sort by Date
-
-    SigninLogs_CL 
-    | extend OS = todynamic(DeviceDetail_s)
-    | where OS = DeviceDetail_s.operatingSystem, Browser = DeviceDetail_s.browser
-    | extend StatusCode = tostring(Status_s.errorCode), StatusDetails = tostring(Status_s.additionalDetails) 
-    | extend Date = startofday(TimeGenerated) 
-    | summarize count() by Date, UserDisplayName_s, UserPrincipalName_s, IPAddress, ResultType, ResultDescription, StatusCode, StatusDetails, OS, Browser 
-    | sort by Date
-
-    ```
-
-    >**Important:** Although the dynamic type appears JSON-like, it can hold values that the JSON model does not represent because they do not exist in JSON. Therefore, in serializing dynamic values into a JSON representation, values that JSON cannot represent are serialized into string values. --->
 
 1. As instruções a seguir demonstram os operadores para manipular o JSON armazenado em campos de cadeia de caracteres. Muitos logs enviam dados no formato JSON, o que exige que você saiba como transformar dados JSON em campos que possam ser consultados. Na janela Consulta, insira a instrução a seguir e selecione **Executar**:
 
